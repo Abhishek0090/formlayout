@@ -95,11 +95,12 @@ input:checked {
 
 
 		//admin 
-
+		$name_company = $row['name_company'];
         $toll_number = $row['toll_number'];
         $toll_fax = $row['toll_fax'];
 
 		//string split using split func
+        $name_company_exp = str_split($name_company);
         $toll_number_exp = str_split($toll_number);
 		$toll_fax_exp = str_split($toll_fax);
     
@@ -189,7 +190,21 @@ input:checked {
 	<h3>DETAILS OF THE THIRD PARTY ADMINISTRATOR</h3><P>(To be filled in block letters)</P>
 	<div>
 		
-		<span>a.</span> Name of TPA/Insurance Company : Aditya Birla Insurance Company Limited 
+		<span>a.</span> Name of TPA/Insurance Company : ";
+
+		for ($i=0; $i < 28; $i++) { 
+	# code...
+	if($i<count($name_company_exp)){
+
+		$html .="<input class=blockwise value=\"".$name_company_exp[$i]."\">";
+	}
+	else{
+		$html .= "
+		<input  class=blockwise>";
+	}
+	
+}
+	$html .="
 	</div>
 	<div>
 	<span>b.</span>
