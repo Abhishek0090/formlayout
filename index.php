@@ -59,18 +59,18 @@
                         <h6  style="text-decoration: underline; text-align : center ;   ">DETAILS OF THE THIRD PARTY ADMINISTRATOR/INSURER/HOSPITAL:</h6>
                         <div class="col d-flex flex-row aligninput  form-group">
                             
-                            <span class="alphabet">a.</span> <label>Name of TPA/Insurance Company : </label> <input type="text" class="form-control class autosave"  name="name_company" id="name_company"  >
+                            <span class="alphabet">a.</span> <label>Name of TPA/Insurance Company : </label> <input type="text" class="form-control class autosave"  name="name_company_apollo" id="name_company_apollo"  >
                         </div>
                         <div class="col-md-6 aligninput form-group">
                             <span class="alphabet">b.</span>
                             <label for="">Toll free phone number</label>
-                    <input type="text" class="form-control class autosave"  name="toll_number" id="toll_number"  >
+                    <input type="text" class="form-control class autosave"  name="toll_number_apollo" id="toll_number_apollo"  >
                 </div>
                 <div class="col-md-6 aligninput form-group">
                         <span class="alphabet">c.</span>
 
                     <label for="">Toll free Fax</label>
-                    <input type="text" class="form-control class autosave"   name="toll_fax" id="toll_fax" >
+                    <input type="text" class="form-control class autosave"   name="toll_fax_apollo" id="toll_fax_apollo" >
                     </div>
                     
                 <div class="col-md-6 aligninput form-group">
@@ -78,14 +78,14 @@
 
                     <label for="">Name of Hospital</label>
                     
-                    <input type="text" class="form-control class autosave"   name="name_hospital" id="name_hospital" >
+                    <input type="text" class="form-control class autosave"   name="name_hospital_apollo" id="name_hospital_apollo" >
                 </div>
                     <div class="col-md-6 aligninput form-group">
 
                         <span class="alphabet">i.</span>
                         
                         <label for="">Address</label>
-                        <input type="text" class="form-control class autosave"   name="apollo_address" id="name_hospital" >
+                        <input type="text" class="form-control class autosave"   name="apollo_address_apollo" id="name_hospital_apollo" >
                         
                     </div>
                     <div class="col-md-6 aligninput ">
@@ -93,14 +93,14 @@
                         <span class="alphabet">ii.</span>
                         
                         <label for="">Rohini</label>
-                        <input type="text" class="form-control class autosave"   name="rohini_id" id="rohini_id" >
+                        <input type="text" class="form-control class autosave"   name="rohini_id_apollo" id="rohini_id_apollo" >
                     </div>
                     <div class="col-md-6 aligninput ">
 
                         <span class="alphabet">iii.</span>
                         
                         <label for="">email id</label>
-                        <input type="text" class="form-control class autosave"   name="email_hospital" id="email_hospital" >
+                        <input type="text" class="form-control class autosave"   name="email_hospital_apollo" id="email_hospital_apollo" >
                     </div>
                 </div>
                     
@@ -112,22 +112,22 @@
                     <span class="alphabet">a.</span>
                     
                     <label for="">Name of the Patient</label>
-                    <input type="text" class="form-control class autosave"  name="name_patient"  id="name_patient">
+                    <input type="text" class="form-control class autosave"  name="name_patient_apollo"  id="name_patient_apollo">
                 </div>
                 <div class="col-md-6 aligninput">
                     <span class="alphabet">b.</span>
                     <label for="">Gender</label>
                     
                     <div class="form-check checkwidth">
-                        <input  type="radio" class="form-check-input autosave gender"   id="gender" name="gender" value="Male" checked >Male
+                        <input  type="radio" class="form-check-input autosave gender"   id="gender_apollo" name="gender_apollo" value="Male" checked >Male
                         <label class="form-check-label" for="radio1"></label>
                     </div>
                     <div class="form-check">
-            <input type="radio" class="form-check-input autosave gender" id="gender" name="gender" value="Female" >Female
+            <input type="radio" class="form-check-input autosave gender_apollo" id="gender_apollo" name="gender_apollo" value="Female" >Female
             <label class="form-check-label" for="radio2" ></label>
         </div>
                     <div class="form-check">
-            <input type="radio" class="form-check-input autosave gender" id="gender" name="gender" value="Third Gender" >Third Gender
+            <input type="radio" class="form-check-input autosave gender_apollo" id="gender_apollo" name="gender_apollo" value="Third Gender" >Third Gender
             <label class="form-check-label" for="radio3" ></label>
         </div>
     </div>
@@ -139,7 +139,7 @@
     <div class="age aligninput">
         
         <label for="">Age</label>
-                        <input type="text" class="form-control autosave" id="age" name="age" > 
+                        <input type="text" class="form-control autosave" id="age_apollo" name="age_apollo" > 
                         
                     </div>
                 </div>
@@ -148,42 +148,42 @@
                     <span class="alphabet">d.</span>
                     
                     <label for="">Date of Birth</label>
-                    <input type="text" class="form-control autosave" id="dob"  name="dob" >
+                    <input type="text" class="form-control autosave" id="dob_apollo"  name="dob_apollo" >
                 </div>
                 
                 <div class="col-md-6 aligninput">
                     <span class="alphabet">e.</span>
                     
                     <label for="">Contact Number</label>
-                    <input type="text" class="form-control autosave" id="contact_patient" name="contact_patient" >
+                    <input type="text" class="form-control autosave" id="contact_patient_apollo" name="contact_patient_apollo" >
                 </div>
 
                 <div class="col-md-6 aligninput">
                 <span class="alphabet">f.</span>
 
                 <label for="">Contact number of attending relative</label>
-                <input type="text" class="form-control autosave" id="contact_relative" name="contact_relative" >
+                <input type="text" class="form-control autosave" id="contact_relative_apollo" name="contact_relative_apollo" >
                 </div>
                 
                 <div class="col-md-6 aligninput">
                     <span class="alphabet">g.</span>
                     
                     <label for="">Insured Card ID number</label>
-                    <input type="text" class="form-control autosave" id="insured_number" name="insured_number" >
+                    <input type="text" class="form-control autosave" id="insured_number_apollo" name="insured_number_apollo"_apollo >
                 </div>
                 
                 <div class="col-md-6 aligninput">
                     <span class="alphabet">h.</span>
                     
                     <label for="">Policy number / Name of corporate</label>
-                    <input type="text" class="form-control autosave" id="policy_number" name="policy_number" ">
+                    <input type="text" class="form-control autosave" id="policy_number_apollo" name="policy_number_apollo" ">
                 </div>
 
                 <div class="col-md-6 aligninput">
                 <span class="alphabet">i.</span>
                 
                 <label for="">Employee ID</label>
-                <input type="text" class="form-control autosave" id="employeeid" name="employeeid" >
+                <input type="text" class="form-control autosave" id="employeeid_apollo" name="employeeid_apollo" >
             </div>
             
             <div class="col-md-6 aligninput">
@@ -191,11 +191,11 @@
 
                 <label for="">Currently do you have any other Mediclaim/Health insurance</label>
                 <div class="form-check checkwidth">
-                    <input  type="radio" class="form-check-input autosave mediclaim"   id="mediclaim" name="mediclaim" value="Yes" checked >Yes
+                    <input  type="radio" class="form-check-input autosave mediclaim"   id="mediclaim_apollo" name="mediclaim_apollo" value="Yes" checked >Yes
                     <label class="form-check-label" for="radio1"></label>
                 </div>
             <div class="form-check">
-                <input type="radio" class="form-check-input autosave mediclaim" id="mediclaim" name="mediclaim" value="No" >No
+                <input type="radio" class="form-check-input autosave mediclaim" id="mediclaim_apollo" name="mediclaim_apollo" value="No" >No
             <label class="form-check-label" for="radio2" ></label>
         </div>
         
@@ -204,23 +204,23 @@
         <span class="alphabet">i.</span>
 
                     <label for="">Company Name:</label>
-                    <input type="text" class="form-control autosave" id="company_name" name="company_name" >
+                    <input type="text" class="form-control autosave" id="company_name_apollo" name="company_name_apollo" >
 </div>
 <div class="col-md-6 aligninput" >
                     <span class="alphabet">ii.</span>
                     <label for="">Give details</label>
-                    <input type="text" class="form-control autosave" id="give_details" name="give_details" >
+                    <input type="text" class="form-control autosave" id="give_details_apollo" name="give_details_apollo" >
                 </div>
                 <div class="col-md-6 aligninput">
                     <span class="alphabet">k.</span>
                     
                     <label for="">Do you have any family  physician</label>
                     <div class="form-check checkwidth">
-                        <input  type="radio" class="form-check-input autosave physician"   id="physician" name="physician" value="Yes" checked >Yes
+                        <input  type="radio" class="form-check-input autosave physician"   id="physician_apollo" name="physician_apollo" value="Yes" checked >Yes
                         <label class="form-check-label" for="radio1"></label>
                     </div>
                     <div class="form-check">
-                        <input type="radio" class="form-check-input autosave physician" id="physician" name="physician" value="No" >No
+                        <input type="radio" class="form-check-input autosave physician" id="physician_apollo" name="physician_apollo" value="No" >No
                         <label class="form-check-label" for="radio2" ></label>
                     </div>
                 </div>
@@ -229,14 +229,14 @@
                     <span class="alphabet">l.</span>
                     
                     <label for="">Name of the family physician</label>
-                    <input type="text" class="form-control autosave" id="name_physician" name="name_physician" >
+                    <input type="text" class="form-control autosave" id="name_physician_apollo" name="name_physician_apollo" >
                 </div>
 
                 <div class="col-md-6 aligninput">
                 <span class="alphabet">m.</span>
                 
                 <label for="">Contact number if any :</label>
-                <input type="text" class="form-control autosave" id="contact_physician" name="contact_physician" >
+                <input type="text" class="form-control autosave" id="contact_physician_apollo" name="contact_physician_apollo" >
                     </div>
 
 
@@ -244,13 +244,13 @@
                 <span class="alphabet">n.</span>
                 
                 <label for="">Current Address of Insured Patient :</label>
-                <input type="text" class="form-control autosave" id="contact_physician" name="contact_physician" >
+                <input type="text" class="form-control autosave" id="contact_physician_apollo" name="contact_physician_apollo" >
                     </div>
                 <div class="col-md-6 aligninput">
                 <span class="alphabet">o.</span>
                 
                 <label for="">Occupation of Insured Patient :</label>
-                <input type="text" class="form-control autosave" id="contact_physician" name="contact_physician" >
+                <input type="text" class="form-control autosave" id="contact_physician_apollo" name="contact_physician_apollo" >
                     </div>
                     
                     
@@ -264,25 +264,25 @@
                         
                         <label for="">Name of the treating doctor :</label>
                         
-                        <input type="text" class="form-control autosave" id="name_doctor" name="name_doctor">
+                        <input type="text" class="form-control autosave" id="name_doctor_apollo" name="name_doctor_apollo">
                     </div> 
                     <div class="col-md-6 aligninput">
                         <span class="alphabet">b.</span>
                         
                         <label for="">Contact number:</label>
-                        <input type="text" class="form-control autosave" id="contact_doctor" name="contact_doctor">
+                        <input type="text" class="form-control autosave" id="contact_doctor_apollo" name="contact_doctor_apollo">
                     </div> 
                     <div class="col-md-6 aligninput">
                         <span class="alphabet">c.</span>
                         
                         <label for="">Name of ILLNESS / Disease with presenting Complaints :</label>
-                        <input type="text" class="form-control autosave" id="nature_illness" name="nature_illness" >
+                        <input type="text" class="form-control autosave" id="nature_illness_apollo" name="nature_illness_apollo" >
                     </div> 
                     <div class="col-md-6 aligninput">
                         <span class="alphabet">d.</span>
                         
                         <label for="">Relevant clinical findings :</label>
-                        <input type="text" class="form-control autosave" id="relevant" name="relevant" >
+                        <input type="text" class="form-control autosave" id="relevant_apollo" name="relevant_apollo" >
                     </div>
                    
                 <div class="form-group">  
@@ -294,10 +294,8 @@
                 </div>
                
             </form>
-            
-
+        
 <div  class="right_section">
-                
                 
                 <h4 style="text-align : center";>Pdf Preview</h4>
                 <iframe src="apollo_home.php" width="100%" height="600" id="refreshpdf" title="pdf preview">
@@ -308,8 +306,7 @@
            
        
 
-
-                         <!-- Aditya Birla -->
+   <!-- Aditya Birla -->
                          <div  id="1" class="data">
                     <div class="center_section mt-5   formalign ">
                         <div class="row d-flex flex-column col"> 
@@ -677,6 +674,46 @@ $(document).ready(function () {
            var post_id = $('#post_id').val(); 
           
            
+
+           //apollo form
+           var name_company_apollo = $('#name_company_apollo').val();
+           var toll_number_apollo = $('#toll_number_apollo').val();  
+      
+           var toll_fax_apollo = $('#toll_fax_apollo').val();  
+           
+           var name_patient_apollo = $('#name_patient_apollo').val();  
+       
+           var age_apollo = $('#age_apollo').val();  
+           var dob_apollo = $('#dob_apollo').val();  
+           var contact_patient_apollo = $('#contact_patient_apollo').val();  
+           var contact_relative_apollo = $('#contact_relative_apollo').val();  
+           var insured_number_apollo = $('#insured_number_apollo').val();  
+           var employeeid_apollo = $('#employeeid_apollo').val();  
+           var policy_number_apollo = $('#policy_number_apollo').val();  
+       
+           var company_name_apollo = $('#company_name_apollo').val();  
+     
+           var name_physician_apollo = $('#name_physician_apollo').val();  
+           var contact_physician_apollo = $('#contact_physician_apollo').val();  
+           var name_doctor_apollo = $('#name_doctor_apollo').val();  
+           var contact_doctor_apollo = $('#contact_doctor_apollo').val();  
+           var nature_illness_apollo = $('#nature_illness_apollo').val();  
+           var relevant_apollo = $('#relevant_apollo').val();  
+           var duration_apollo = $('#duration_apollo').val();  
+           var date_consultation_apollo = $('#date_consultation_apollo').val();  
+           var past_history_apollo = $('#past_history_apollo').val();  
+           var diagnosis_apollo = $('#diagnosis_apollo').val();  
+           var icd_code_apollo = $('#icd_code_apollo').val();  
+           var line_treatment_apollo = $('#line_treatment_apollo').val();  
+           var invest_medical_apollo = $('#invest_medical_apollo').val();  
+           var route_drug_apollo = $('#route_drug_apollo').val();  
+           var name_surgery_apollo = $('#name_surgery_apollo').val();  
+           var icd_pcs_apollo = $('#icd_pcs_apollo').val();  
+           var other_treatment_apollo = $('#other_treatment_apollo').val();  
+           var injury_occur_apollo = $('#injury_occur_apollo').val();  
+           var post_id = $('#post_id').val(); 
+          
+
                 $.ajax({  
                      url:"admin.php",  
                      method:"POST",  

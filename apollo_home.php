@@ -73,7 +73,7 @@ input:checked {
 	
 	$link = mysqli_connect("localhost","root","","birlaform");
 	$no = 0;
-	$q = "SELECT * FROM `admin` ORDER BY id DESC";
+	$q = "SELECT * FROM `apollo` ORDER BY id DESC";
 	$res = mysqli_query($link,$q);
 	
 	$row = mysqli_num_rows($res);
@@ -85,88 +85,75 @@ input:checked {
 
 
 		//admin 
-		$name_company = $row['name_company'];
-        $toll_number = $row['toll_number'];
-        $toll_fax = $row['toll_fax'];
+		$name_company_apollo = $row['name_company_apollo'];
+        $toll_number_apollo = $row['toll_number_apollo'];
+        $toll_fax_apollo = $row['toll_fax_apollo'];
+        $name_hospital_apollo = $row['name_hospital_apollo'];
+        $address_apollo  = $row['address_apollo'];
+        $rohiniid_apollo  = $row['rohiniid_apollo'];
+        $emailid_apollo  = $row['emailid_apollo'];
 
 		//string split using split func
-        $name_company_exp = str_split($name_company);
-        $toll_number_exp = str_split($toll_number);
-		$toll_fax_exp = str_split($toll_fax);
+        $name_company_exp = str_split($name_company_apollo);
+        $toll_number_exp = str_split($toll_number_apollo);
+		$toll_fax_exp = str_split($toll_fax_apollo);
+        $name_hospital_exp = $row['name_hospital_apollo'];
+        $address_exp  = $row['address_apollo'];
+        $rohiniid_exp  = $row['rohiniid_apollo'];
+        $emailid_exp  = $row['emailid_apollo'];
     
 
 		//patient
 
-		$employeeid = $row['employeeid'];
-        $name_patient = $row['name_patient'];
-        $gender = $row['gender'];
-        $age = $row['age'];
-        $dob = $row['dob'];
-        $contact_patient = $row['contact_patient'];
-        $contact_relative = $row['contact_relative'];
-        $insured_number = $row['insured_number'];
-        $policy_number = $row['policy_number'];
-        $mediclaim = $row['mediclaim'];
-        $company_name = $row['company_name'];
-        $physician = $row['physician'];
-        $name_physician = $row['name_physician'];
-        $contact_physician = $row['contact_physician'];
+		$employeeid_apollo = $row['employeeid_apollo'];
+        $name_patient_apollo = $row['name_patient_apollo'];
+        $gender_apollo = $row['gender_apollo'];
+        $age_apollo = $row['age_apollo'];
+        $dob_apollo = $row['dob_apollo'];
+        $contact_patient_apollo = $row['contact_patient_apollo'];
+        $contact_relative_apollo = $row['contact_relative_apollo'];
+        $insured_number_apollo = $row['insured_number_apollo'];
+        $policy_number_apollo = $row['policy_number_apollo'];
+        $mediclaim_apollo = $row['mediclaim_apollo'];
+        $company_name_apollo = $row['company_name_apollo'];
+        $give_details_apollo = $row['give_details_apollo'];
+        $physician_apollo = $row['physician_apollo'];
+        $name_physician_apollo = $row['name_physician_apollo'];
+        $contact_physician_apollo = $row['contact_physician_apollo'];
+        $address_patient_apollo = $row['address_patient_apollo'];
+        $occupation_patient_apollo = $row['occupation_patient_apollo'];
 
 		//split into string char
-        $employeeid_exp = str_split($employeeid);
-		$name_patient_exp = str_split($name_patient);
-		$gender_exp = str_split($gender);
-		$age_exp = str_split($age);
-		$dob_exp = str_split($dob);
-		$contact_patient_exp = str_split($contact_patient);
-		$contact_relative_exp = str_split($contact_relative);
-		$insured_number_exp = str_split($insured_number);
-		$policy_number_exp = str_split($policy_number);
-		$mediclaim_exp = str_split($mediclaim);
-		$company_name_exp = str_split($company_name);
-		$physician_exp = str_split($physician);
-		$name_physician_exp = str_split($name_physician);
-		$contact_physician_exp = str_split($contact_physician);
+        $employeeid_exp = str_split($employeeid_apollo);
+		$name_patient_exp = str_split($name_patient_apollo);
+		$gender_exp = str_split($gender_apollo);
+		$age_exp = str_split($age_apollo);
+		$dob_exp = str_split($dob_apollo);
+		$contact_patient_exp = str_split($contact_patient_apollo);
+		$contact_relative_exp = str_split($contact_relative_apollo);
+		$insured_number_exp = str_split($insured_number_apollo);
+		$policy_number_exp = str_split($policy_number_apollo);
+		$mediclaim_exp = str_split($mediclaim_apollo);
+		$company_name_exp = str_split($company_name_apollo);
+		$physician_exp = str_split($physician_apollo);
+		$name_physician_exp = str_split($name_physician_apollo);
+		$contact_physician_exp = str_split($contact_physician_apollo);
+		$address_patient_exp = str_split($contact_physician_apollo);
+		$contact_physician_exp = str_split($contact_physician_apollo);
 		
 		//doctor
-		$name_doctor = $row['name_doctor'];
-        $contact_doctor = $row['contact_doctor'];
-        $nature_illness = $row['nature_illness'];
-        $relevant = $row['relevant'];
-        $duration = $row['duration'];
-        $date_consultation = $row['date_consultation'];
-        $past_history = $row['past_history'];
-        $diagnosis = $row['diagnosis'];
-        $icd_code = $row['icd_code'];
-        $line_treatment = $row['line_treatment'];
-        $invest_medical = $row['invest_medical'];
-        $route_drug = $row['route_drug'];
-        $name_surgery = $row['name_surgery'];
-        $icd_pcs = $row['icd_pcs'];
-        $other_treatment = $row['other_treatment'];
-        $injury_occur = $row['injury_occur'];
+		$name_doctor_apollo = $row['name_doctor_apollo'];
+        $contact_doctor_apollo = $row['contact_doctor_apollo'];
+        $nature_illness_apollo = $row['nature_illness_apollo'];
+        $relevant_apollo = $row['relevant_apollo'];
+        
        
 		//split into string char
-        $name_doctor_exp = str_split($name_doctor);
-		$contact_doctor_exp = str_split($contact_doctor);
-		$nature_illness_exp = str_split($nature_illness);
-		$relevant_exp = str_split($relevant);
-		$duration_exp = str_split($duration);
-		$date_consultation_exp = str_split($date_consultation);
-		$past_history_exp = str_split($past_history);
-		$diagnosis_exp = str_split($diagnosis);
-		$icd_code_exp = str_split($icd_code);
-		$line_treatment_exp = str_split($line_treatment);
-		$invest_medical_exp = str_split($invest_medical);
-		$route_drug_exp = str_split($route_drug);
-		$name_surgery_exp = str_split($name_surgery);
-		$icd_pcs_exp = str_split($icd_pcs);
-		$other_treatment_exp = str_split($other_treatment);
-		$injury_occur_exp = str_split($injury_occur);
-
-
-
-
+        $name_doctor_exp = str_split($name_doctor_apollo);
+		$contact_doctor_exp = str_split($contact_doctor_apollo);
+		$nature_illness_exp = str_split($nature_illness_apollo);
+		$relevant_exp = str_split($relevant_apollo);
+		
 
 	}
 	} else {

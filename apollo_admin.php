@@ -9,6 +9,8 @@
     $name_company =  !empty($_POST['name_company']) ? mysqli_real_escape_string($conn, $_POST['name_company']) : '';
     $toll_number =  !empty($_POST['toll_number']) ? mysqli_real_escape_string($conn, $_POST['toll_number']) : '';
     $toll_fax =  !empty($_POST['toll_fax']) ? mysqli_real_escape_string($conn, $_POST['toll_fax']) : '';
+    $toll_fax =  !empty($_POST['toll_fax']) ? mysqli_real_escape_string($conn, $_POST['toll_fax']) : '';
+    $toll_fax =  !empty($_POST['toll_fax']) ? mysqli_real_escape_string($conn, $_POST['toll_fax']) : '';
     
   
 //patient       
@@ -48,7 +50,7 @@ $injury_occur  =  !empty($_POST['injury_occur']) ? mysqli_real_escape_string($co
     if($_POST['post_id'] != ''){
 
         //updating data
-        $sql = "UPDATE  admin SET name_company='".$name_company."', toll_number='".$toll_number."' , toll_fax='".$toll_fax."' , name_patient = '".$name_patient."', gender = '".$gender."' , age = '".$age."' , dob = '".$dob."' , contact_patient = '".$contact_patient."' , contact_relative = '".$contact_relative."' , insured_number = '".$insured_number."' , policy_number = '".$policy_number."' ,employeeid = '".$employeeid."' , mediclaim = '".$mediclaim."' , company_name = '".$company_name."' ,  physician = '".$physician."' , name_physician = '".$name_physician."' , contact_physician = '".$contact_physician."' , name_doctor = '".$name_doctor."' , contact_doctor = '".$contact_doctor."' , nature_illness = '".$nature_illness."' , relevant = '".$relevant."' , duration = '".$duration."' , date_consultation = '".$date_consultation."' , past_history = '".$past_history."' , diagnosis = '".$diagnosis."' , icd_code = '".$icd_code."', line_treatment = '".$line_treatment."' , invest_medical = '".$invest_medical."' , route_drug = '".$route_drug."' , name_surgery = '".$name_surgery."' , icd_pcs = '".$icd_pcs."' , other_treatment = '".$other_treatment."' , injury_occur = '".$injury_occur."'    where id = '".$_POST['post_id']."'";
+        $sql = "UPDATE  apollo SET name_company='".$name_company."', toll_number='".$toll_number."' , toll_fax='".$toll_fax."' , name_patient = '".$name_patient."', gender = '".$gender."' , age = '".$age."' , dob = '".$dob."' , contact_patient = '".$contact_patient."' , contact_relative = '".$contact_relative."' , insured_number = '".$insured_number."' , policy_number = '".$policy_number."' ,employeeid = '".$employeeid."' , mediclaim = '".$mediclaim."' , company_name = '".$company_name."' ,  physician = '".$physician."' , name_physician = '".$name_physician."' , contact_physician = '".$contact_physician."' , name_doctor = '".$name_doctor."' , contact_doctor = '".$contact_doctor."' , nature_illness = '".$nature_illness."' , relevant = '".$relevant."' , duration = '".$duration."' , date_consultation = '".$date_consultation."' , past_history = '".$past_history."' , diagnosis = '".$diagnosis."' , icd_code = '".$icd_code."', line_treatment = '".$line_treatment."' , invest_medical = '".$invest_medical."' , route_drug = '".$route_drug."' , name_surgery = '".$name_surgery."' , icd_pcs = '".$icd_pcs."' , other_treatment = '".$other_treatment."' , injury_occur = '".$injury_occur."'    where id = '".$_POST['post_id']."'";
         mysqli_query($conn,$sql);
         echo $_POST['post_id'];
         
