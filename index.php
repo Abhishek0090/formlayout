@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=\, initial-scale=1.0">
     <meta http-equiv="refresh" content = "600">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="apollo.css">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>      <title>Document</title>
@@ -31,24 +33,285 @@
                 
                 </select>
      
-        </div>
+             </div>
        
        
         <div class="top_section col-2 mt-2 " >
                 <button class="btn btn-warning ">Next</button>
                 <button class="btn btn-dark" >Prev</button>
                 <button class="btn btn-success" >Auto Save</button>
+        </div>
+
+
+                    <div id="Anmol" class="center_section data"><img class="image" src="Anmol/1.png" alt=""> </div>
+                    <div id="Alankit" class=" center_section data"><img class="image" src="Alankit/1.png" alt=""> </div>
+                     
+                    
+                    <!-- for apollo -->
+
+            <div id="Apollo" class="data">
+            <div class="center_section mt-5  formalign1">
+                                    <div class="row d-flex flex-column col"> 
+                   <form  method="post">
+
+                    <div class="form-group">
+                        <h6 style="text-align : center ;    text-decoration: underline;";>REQUEST FOR CASHLESS HOSPILISATION FOR HEALTH INSURANCE<br> POLICY PART-C(Revised)</h6><P style="text-align : center  ;  text-decoration: underline;";>(To be filled in block letters)</P>
+                        <h6  style="text-decoration: underline; text-align : center ;   ">DETAILS OF THE THIRD PARTY ADMINISTRATOR/INSURER/HOSPITAL:</h6>
+                        <div class="col d-flex flex-row aligninput  form-group">
+                            
+                            <span class="alphabet">a.</span> <label>Name of TPA/Insurance Company : </label> <input type="text" class="form-control class autosave"  name="name_company" id="name_company"  >
+                        </div>
+                        <div class="col-md-6 aligninput form-group">
+                            <span class="alphabet">b.</span>
+                            <label for="">Toll free phone number</label>
+                    <input type="text" class="form-control class autosave"  name="toll_number" id="toll_number"  >
+                </div>
+                <div class="col-md-6 aligninput form-group">
+                        <span class="alphabet">c.</span>
+
+                    <label for="">Toll free Fax</label>
+                    <input type="text" class="form-control class autosave"   name="toll_fax" id="toll_fax" >
+                    </div>
+                    
+                <div class="col-md-6 aligninput form-group">
+                        <span class="alphabet">d.</span>
+
+                    <label for="">Name of Hospital</label>
+                    
+                    <input type="text" class="form-control class autosave"   name="name_hospital" id="name_hospital" >
+                </div>
+                    <div class="col-md-6 aligninput form-group">
+
+                        <span class="alphabet">i.</span>
+                        
+                        <label for="">Address</label>
+                        <input type="text" class="form-control class autosave"   name="apollo_address" id="name_hospital" >
+                        
+                    </div>
+                    <div class="col-md-6 aligninput ">
+
+                        <span class="alphabet">ii.</span>
+                        
+                        <label for="">Rohini</label>
+                        <input type="text" class="form-control class autosave"   name="rohini_id" id="rohini_id" >
+                    </div>
+                    <div class="col-md-6 aligninput ">
+
+                        <span class="alphabet">iii.</span>
+                        
+                        <label for="">email id</label>
+                        <input type="text" class="form-control class autosave"   name="email_hospital" id="email_hospital" >
+                    </div>
+                </div>
+                    
+
+                </div>
+                
+                <h5 style="text-align : center ;  text-decoration: underline; ">TO BE FILLED BY THE INSURED/PATIENT</h5>
+                <div class="col-md-6 aligninput">
+                    <span class="alphabet">a.</span>
+                    
+                    <label for="">Name of the Patient</label>
+                    <input type="text" class="form-control class autosave"  name="name_patient"  id="name_patient">
+                </div>
+                <div class="col-md-6 aligninput">
+                    <span class="alphabet">b.</span>
+                    <label for="">Gender</label>
+                    
+                    <div class="form-check checkwidth">
+                        <input  type="radio" class="form-check-input autosave gender"   id="gender" name="gender" value="Male" checked >Male
+                        <label class="form-check-label" for="radio1"></label>
+                    </div>
+                    <div class="form-check">
+            <input type="radio" class="form-check-input autosave gender" id="gender" name="gender" value="Female" >Female
+            <label class="form-check-label" for="radio2" ></label>
+        </div>
+                    <div class="form-check">
+            <input type="radio" class="form-check-input autosave gender" id="gender" name="gender" value="Third Gender" >Third Gender
+            <label class="form-check-label" for="radio3" ></label>
+        </div>
+    </div>
+
+
+
+<div class="col-md-6 aligninput">
+    <span class="alphabet">c.</span>
+    <div class="age aligninput">
+        
+        <label for="">Age</label>
+                        <input type="text" class="form-control autosave" id="age" name="age" > 
+                        
+                    </div>
+                </div>
+                
+                <div class="col-md-6 aligninput">
+                    <span class="alphabet">d.</span>
+                    
+                    <label for="">Date of Birth</label>
+                    <input type="text" class="form-control autosave" id="dob"  name="dob" >
+                </div>
+                
+                <div class="col-md-6 aligninput">
+                    <span class="alphabet">e.</span>
+                    
+                    <label for="">Contact Number</label>
+                    <input type="text" class="form-control autosave" id="contact_patient" name="contact_patient" >
                 </div>
 
-                <div class="center_section mt-1">
+                <div class="col-md-6 aligninput">
+                <span class="alphabet">f.</span>
 
-                    <div id="Anmol" class="data"><img class="image" src="Anmol/1.png" alt=""> </div>
-                    <div id="Alankit" class="data"><img class="image" src="Alankit/1.png" alt=""> </div>
-                    <div id="Apollo" class="data"><img class="image" src="apollo/1.png" alt=""> </div>
-                 
-                 
+                <label for="">Contact number of attending relative</label>
+                <input type="text" class="form-control autosave" id="contact_relative" name="contact_relative" >
+                </div>
+                
+                <div class="col-md-6 aligninput">
+                    <span class="alphabet">g.</span>
+                    
+                    <label for="">Insured Card ID number</label>
+                    <input type="text" class="form-control autosave" id="insured_number" name="insured_number" >
+                </div>
+                
+                <div class="col-md-6 aligninput">
+                    <span class="alphabet">h.</span>
+                    
+                    <label for="">Policy number / Name of corporate</label>
+                    <input type="text" class="form-control autosave" id="policy_number" name="policy_number" ">
+                </div>
+
+                <div class="col-md-6 aligninput">
+                <span class="alphabet">i.</span>
+                
+                <label for="">Employee ID</label>
+                <input type="text" class="form-control autosave" id="employeeid" name="employeeid" >
+            </div>
+            
+            <div class="col-md-6 aligninput">
+                <span class="alphabet">j.</span>
+
+                <label for="">Currently do you have any other Mediclaim/Health insurance</label>
+                <div class="form-check checkwidth">
+                    <input  type="radio" class="form-check-input autosave mediclaim"   id="mediclaim" name="mediclaim" value="Yes" checked >Yes
+                    <label class="form-check-label" for="radio1"></label>
+                </div>
+            <div class="form-check">
+                <input type="radio" class="form-check-input autosave mediclaim" id="mediclaim" name="mediclaim" value="No" >No
+            <label class="form-check-label" for="radio2" ></label>
+        </div>
+        
+    </div>
+    <div class="col-md-6 aligninput">
+        <span class="alphabet">i.</span>
+
+                    <label for="">Company Name:</label>
+                    <input type="text" class="form-control autosave" id="company_name" name="company_name" >
 </div>
-                    <div id="1" class="center_section mt-5 data  formalign ">
+<div class="col-md-6 aligninput" >
+                    <span class="alphabet">ii.</span>
+                    <label for="">Give details</label>
+                    <input type="text" class="form-control autosave" id="give_details" name="give_details" >
+                </div>
+                <div class="col-md-6 aligninput">
+                    <span class="alphabet">k.</span>
+                    
+                    <label for="">Do you have any family  physician</label>
+                    <div class="form-check checkwidth">
+                        <input  type="radio" class="form-check-input autosave physician"   id="physician" name="physician" value="Yes" checked >Yes
+                        <label class="form-check-label" for="radio1"></label>
+                    </div>
+                    <div class="form-check">
+                        <input type="radio" class="form-check-input autosave physician" id="physician" name="physician" value="No" >No
+                        <label class="form-check-label" for="radio2" ></label>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 aligninput">
+                    <span class="alphabet">l.</span>
+                    
+                    <label for="">Name of the family physician</label>
+                    <input type="text" class="form-control autosave" id="name_physician" name="name_physician" >
+                </div>
+
+                <div class="col-md-6 aligninput">
+                <span class="alphabet">m.</span>
+                
+                <label for="">Contact number if any :</label>
+                <input type="text" class="form-control autosave" id="contact_physician" name="contact_physician" >
+                    </div>
+
+
+                <div class="col-md-6 aligninput">
+                <span class="alphabet">n.</span>
+                
+                <label for="">Current Address of Insured Patient :</label>
+                <input type="text" class="form-control autosave" id="contact_physician" name="contact_physician" >
+                    </div>
+                <div class="col-md-6 aligninput">
+                <span class="alphabet">o.</span>
+                
+                <label for="">Occupation of Insured Patient :</label>
+                <input type="text" class="form-control autosave" id="contact_physician" name="contact_physician" >
+                    </div>
+                    
+                    
+                    <p>PLEASE COMPLETE DECLARATION ON THE REVERSE SIDE OF THIS FORM</p>
+                    
+                    
+                    <h5 style="text-align : center ; text-decoration: underline;  ">TO BE FILLED BY THE TREATING DOCTOR/HOSPITAL</h5>
+                    
+                    <div class="col-md-6 aligninput">
+                        <span class="alphabet">a.</span>
+                        
+                        <label for="">Name of the treating doctor :</label>
+                        
+                        <input type="text" class="form-control autosave" id="name_doctor" name="name_doctor">
+                    </div> 
+                    <div class="col-md-6 aligninput">
+                        <span class="alphabet">b.</span>
+                        
+                        <label for="">Contact number:</label>
+                        <input type="text" class="form-control autosave" id="contact_doctor" name="contact_doctor">
+                    </div> 
+                    <div class="col-md-6 aligninput">
+                        <span class="alphabet">c.</span>
+                        
+                        <label for="">Name of ILLNESS / Disease with presenting Complaints :</label>
+                        <input type="text" class="form-control autosave" id="nature_illness" name="nature_illness" >
+                    </div> 
+                    <div class="col-md-6 aligninput">
+                        <span class="alphabet">d.</span>
+                        
+                        <label for="">Relevant clinical findings :</label>
+                        <input type="text" class="form-control autosave" id="relevant" name="relevant" >
+                    </div>
+                   
+                <div class="form-group">  
+                    <input type="hidden" name="post_id" id="post_id" />  
+                     <div id="autoSave"></div> 
+                     
+                    </div>  
+                   
+                </div>
+               
+            </form>
+            
+
+<div  class="right_section">
+                
+                
+                <h4 style="text-align : center";>Pdf Preview</h4>
+                <iframe src="apollo_home.php" width="100%" height="600" id="refreshpdf" title="pdf preview">
+                    </iframe>
+     
+        </div> 
+</div>
+           
+       
+
+
+                         <!-- Aditya Birla -->
+                         <div  id="1" class="data">
+                    <div class="center_section mt-5   formalign ">
                         <div class="row d-flex flex-column col"> 
                 
                             <form  method="post">
@@ -321,15 +584,16 @@
                     </iframe>
      
         </div>
-       
+</div>
        
     </div>
 </div>
-</div>
 <div class="bottom_section">
-                    
-                    <button class = "btn btn-success"><a href="home.php" class= "auto" style="text-decoration:none ; color : white"; target="_blank" onclick=download();>Download pdf</a></button>
-                </div>
+    
+    <button class = "btn btn-success"><a href="home.php" class= "auto" style="text-decoration:none ; color : white"; target="_blank" onclick=download();>Download pdf</a></button>
+</div>
+</div>
+
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
 
@@ -344,13 +608,7 @@ $(document).ready(function () {
         $('#'+$(this).val()).fadeIn(400);
     }).change();
 
-    // function download(){
-    //      const element = document.getElementById("auto");
-    //      setInterval(() => {
-    //         element.click();
-    //      }, 1000);
-    // }
-    // download();
+   
 
       $('.autosave').change(function () { 
      

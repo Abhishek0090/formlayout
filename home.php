@@ -208,7 +208,7 @@ input:checked {
 	</div>
 	<div>
 	<span>b.</span>
-<label>Toll free phone number</label>";
+<label>Toll free phone number</label>&nbsp;";
 for ($i=0; $i < 13; $i++) { 
 	# code...
 	if($i<count($toll_number_exp)){
@@ -227,7 +227,7 @@ $html .="
 	<div>
 	<span>c.</span>
 
-<label>Toll free Fax</label>";
+<label>Toll free Fax</label>&nbsp;";
 for ($i=0; $i < 10; $i++) { 
 	# code...
 	if($i<count($toll_fax_exp)){
@@ -248,8 +248,8 @@ $html .="
 <div>
 <span>a.</span>
 
-	<label >Name of the Patient</label>";
-	for ($i=0; $i < 34; $i++) { 
+	<label >Name of the Patient</label>&nbsp;";
+	for ($i=0; $i < 33; $i++) { 
 		# code...
 		if($i<count($name_patient_exp)){
 
@@ -264,7 +264,7 @@ $html .="
 	</div>
 <div>
 <span>b.</span>
-	<label>Gender</label>";
+	<label>Gender</label>&nbsp;";
 	
 		if($gender == "Male"){
 
@@ -281,11 +281,11 @@ $html .="
 	$html .= "
 	
 	
-<label></label>
+<label></label>&nbsp;
 
 
 
-<label></label>
+<label></label>&nbsp;
 
 </div>
 
@@ -294,7 +294,7 @@ $html .="
 	 <span>c.</span>
 	
 		
-		<label>Age</label>";
+		<label>Age</label>&nbsp;";
 		for ($i=0; $i < 4; $i++) { 
 			# code...
 			if($i<count($age_exp)){
@@ -313,7 +313,7 @@ $html .="
 <div>
 <span>d.</span>
 
-	<label>Date of Birth</label>";
+	<label>Date of Birth</label>&nbsp;";
 	for ($i=0; $i < 9; $i++) { 
 		# code...
 		if($i<count($dob_exp)){
@@ -332,7 +332,7 @@ $html .="
 <div>
 <span>e.</span>
 
-	<label>Contact Number</label>";
+	<label>Contact Number</label>&nbsp;";
 	for ($i=0; $i < 10; $i++) { 
 		# code...
 		if($i<count($contact_patient_exp)){
@@ -350,7 +350,7 @@ $html .="
 <div>
 <span>f.</span>
 
-	<label>Contact number of attending relative</label>";
+	<label>Contact number of attending relative</label>&nbsp;";
 	for ($i=0; $i < 10; $i++) { 
 		# code...
 		if($i<count($contact_relative_exp)){
@@ -368,7 +368,7 @@ $html .="
 <div>
 <span>g.</span>
 
-	<label>Insured Card ID number</label>";
+	<label>Insured Card ID number</label>&nbsp;";
 	for ($i=0; $i < 10; $i++) { 
 		# code...
 		if($i<count($insured_number_exp)){
@@ -386,7 +386,7 @@ $html .="
 <div>
 <span>h.</span>
 
-	<label>Policy number / Name of corporate</label>";
+	<label>Policy number / Name of corporate</label>&nbsp;";
 	for ($i=0; $i < 28; $i++) { 
 		# code...
 		if($i<count($policy_number_exp)){
@@ -407,7 +407,7 @@ $html .="
 <div>
 <span>i.</span>
 
-	<label>Employee ID</label>";
+	<label>Employee ID</label>&nbsp;";
 	for ($i=0; $i < 28; $i++) { 
 		# code...
 		if($i<count($employeeid_exp)){
@@ -427,7 +427,7 @@ $html .="
 <div>
 <span>j.</span>
 
-	<label>Currently do you have any other Mediclaim/Health insurance</label>";
+	<label>Currently do you have any other Mediclaim/Health insurance</label>&nbsp;";
 	if($mediclaim == "Yes"){
 
 		$html .="<input type=checkbox checked=checked> Yes";
@@ -451,8 +451,8 @@ $html .= "
 </div>
 <span>k.</span>
 
-	<label>Company Name:</label>
-	<label>Give details</label>";
+	<label>Company Name:</label>&nbsp;
+	<label>Give details</label>&nbsp;";
 	for ($i=0; $i < 31; $i++) { 
 		# code...
 		if($i<count($company_name_exp)){
@@ -469,7 +469,7 @@ $html .= "
 <div>
 <span>l.</span>
 
-	<label>Do you have any family  physician</label>";
+	<label>Do you have any family  physician</label>&nbsp;";
 	if($physician == "Yes"){
 
 		$html .="<input type=checkbox checked=checked> Yes";
@@ -490,7 +490,7 @@ $html .= "
 <div>
 <span>m.</span>
 
-	<label>Name of the family physician</label>";
+	<label>Name of the family physician</label>&nbsp;";
 	for ($i=0; $i < 28; $i++) { 
 		# code...
 		if($i<count($name_physician_exp)){
@@ -507,7 +507,7 @@ $html .= "
 <div>
 <span>n.</span>
 
-	<label>Contact number if any :</label>";
+	<label>Contact number if any :</label>&nbsp;";
 	for ($i=0; $i < 10; $i++) { 
 		# code...
 		if($i<count($contact_physician_exp)){
@@ -533,7 +533,7 @@ $html .= "
 	<div>
 		<span>a.</span>
 		
-		<label>Name of the treating doctor :</label>";
+		<label>Name of the treating doctor :</label>&nbsp;";
 		for ($i=0; $i < 28; $i++) { 
 			# code...
 			if($i<count($name_doctor_exp)){
@@ -551,7 +551,7 @@ $html .= "
 	<div>
 		<span>b.</span>
 		
-		<label>Contact number:</label>";
+		<label>Contact number:</label>&nbsp;";
 		for ($i=0; $i < 10; $i++) { 
 			# code...
 			if($i<count($contact_doctor_exp)){
@@ -569,7 +569,7 @@ $html .= "
 <div>
 	<span>c.</span>
 	
-	<label>Name of ILLNESS / Disease with presenting Complaints :</label>";
+	<label>Name of ILLNESS / Disease with presenting Complaints :</label>&nbsp;";
 	for ($i=0; $i < 24; $i++) { 
 		# code...
 		if($i<count($nature_illness_exp)){
@@ -588,7 +588,7 @@ $html .= "
 <div>
 	<span>d.</span>
 	
-	<label>Relevant clinical findings :</label>";
+	<label>Relevant clinical findings :</label>&nbsp;";
 	for ($i=0; $i < 24; $i++) { 
 		# code...
 		if($i<count($relevant_exp)){
@@ -606,7 +606,7 @@ $html .= "
 <div>
 	<span>e.</span>
 	
-	<label>Duration of the present ailment :</label> ";
+	<label>Duration of the present ailment :</label>&nbsp; ";
 	for ($i=0; $i < 3; $i++) { 
 		# code...
 		if($i<count($duration_exp)){
@@ -624,7 +624,7 @@ $html .= "
 	<span>Days</span>
 </div>
 <div>
-	<label>Date of first consultation :</label>";
+	<label>Date of first consultation :</label>&nbsp;";
 	for ($i=0; $i < 6; $i++) { 
 		# code...
 		if($i<count($date_consultation_exp)){
@@ -637,7 +637,7 @@ $html .= "
 	}
 	$html .= "
 	
-	<label>Past history of present ailment if any :</label>";
+	<label>Past history of present ailment if any :</label>&nbsp;";
 	for ($i=0; $i < 16; $i++) { 
 		# code...
 		if($i<count($past_history_exp)){
@@ -654,7 +654,7 @@ $html .= "
 <div>
 	<span>f.</span>
 	
-	<label>Provisional diagnosis :</label>";
+	<label>Provisional diagnosis :</label>&nbsp;";
 	for ($i=0; $i < 31; $i++) { 
 		# code...
 		if($i<count($diagnosis_exp)){
@@ -670,7 +670,7 @@ $html .= "
 <div>
 	<span>g.</span>
 	
-	<label>ICD 10 Code :</label>";
+	<label>ICD 10 Code :</label>&nbsp;";
 	for ($i=0; $i < 10; $i++) { 
 		# code...
 		if($i<count($icd_code_exp)){
@@ -687,8 +687,8 @@ $html .= "
 <div>
 	<span>h.</span>
 	
-	<label>Proposed line of treatment :</label>
-	<label>Medical Management Surgical Management Intensive care Investigation Non allopathic treatment.</label>";
+	<label>Proposed line of treatment :</label>&nbsp;
+	<label>Medical Management Surgical Management Intensive care Investigation Non allopathic treatment.</label>&nbsp;";
 	for ($i=0; $i < 5; $i++) { 
 		# code...
 		if($i<count($line_treatment_exp)){
@@ -706,7 +706,7 @@ $html .= "
 <div>
 	<span>I.</span>
 	
-	<label>If Investigation &/or Medical Management provide :</label>";
+	<label>If Investigation &/or Medical Management provide :</label>&nbsp;";
 	for ($i=0; $i < 24; $i++) { 
 		# code...
 		if($i<count($invest_medical_exp)){
@@ -724,7 +724,7 @@ $html .= "
 <div>
 	<span>j.</span>
 	
-	<label>Route of drug administartion :</label>";
+	<label>Route of drug administartion :</label>&nbsp;";
 	for ($i=0; $i < 30; $i++) { 
 		# code...
 		if($i<count($route_drug_exp)){
@@ -741,7 +741,7 @@ $html .= "
 <div>
 	<span>k.</span>
 	
-	<label>If Surgical, name of surgery :</label>";
+	<label>If Surgical, name of surgery :</label>&nbsp;";
 	for ($i=0; $i < 30; $i++) { 
 		# code...
 		if($i<count($name_surgery_exp)){
@@ -757,7 +757,7 @@ $html .= "
 <div>
 	<span>l.</span>
 	
-	<label>ICD 10 PCS Code :</label>";
+	<label>ICD 10 PCS Code :</label>&nbsp;";
 	for ($i=0; $i < 10; $i++) { 
 		# code...
 		if($i<count($icd_pcs_exp)){
@@ -773,7 +773,7 @@ $html .= "
 <div>
 	<span>m.</span>
 	
-	<label>If other treatments provide details :</label>";
+	<label>If other treatments provide details :</label>&nbsp;";
 	for ($i=0; $i < 30; $i++) { 
 		# code...
 		if($i<count($other_treatment_exp)){
@@ -791,7 +791,7 @@ $html .= "
 <div>
 	<span>n.</span>
 	
-	<label>How did injury occur :</label>";
+	<label>How did injury occur :</label>&nbsp;";
 	for ($i=0; $i < 30; $i++) { 
 		# code...
 		if($i<count($injury_occur_exp)){
