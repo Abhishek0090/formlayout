@@ -22,6 +22,7 @@
     /* box-sizing: border-box;
      */
      display: inline-block;
+
 }
 
 
@@ -119,4 +120,7 @@ a{
  }
 .image{
     width: 100%;
+ }
+ .adjust{
+    max-width: fit-content;
  }

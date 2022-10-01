@@ -309,7 +309,7 @@
    <!-- Aditya Birla -->
                          <div  id="1" class="data">
                     <div class="center_section mt-5   formalign ">
-                        <div class="row d-flex flex-column col"> 
+                        <div class="row d-flex adjust flex-column col"> 
                 
                             <form  method="post">
 
@@ -317,7 +317,7 @@
                         <h5>DETAILS OF THE THIRD PARTY ADMINISTRATOR</h5><P>(To be filled in block letters)</P>
                         <div class="col d-flex flex-row aligninput  form-group">
                             
-                            <span class="alphabet">a.</span> <label>Name of TPA/Insurance Company : </label> <input type="text" class="form-control class autosave"  name="name_company" id="name_company"  >
+                            <span class="alphabet">a.</span> <label for="">Name of TPA/Insurance Company : </label> <input type="text" class="form-control class autosave"  name="name_company" id="name_company"  >
                         </div>
                         <div class="col-md-6 aligninput form-group">
                             <span class="alphabet">b.</span>
@@ -363,29 +363,31 @@
         
         <label for="">Age</label>
                         <input type="text" class="form-control autosave" id="age" name="age" > 
-                        
+                        &nbsp;<label>Years
+                    </label>
                     </div>
+
                 </div>
                 
                 <div class="col-md-6 aligninput">
                     <span class="alphabet">d.</span>
                     
                     <label for="">Date of Birth</label>
-                    <input type="text" class="form-control autosave" id="dob"  name="dob" >
+                    <input type="date" class="form-control autosave" id="dob"  name="dob" >
                 </div>
                 
                 <div class="col-md-6 aligninput">
                     <span class="alphabet">e.</span>
                     
                     <label for="">Contact Number</label>
-                    <input type="text" class="form-control autosave" id="contact_patient" name="contact_patient" >
+                    <input type="text" maxlength="10" class="form-control autosave" id="contact_patient" name="contact_patient" >
                 </div>
 
                 <div class="col-md-6 aligninput">
                 <span class="alphabet">f.</span>
 
                 <label for="">Contact number of attending relative</label>
-                <input type="text" class="form-control autosave" id="contact_relative" name="contact_relative" >
+                <input type="text" maxlength="10" class="form-control autosave" id="contact_relative" name="contact_relative" >
                 </div>
                 
                 <div class="col-md-6 aligninput">
@@ -454,7 +456,7 @@
                 <span class="alphabet">n.</span>
                 
                 <label for="">Contact number if any :</label>
-                <input type="text" class="form-control autosave" id="contact_physician" name="contact_physician" >
+                <input type="text" maxlength="10" class="form-control autosave" id="contact_physician" name="contact_physician" >
                     </div>
                     
                     
@@ -474,7 +476,7 @@
                         <span class="alphabet">b.</span>
                         
                         <label for="">Contact number:</label>
-                        <input type="text" class="form-control autosave" id="contact_doctor" name="contact_doctor">
+                        <input type="text" maxlength="10" title="Please enter valid phone number" class="form-control autosave" id="contact_doctor" name="contact_doctor">
                     </div> 
                     <div class="col-md-6 aligninput">
                         <span class="alphabet">c.</span>
@@ -498,7 +500,7 @@
                 </div>
 
                     <label for="">Date of first consultation :</label>
-                    <input type="text" class="form-control autosave input_size" style="width:40%"; id="date_consultation" name="date_consultation"  >
+                    <input type="date" class="form-control autosave input_size" style="width:40%"; id="date_consultation" name="date_consultation"  >
                     
                     <label for="">Past history of present ailment if any :</label>
                     <input type="text" class="form-control autosave input_size"   style="width:40%"; id="past_history" name="past_history">
@@ -514,7 +516,7 @@
                     <span class="alphabet">g.</span>
                     
                     <label for="">ICD 10 Code :</label>
-                    <input type="text" class="form-control autosave" id="icd_code" name="icd_code" >
+                    <input type="text" maxlength="10" class="form-control autosave" id="icd_code" name="icd_code" >
                 </div>
                 <div class="col-md-6  aligninput">
                     <span class="alphabet">h.</span>
@@ -532,7 +534,7 @@
                 <div class="col-md-6 aligninput">
                     <span class="alphabet">j.</span>
                     
-                    <label for="">Route of drug administartion :</label>
+                    <label for="">Route of drug administration :</label>
                     <input type="text" class="form-control autosave" id="route_drug" name="route_drug" >
                 </div>
                 <div class="col-md-6 aligninput">
@@ -545,7 +547,7 @@
                     <span class="alphabet">l.</span>
                     
                     <label for="">ICD 10 PCS Code :</label>
-                    <input type="text" class="form-control autosave" id="icd_pcs" name="icd_pcs" >
+                    <input type="text" maxlength="10" class="form-control autosave" id="icd_pcs" name="icd_pcs" >
                 </div>
                 <div class="col-md-6 aligninput">
                     <span class="alphabet">m.</span>
