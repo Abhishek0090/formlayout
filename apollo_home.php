@@ -533,13 +533,13 @@ $html .= "
 <span>l.</span>
 
 	<label>Do you have any family  physician</label>&nbsp;";
-	if($physician == "Yes"){
+	if($physician_apollo == "Yes"){
 
 		$html .="<input type=checkbox checked=checked> Yes";
 		$html .= "
 		<input type=checkbox>No";
 	}
-	if($physician == "No"){
+	if($physician_apollo == "No"){
 		$html .="<input type=checkbox> Yes";
 		$html .= "
 		<input type=checkbox checked=checked>No";

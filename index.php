@@ -119,7 +119,7 @@
                     <label for="">Gender</label>
                     
                     <div class="form-check checkwidth">
-                        <input  type="radio" class="form-check-input autosave gender"   id="gender_apollo" name="gender_apollo" value="Male" checked >Male
+                        <input  type="radio" class="form-check-input autosave gender_apollo"   id="gender_apollo" name="gender_apollo" value="Male" checked >Male
                         <label class="form-check-label" for="radio1"></label>
                     </div>
                     <div class="form-check">
@@ -191,11 +191,11 @@
 
                 <label for="">Currently do you have any other Mediclaim/Health insurance</label>
                 <div class="form-check checkwidth">
-                    <input  type="radio" class="form-check-input autosave mediclaim"   id="mediclaim_apollo" name="mediclaim_apollo" value="Yes" checked >Yes
+                    <input  type="radio" class="form-check-input autosave mediclaim_apollo"   id="mediclaim_apollo" name="mediclaim_apollo" value="Yes" checked >Yes
                     <label class="form-check-label" for="radio1"></label>
                 </div>
             <div class="form-check">
-                <input type="radio" class="form-check-input autosave mediclaim" id="mediclaim_apollo" name="mediclaim_apollo" value="No" >No
+                <input type="radio" class="form-check-input autosave mediclaim_apollo" id="mediclaim_apollo" name="mediclaim_apollo" value="No" >No
             <label class="form-check-label" for="radio2" ></label>
         </div>
         
@@ -216,11 +216,11 @@
                     
                     <label for="">Do you have any family  physician</label>
                     <div class="form-check checkwidth">
-                        <input  type="radio" class="form-check-input autosave physician"   id="physician_apollo" name="physician_apollo" value="Yes" checked >Yes
+                        <input  type="radio" class="form-check-input autosave physician_apollo"   id="physician_apollo" name="physician_apollo" value="Yes" checked >Yes
                         <label class="form-check-label" for="radio1"></label>
                     </div>
                     <div class="form-check">
-                        <input type="radio" class="form-check-input autosave physician" id="physician_apollo" name="physician_apollo" value="No" >No
+                        <input type="radio" class="form-check-input autosave physician_apollo" id="physician_apollo" name="physician_apollo" value="No" >No
                         <label class="form-check-label" for="radio2" ></label>
                     </div>
                 </div>
@@ -285,12 +285,12 @@
                         <input type="text" class="form-control autosave" id="relevant_apollo" name="relevant_apollo" >
                     </div>
                    
-                <div class="form-group">  
+            <div class="form-group">  
                     <input type="hidden" name="post_id" id="post_id" />  
                      <div id="autoSave"></div> 
                      
                     </div>  
-                   
+                    
                 </div>
                
             </form>
@@ -298,7 +298,7 @@
 <div  class="right_section">
                 
                 <h4 style="text-align : center";>Pdf Preview</h4>
-                <iframe src="apollo_home.php" width="100%" height="600" id="refreshpdf" title="pdf preview">
+                <iframe src="apollo_home.php" width="100%" height="600" id="refresh" title="pdf preview">
                     </iframe>
      
         </div> 
@@ -614,6 +614,11 @@ $(document).ready(function () {
             var mediclaim = [];
             var physician = [];
           
+        
+            var gender_apollo = [];
+            var mediclaim_apollo = [];
+            var physician_apollo = [];
+          
 
             $(".gender").each(function(){
             if($(this).is(":checked")){
@@ -632,9 +637,32 @@ $(document).ready(function () {
                 physician.push($(this).val());
             }
             });
+
+
+            $(".gender_apollo").each(function(){
+            if($(this).is(":checked")){
+                gender_apollo.push($(this).val());
+            }
+            });
+
+            $(".mediclaim_apollo").each(function(){
+            if($(this).is(":checked")){
+                mediclaim_apollo.push($(this).val());
+            }
+            });
+
+            $(".physician_apollo").each(function(){
+            if($(this).is(":checked")){
+                physician_apollo.push($(this).val());
+            }
+            });
             gender = gender.toString();
             mediclaim = mediclaim.toString();
             physician = physician.toString();
+
+            gender_apollo = gender_apollo.toString();
+            mediclaim_apollo = mediclaim_apollo.toString();
+            physician_apollo = physician_apollo.toString();
 
             var name_company = $('#name_company').val();
            var toll_number = $('#toll_number').val();  
@@ -675,7 +703,7 @@ $(document).ready(function () {
           
            
 
-           //apollo form
+        //    //apollo form
            var name_company_apollo = $('#name_company_apollo').val();
            var toll_number_apollo = $('#toll_number_apollo').val();  
       
@@ -711,8 +739,7 @@ $(document).ready(function () {
            var icd_pcs_apollo = $('#icd_pcs_apollo').val();  
            var other_treatment_apollo = $('#other_treatment_apollo').val();  
            var injury_occur_apollo = $('#injury_occur_apollo').val();  
-           var post_id = $('#post_id').val(); 
-          
+           0
 
                 $.ajax({  
                      url:"admin.php",  
