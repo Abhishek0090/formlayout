@@ -206,6 +206,8 @@ input:checked {
 }
 	$html .="
 	</div>
+	<br>
+	
 	<div>
 	<span>b.</span>
 <label>Toll free phone number</label>&nbsp;";
@@ -314,7 +316,7 @@ $html .="
 <span>d.</span>
 
 	<label>Date of Birth</label>&nbsp;";
-	for ($i=0; $i < 9; $i++) { 
+	for ($i=0; $i < 10; $i++) { 
 		# code...
 		if($i<count($dob_exp)){
 
