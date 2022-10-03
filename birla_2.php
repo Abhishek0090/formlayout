@@ -7,6 +7,6 @@
     <title>Document</title>
 </head>
 <body>
-<img class="image" src="Anmol/1.png" alt="">
+<img class="image slide" src="Anmol/1.png" alt="">
 </body>
 </html>

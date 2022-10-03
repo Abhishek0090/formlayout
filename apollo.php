@@ -9,7 +9,7 @@
 </head>
 <body>         <!-- for apollo -->
 
-<div id="Apollo" class="data">
+<div id="Apollo slide" class="data">
 <div class="center_section mt-5  formalign1">
                         <div class="row d-flex flex-column col"> 
        <form  method="post">

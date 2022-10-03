@@ -9,7 +9,7 @@
 <body>
     
    <!-- Aditya Birla -->
-   <div  id="birla" class="data">
+   <div  id="birla" class=" slide data">
                     <div class="center_section mt-5   formalign ">
                         <div class="row d-flex adjust flex-column col"> 
                 

@@ -37,15 +37,16 @@
        
        
         <div class="top_section col-2 mt-2 " >
-                <button class="btn btn-warning " onclick="showNext()"></button>
-                <button class="btn btn-dark" onclick = "showPrev()" >Prev</button>
+                <button class="btn btn-warning " onclick="mySlide('next')">Next</button>
+                <button class="btn btn-dark" onclick = "mySlide('previous')" >Previous</button>
                 <button class="btn btn-success" >Auto Save</button>
         </div>
    
 
         
-        <div id="Anmol" class="center_section data"><img class="image" src="Anmol/1.png" alt=""> </div>
-        <div id="Alankit" class=" center_section data"><img class="image" src="Alankit/1.png" alt=""> </div>
+    
+        <div id="Anmol " class="center_section slide data"><img class="image" src="Anmol/1.png" alt=""> </div>
+        <div id="Alankit " class=" center_section slide data"><img class="image" src="Alankit/1.png" alt=""> </div>
         
         
         <?php include 'apollo.php';?>
@@ -53,7 +54,7 @@
         
         <?php include 'birla.php';?>
    
-            
+
             
             <div class="right_section">
                 
@@ -78,6 +79,25 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
 
 <script>
+    var i = 0 , images = ["birla.php","apollo,php", "birla_2.php"];
+    function mySlide(param){
+        {
+            if(param == 'next'){
+                i++;
+                if(i === images.length){
+                    i = images.length - 1
+                }
+            }
+            else{
+                i--;
+                if(i < 0){
+                    i = 0
+                }            }
+        }
+        document.getElementsByClassName('slide').src = images[i];
+    }
+
+    </script>
   
 </body>
 </html>
