@@ -72,12 +72,28 @@
                                         <br>
                                         <span class="alphabet">iii.</span>
                                         <label for="">Reported to Police : </label>
+                                        <div class="form-check checkwidth">
+                                            <input  type="radio" class="form-check-input autosave police"   id="police" name="police" value="Yes" checked >Yes
+                                            <label class="form-check-label" for="radio1"></label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input type="radio" class="form-check-input autosave police" id="police" name="police" value="No" >No
+                                            <label class="form-check-label" for="radio2" ></label>
+                                        </div>
                                     </div>
                                     <div class="col-md-6 aligninput form-group">
                             <span class="alphabet">b.</span>
-                            <label for="">Toll free phone number</label>
-                    <input type="text" class="form-control class autosave"  name="toll_number" id="toll_number"  >
-                </div>
+                            <label for="">Injury / Disease caused due to substance abuse / alcohol consumption : </label>
+                            <div class="form-check checkwidth">
+                                            <input  type="radio" class="form-check-input autosave alcohol"   id="alcohol" name="alcohol" value="Yes" checked >Yes
+                                            <label class="form-check-label" for="radio1"></label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input type="radio" class="form-check-input autosave alcohol" id="alcohol" name="alcohol" value="No" >No
+                                            <label class="form-check-label" for="radio2" ></label>
+                                        </div>
+               
+             
                 <div class="col-md-6 aligninput form-group">
                     <span class="alphabet">c.</span>
                     
