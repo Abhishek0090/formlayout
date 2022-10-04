@@ -206,7 +206,7 @@ input:checked {
 }
 	$html .="
 	</div>
-	<br>
+
 	
 	<div>
 	<span>b.</span>

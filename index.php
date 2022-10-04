@@ -37,67 +37,31 @@
        
        
         <div class="top_section col-2 mt-2 " >
-                <button class="btn btn-warning " onclick="mySlide('next')">Next</button>
-                <button class="btn btn-dark" onclick = "mySlide('previous')" >Previous</button>
+                <button class="btn btn-warning "><a href="birla_2.php">Next</a></button>
+                <button class="btn btn-dark" >Prev</button>
                 <button class="btn btn-success" >Auto Save</button>
         </div>
-   
 
-        
-    
-        <div id="Anmol " class="center_section slide data"><img class="image" src="Anmol/1.png" alt=""> </div>
-        <div id="Alankit " class=" center_section slide data"><img class="image" src="Alankit/1.png" alt=""> </div>
-        
-        
-        <?php include 'apollo.php';?>
-        
-        
         <?php include 'birla.php';?>
-   
 
-            
-            <div class="right_section">
+                <!-- <div id="Anmol" class="center_section data"><img class="image" src="Anmol/1.png" alt=""> </div>
+                <div id="Alankit" class=" center_section data"><img class="image" src="Alankit/1.png" alt=""> </div> -->
                 
-                
-                <h4 style="text-align : center";>Pdf Preview</h4>
-                <iframe src="home.php" width="100%" height="600" id="refreshpdf" title="pdf preview">
-                    </iframe>
-     
-        </div>
-</div>
-       
-    </div>
-</div>
-<div class="bottom_section">
-    
-    <button class = "btn btn-success"><a href="home.php" class= "auto" style="text-decoration:none ; color : white"; target="_blank" onclick=download();>Download pdf</a></button>
-</div>
+
+         
+
+
 </div>
 <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
-
 <script>
-    var i = 0 , images = ["birla.php","apollo,php", "birla_2.php"];
-    function mySlide(param){
-        {
-            if(param == 'next'){
-                i++;
-                if(i === images.length){
-                    i = images.length - 1
-                }
-            }
-            else{
-                i--;
-                if(i < 0){
-                    i = 0
-                }            }
-        }
-        document.getElementsByClassName('slide').src = images[i];
+    function next(){
+        var data =  []; 
     }
+</script>
 
-    </script>
   
 </body>
 </html>
