@@ -15,7 +15,7 @@
 </head>
 <body>
 
-    <div>
+
 
         <div class="left_section">
             <select class="form-select"  style = "width:80%" ; aria-label="Default select example">
@@ -43,9 +43,9 @@
                 <button class="btn btn-dark" >Prev</button>
                 <button class="btn btn-success" >Auto Save</button>
         </div>
-    <div id="birla_2" class="data">
+    <div id="birla_2">
         
-        <div class="center_section mt-5   formdesign  ">
+        <div class="center_section mt-5 formdesign">
             <div class="row d-flex adjust flex-column col"> 
                 
                             <form  method="post">
@@ -66,7 +66,12 @@
                                             <input type="radio" class="form-check-input autosave RTA" id="RTA" name="RTA" value="No" >No
                                             <label class="form-check-label" for="radio2" ></label>
                                         </div>
-                                        <input type="text" class="form-control class autosave"  name="name_company" id="name_company"  >
+                                        <span class="alphabet">ii.</span>
+                                        <label for="">Date of Injury : </label>
+                                        <input type="text" class="form-control class autosave"  name="date_injury" id="date_injury"  >
+                                        <br>
+                                        <span class="alphabet">iii.</span>
+                                        <label for="">Reported to Police : </label>
                                     </div>
                                     <div class="col-md-6 aligninput form-group">
                             <span class="alphabet">b.</span>
@@ -318,10 +323,10 @@
                     <input type="hidden" name="post_id" id="post_id" />  
                     <div id="autoSave"></div>  
                 </div>  
-            </div>
-            
+</div>       
             
         </form>
+
         <div class="right_section">
             
             <h4 style="text-align : center";>Pdf Preview</h4>
@@ -329,13 +334,13 @@
                 </iframe>
                 
             </div>
+            <div class="bottom_section">
+                
+                <button class = "btn btn-success"><a href="birla_2.php" class= "auto" style="text-decoration:none ; color : white"; target="_blank" >Download pdf</a></button>
+            </div>
         </div>
-        <div class="bottom_section">
-            
-            <button class = "btn btn-success"><a href="birla_2.php" class= "auto" style="text-decoration:none ; color : white"; target="_blank" >Download pdf</a></button>
-        </div>
-    </div>
-</div>
+   
+
 
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
     
