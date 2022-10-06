@@ -34,6 +34,7 @@ label{
     min-width: fit-content;
     margin-right: 90px;
     font-size: 13px;
+    display: initial;
 }
 
 

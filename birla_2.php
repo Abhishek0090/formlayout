@@ -1,366 +1,553 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="birla2.css">
-    <link rel="stylesheet" href="apollo.css">
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>  
-    <title>Document</title>
-</head>
-<body>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="birla2.css">
+        <link rel="stylesheet" href="apollo.css">
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>  
+        <title>Document</title>
+    </head>
+    <body>
+
+    <div>
 
 
-
-        <div class="left_section">
-            <select class="form-select"  style = "width:80%" ; aria-label="Default select example">
-                <option selected>Select Patient</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
-            </select>
-            <br>
-
-                <select class="form-select" id = "select_form"  style = "width:80%" ; aria-label="Default select example">
-                    <option selected value="birla">Select Category</option>
-                    <option  value="birla">Aditya Birla</option>
-                    <option value="Alankit">Alankit</option>
-                    <option value="Anmol">Anmol</option>
-                    <option value="Apollo">Apollo</option>
-                    
+            <div class="left_section">
+                <select class="form-select"  style = "width:80%" ; aria-label="Default select example">
+                    <option selected>Select Patient</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
                 </select>
+                <br>
+
+                    <select class="form-select" id = "select_form"  style = "width:80%" ; aria-label="Default select example">
+                        <option selected value="birla">Select Category</option>
+                        <option  value="birla">Aditya Birla</option>
+                        <option value="Alankit">Alankit</option>
+                        <option value="Anmol">Anmol</option>
+                        <option value="Apollo">Apollo</option>
+                        
+                    </select>
+                    
+                </div>
                 
+                
+                <div class="top_section col-2 mt-2 " >
+                    <button class="btn btn-warning "><a href="birla_2.php">Next</a></button>
+                    <button class="btn btn-dark" >Prev</button>
+                    <button class="btn btn-success" >Auto Save</button>
             </div>
+
+
+        <div id="birla_2">
             
-            
-            <div class="top_section col-2 mt-2 " >
-                <button class="btn btn-warning "><a href="birla_2.php">Next</a></button>
-                <button class="btn btn-dark" >Prev</button>
-                <button class="btn btn-success" >Auto Save</button>
-        </div>
-    <div id="birla_2">
-        
-        <div class="center_section mt-5 formdesign">
-            <div class="row d-flex adjust flex-column col"> 
-                
-                            <form  method="post">
-                                
-                                <div class="form-group">
+            <div class="center_section mt-5 formdesign">
+                <div class="row d-flex adjust flex-column col"> 
+                    
+                                <form  method="post">
                                     
-                                    <div class="col d-flex flex-row aligninput  form-group">
+                                    <div class="form-group">
                                         
-                                        <span class="alphabet">o.</span> <label for="">In case of accident : </label> 
-                                        <span class="alphabet">i.</span>
-                                        <label for="">Is it RTA-</label>
-                                        
-                                        <div class="form-check checkwidth">
-                                            <input  type="radio" class="form-check-input autosave RTA"   id="RTA" name="RTA" value="Yes" checked >Yes
-                                            <label class="form-check-label" for="radio1"></label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input type="radio" class="form-check-input autosave RTA" id="RTA" name="RTA" value="No" >No
-                                            <label class="form-check-label" for="radio2" ></label>
-                                        </div>
-                                        <span class="alphabet">ii.</span>
-                                        <label for="">Date of Injury : </label>
-                                        <input type="text" class="form-control class autosave"  name="date_injury" id="date_injury"  >
-                                        <br>
-                                        <span class="alphabet">iii.</span>
-                                        <label for="">Reported to Police : </label>
-                                        <div class="form-check checkwidth">
-                                            <input  type="radio" class="form-check-input autosave police"   id="police" name="police" value="Yes" checked >Yes
-                                            <label class="form-check-label" for="radio1"></label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input type="radio" class="form-check-input autosave police" id="police" name="police" value="No" >No
-                                            <label class="form-check-label" for="radio2" ></label>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 aligninput form-group">
-                            <span class="alphabet">b.</span>
-                            <label for="">Injury / Disease caused due to substance abuse / alcohol consumption : </label>
-                            <div class="form-check checkwidth">
-                                            <input  type="radio" class="form-check-input autosave alcohol"   id="alcohol" name="alcohol" value="Yes" checked >Yes
-                                            <label class="form-check-label" for="radio1"></label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input type="radio" class="form-check-input autosave alcohol" id="alcohol" name="alcohol" value="No" >No
-                                            <label class="form-check-label" for="radio2" ></label>
-                                        </div>
-               
-             
-                <div class="col-md-6 aligninput form-group">
-                    <span class="alphabet">c.</span>
-                    
-                    <label for="">Toll free Fax</label>
-                    <input type="text" class="form-control class autosave"   name="toll_fax" id="toll_fax" >
-                </div>
-                
-                
-            </div>
-            
-            <h5>TO BE FILLED BY THE INSURED/PATIENT</h5>
-            <div class="col-md-6 aligninput">
-                <span class="alphabet">a.</span>
-                
-                <label for="">Name of the Patient</label>
-                <input type="text" class="form-control class autosave"  name="name_patient"  id="name_patient">
-            </div>
-            <div class="col-md-6 aligninput">
-                <span class="alphabet">b.</span>
-                <label for="">Gender</label>
-                
-                <div class="form-check checkwidth">
-                    <input  type="radio" class="form-check-input autosave gender"   id="gender" name="gender" value="Male" checked >Male
-                    <label class="form-check-label" for="radio1"></label>
-                </div>
-                <div class="form-check">
-                    <input type="radio" class="form-check-input autosave gender" id="gender" name="gender" value="Female" >Female
-                    <label class="form-check-label" for="radio2" ></label>
-                </div>
-            </div>
-        </div>
-        
-        
-        <div class="col-md-6 aligninput">
-            <span class="alphabet">c.</span>
-            <div class="age aligninput">
-                
-                <label for="">Age</label>
-                <input type="text" class="form-control autosave" id="age" name="age" > 
-                &nbsp;<label>Years
-                    </label>
-                </div>
-                
-            </div>
-            
-            <div class="col-md-6 aligninput">
-                <span class="alphabet">d.</span>
-                
-                <label for="">Date of Birth</label>
-                <input type="text" class="form-control autosave" id="dob"  name="dob" >
-            </div>
-            
-            <div class="col-md-6 aligninput">
-                <span class="alphabet">e.</span>
-                
-                <label for="">Contact Number</label>
-                <input type="text" maxlength="10" class="form-control autosave" id="contact_patient" name="contact_patient" >
-            </div>
-            
-            <div class="col-md-6 aligninput">
-                <span class="alphabet">f.</span>
-                
-                <label for="">Contact number of attending relative</label>
-                <input type="text" maxlength="10" class="form-control autosave" id="contact_relative" name="contact_relative" >
-            </div>
-            
-            <div class="col-md-6 aligninput">
-                    <span class="alphabet">g.</span>
-                    
-                    <label for="">Insured Card ID number</label>
-                    <input type="text" class="form-control autosave" id="insured_number" name="insured_number" >
-                </div>
-                
-                <div class="col-md-6 aligninput">
-                    <span class="alphabet">h.</span>
-                    
-                    <label for="">Policy number / Name of corporate</label>
-                    <input type="text" class="form-control autosave" id="policy_number" name="policy_number" ">
-                </div>
-                
-                <div class="col-md-6 aligninput">
-                    <span class="alphabet">i.</span>
-                
-                    <label for="">Employee ID</label>
-                    <input type="text" class="form-control autosave" id="employeeid" name="employeeid" >
-                </div>
-                
-                <div class="col-md-6 aligninput">
-                    <span class="alphabet">j.</span>
-                    
-                    <label for="">Currently do you have any other Mediclaim/Health insurance</label>
-                    <div class="form-check checkwidth">
-                        <input  type="radio" class="form-check-input autosave mediclaim"   id="mediclaim" name="mediclaim" value="Yes" checked >Yes
-                        <label class="form-check-label" for="radio1"></label>
-                    </div>
-                    <div class="form-check">
-                        <input type="radio" class="form-check-input autosave mediclaim" id="mediclaim" name="mediclaim" value="No" >No
-            <label class="form-check-label" for="radio2" ></label>
-        </div>
-        
+                                        <div class="col d-flex flex-row aligninput  form-group">
+                                            
+                                            <span class="alphabet">o.</span> 
+                                            <label class="inlinedivs"for="">In case of accident : </label> 
+                                            <span class="alphabet">i.</span>
+                                            <label class="inlinedivs"for="">Is it RTA -</label>
+                                            <div class="form-check checkwidth">
+                                                <input  type="radio" class="form-check-input autosave rta"   id="rta" name="rta" value="Yes" checked >Yes
+                                                <label class="inlinedivs"class="form-check-label" for="radio1"></label>
+                                            </div>
+                                            
+                                            <div class="form-check">
+                                                <input type="radio" class="form-check-input autosave rta" id="rta" name="rta" value="No" >No
+                                                <label class="inlinedivs"class="form-check-label" for="radio2" ></label>
+                                            </div>
     </div>
-    <div class="col-md-6 aligninput">
-        <span class="alphabet">k.</span>
-        
-        <label for="">Company Name:</label>
-                    <label for="">Give details</label>
-                    <input type="text" class="form-control autosave" id="company_name" name="company_name" >
+                                            <div class="col-md-6 aligninput form-group">
+
+                                            <span class="alphabet">ii.</span>
+                                            <label class="inlinedivs"for="">Date of Injury : </label>
+                                            <input type="text" class="form-control class autosave"  name="date_injury" id="date_injury"  >
+                                            
+                                        </div>
+                                        <div class="col-md-6 aligninput form-group">
+
+                                            <span class="alphabet">iii.</span>
+                                            <label class="inlinedivs"for="">Reported to Police : </label>
+                                            <div class="form-check checkwidth">
+                                                <input  type="radio" class="form-check-input autosave police"   id="police" name="police" value="Yes" checked >Yes
+                                                <label class="inlinedivs"class="form-check-label" for="radio1"></label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input type="radio" class="form-check-input autosave police" id="police" name="police" value="No" >No
+                                                <label class="inlinedivs"class="form-check-label" for="radio2" ></label>
+                                            </div>
+                                        </div>
+                                        </div>
+                                        <div class="col-md-6 aligninput form-group">
+                                <span class="alphabet">b.</span>
+                                <label class="inlinedivs"for="">Injury / Disease caused due to substance abuse / alcohol consumption : </label>
+                                <div class="form-check checkwidth">
+                                                <input  type="radio" class="form-check-input autosave alcohol"   id="alcohol" name="alcohol" value="Yes" checked >Yes
+                                                <label class="inlinedivs"class="form-check-label" for="radio1"></label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input type="radio" class="form-check-input autosave alcohol" id="alcohol" name="alcohol" value="No" >No
+                                                <label class="inlinedivs"class="form-check-label" for="radio2" ></label>
+                                </div>
+    </div>
+                            
+                    <div class="col-md-6 aligninput form-group">
+                        <label class="inlinedivs"for="">Test Conducted to establish this :</label>
+                        <div class="form-check checkwidth">
+                                                <input  type="radio" class="form-check-input autosave test"   id="test" name="test" value="Yes" checked >Yes
+                                                <label class="inlinedivs"class="form-check-label" for="radio1"></label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input type="radio" class="form-check-input autosave test" id="test" name="test" value="No" >No (if Yes attach reports)
+                                                <label class="inlinedivs"class="form-check-label" for="radio2" ></label>
+                                </div>       
+                    </div>
+                    <div class="col-md-6 aligninput form-group">
+                        <span class="alphabet">q.</span>
+                        
+                        <label class="inlinedivs"for="">In case of Maternity</label>
+                        <div class="form-check checkwidth">
+                            <label class="inlinedivs"class="form-check-label" for="checkbox"></label>
+                            <input  type="checkbox" class="form-check-input autosave "   id="maternity" name="maternity" value="Yes" checked >G
+    </div>
+                                            <div class="form-check checkwidth">
+                                                <input type="checkbox" class="form-check-input autosave maternity" id="maternity" name="maternity" value="No" >P
+                                                <label class="inlinedivs"class="form-check-label" for="checkbox" ></label>
+                                        </div>  
+                                        <div class="form-check checkwidth">
+                                                        <input type="checkbox" class="form-check-input autosave maternity" id="maternity" name="maternity" value="No" >L
+                                                        <label class="inlinedivs"class="form-check-label" for="checkbox" ></label>
+                                        </div>  
+                                            <div class="form-check checkwidth">
+                                                            <input type="checkbox" class="form-check-input autosave maternity" id="maternity" name="maternity" value="No" >A
+                                                            <label class="inlinedivs"class="form-check-label" for="checkbox" ></label>
+                                            </div>  
+    </div>  
+                                    <div class="col-md-6 aligninput">
+    
+                                    
+                                    <label class="inlinedivs"for="">Date of Delivery</label>
+                                    <input type="text" class="form-control autosave" id="dod"  name="dod" >
+                                </div>
+                
+                    
+
+                <h5>TO BE FILLED BY THE INSURED/PATIENT</h5>
+                <h5>Details of the patient admitted </h5>
+                <div class="col-md-6 aligninput">
+                    <span class="alphabet">a.</span>
+                    
+                    <label class="inlinedivs"for="">Date of admission : </label>
+                    <input type="text" class="form-control autosave" id="doa"  name="doa" >
                 </div>
                 <div class="col-md-6 aligninput">
-                    <span class="alphabet">l.</span>
+                    <span class="alphabet">b.</span>
+                    <label class="inlinedivs"for="">Time</label>
+                    <input type="time" class="form-control autosave" id="time"  name="time" >
+                </div>
+            </div>
+            
+            
+            <div class="col-md-6 aligninput">
+                <span class="alphabet">c.</span>
+                <div class="col-md-6 aligninput">
                     
-                    <label for="">Do you have any family  physician</label>
-                    <div class="form-check checkwidth">
-                        <input  type="radio" class="form-check-input autosave physician"   id="physician" name="physician" value="Yes" checked >Yes
-                        <label class="form-check-label" for="radio1"></label>
+                        <label class="inlinedivs"for="">Is this an emergency / a planned hospitalization event ?</label>
+                        <div class="form-check checkwidth">
+                                                            <input type="radio" class="form-check-input autosave emergency" id="emergency" name="emergency" value="Emergency"  checked >Emergency
+                                                            <label class="inlinedivs"class="form-check-label" for="radio2" ></label>
+                               </div>  
+                                    <div class="form-check checkwidth">
+                                                                <input type="radio" class="form-check-input autosave planned" id="emergency"      name="emergency" value="Planned" >Planned
+                                                                <label class="inlinedivs" class="form-check-label" for="radio2" ></label>
+                                 </div>  
+                        </div>
+                        
                     </div>
-                    <div class="form-check">
-                        <input type="radio" class="form-check-input autosave physician" id="physician" name="physician" value="No" >No
-                        <label class="form-check-label" for="radio2" ></label>
-                    </div>
+                
+                <div class="col-md-6 aligninput">
+                    <span class="alphabet">d.</span>
+                    
+                    <label class="inlinedivs"for="">Expected no. of days stay in hospital :</label>
+                    <input type="text" class="form-control autosave" id="stay_hospital"  name="stay_hospital" >
                 </div>
                 
                 <div class="col-md-6 aligninput">
-                    <span class="alphabet">m.</span>
+                    <span class="alphabet">e.</span>
                     
-                    <label for="">Name of the family physician</label>
-                    <input type="text" class="form-control autosave" id="name_physician" name="name_physician" >
+                    <label class="inlinedivs"for="">Room Type : </label>
+                    <input type="text" class="form-control autosave" id="room_type" name="room_type" >
                 </div>
+                
                 <div class="col-md-6 aligninput">
-                    <span class="alphabet">n.</span>
+                    <span class="alphabet">f.</span>
                     
-                    <label for="">Contact number if any :</label>
-                    <input type="text" maxlength="10" class="form-control autosave" id="contact_physician" name="contact_physician" >
+                    <label class="inlinedivs"for="">Per Day Room Rent + Nursing & Service Charges + Patient's Diet</label>
+                    <input type="text"  class="form-control autosave rent" id="rent" name="rent" >
                 </div>
                 
-                
-                    <p>PLEASE COMPLETE DECLARATION ON THE REVERSE SIDE OF THIS FORM</p>
-                    
-                    
-                    <h5>TO BE FILLED BY THE TREATING DOCTOR/HOSPITAL</h5>
-                    
-                    <div class="col-md-6 aligninput">
-                        <span class="alphabet">a.</span>
-                        
-                        <label for="">Name of the treating doctor :</label>
-                        
-                        <input type="text" class="form-control autosave" id="name_doctor" name="name_doctor">
-                    </div> 
-                    <div class="col-md-6 aligninput">
-                        <span class="alphabet">b.</span>
-                        
-                        <label for="">Contact number:</label>
-                        <input type="text" maxlength="10" title="Please enter valid phone number" class="form-control autosave" id="contact_doctor" name="contact_doctor">
-                    </div> 
-                    <div class="col-md-6 aligninput">
-                        <span class="alphabet">c.</span>
-                        
-                        <label for="">Name of ILLNESS / Disease with presenting Complaints :</label>
-                        <input type="text" class="form-control autosave" id="nature_illness" name="nature_illness" >
-                    </div> 
-                    <div class="col-md-6 aligninput">
-                        <span class="alphabet">d.</span>
-                        
-                        <label for="">Relevant clinical findings :</label>
-                        <input type="text" class="form-control autosave" id="relevant" name="relevant" >
-                    </div>
-                    
-                    <div class="col-md-6 aligninput">
-                        <span class="alphabet">e.</span>
-                        
-                        <label for="">Duration of the present ailment :</label> 
-                        <input type="text" class="form-control class d-flex flex-row-reverse" id="duration"  name="duration"  >
-                        <span>Days</span>
-                    </div>
-                    
-                    <label for="">Date of first consultation :</label>
-                    <input type="date" class="form-control autosave input_size" style="width:40%"; id="date_consultation" name="date_consultation"  >
-                    
-                    <label for="">Past history of present ailment if any :</label>
-                    <input type="text" class="form-control autosave input_size"   style="width:40%"; id="past_history" name="past_history">
-                    
-                    
-                    <div class="col-md-6 aligninput">
-                        <span class="alphabet">f.</span>
-                        
-                        <label for="">Provisional diagnosis :</label>
-                        <input type="text" class="form-control autosave" id="diagnosis" name="diagnosis">
-                    </div>
-                    <div class="col-md-6 aligninput">
+                <div class="col-md-6 aligninput">
                         <span class="alphabet">g.</span>
                         
-                        <label for="">ICD 10 Code :</label>
-                        <input type="text" maxlength="10" class="form-control autosave" id="icd_code" name="icd_code" >
+                        <label class="inlinedivs"for="">Expected cost of Investigation + diagnostics</label>
+                        <input type="text" class="form-control autosave cost_investigation" id="cost_investigation" name="cost_investigation" >
                     </div>
-                    <div class="col-md-6  aligninput">
+                    
+                    <div class="col-md-6 aligninput">
                         <span class="alphabet">h.</span>
                         
-                        <label for="" style="margin-right:12px";>Proposed line of treatment :</label>
+                        <label class="inlinedivs"for="">ICU Charges : </label>
+                        <input type="text" class="form-control autosave icu_charges " id="icu_charges" name="icu_charges">
                     </div>
-                    <label for="" style="margin:auto ; margin-right:10px;">Medical Management Surgical Management Intensive care Investigation Non allopathic treatment.</label>
-                    <input type="text" class="form-control autosave input_size "   style="width:50%"; id="line_treatment" name="line_treatment" >
-                    <div class="col-md-6 aligninput" >
-                    <span class="alphabet">I.</span>
                     
-                    <label for="">If Investigation &/or Medical Management provide :</label>
-                    <input type="text" class="form-control autosave" id="invest_medical" name="invest_medical" >
-                </div>
-                <div class="col-md-6 aligninput">
-                    <span class="alphabet">j.</span>
+                    <div class="col-md-6 aligninput">
+                        <span class="alphabet">i.</span>
                     
-                    <label for="">Route of drug administration :</label>
-                    <input type="text" class="form-control autosave" id="route_drug" name="route_drug" >
-                </div>
+                        <label class="inlinedivs"for="">OT Charges</label>
+                        <input type="text" class="form-control autosave ot_charges" id="ot_charges" name="ot_charges" >
+                    </div>
+                    
+                    <div class="col-md-6 aligninput">
+                        <span class="alphabet">j.</span>
+                        
+                        <label class="inlinedivs"for="">Professional fees Surgeon + Anaesthetist Fees + consultation Charges :</label>
+                    
+                        <input type="text" class="form-control autosave fees_charges" id="fees_charges" name="fees_charges" >
+            
+                    </div>
                 <div class="col-md-6 aligninput">
                     <span class="alphabet">k.</span>
                     
-                    <label for="">If Surgical, name of surgery :</label>
-                    <input type="text" class="form-control autosave" id="name_surgery" name="name_surgery" > 
+                    <label class="inlinedivs"for="">Medicines + Consumables + Cost of Implants(if applicable specify)Other hospital expenses if any:</label>
+                                
                 </div>
-                <div class="col-md-6 aligninput">
-                    <span class="alphabet">l.</span>
-                    
-                    <label for="">ICD 10 PCS Code :</label>
-                    <input type="text" maxlength="10" class="form-control autosave" id="icd_pcs" name="icd_pcs" >
-                </div>
-                <div class="col-md-6 aligninput">
-                    <span class="alphabet">m.</span>
-                    
-                    <label for="">If other treatments provide details :</label>
-                    <input type="text" class="form-control autosave" id="other_treatment" name="other_treatment" >
-                </div>
-                <div class="col-md-6 aligninput">
-                    <span class="alphabet">n.</span>
-                    
-                    <label for="">How did injury occur :</label>
-                    <input type="text" class="form-control autosave" id="injury_occur" name="injury_occur" >
-                </div>
-                
-                
-                
-                
-                <div class="form-group">  
-                    <input type="hidden" name="post_id" id="post_id" />  
-                    <div id="autoSave"></div>  
-                </div>  
-</div>       
+        <div class="col-md-6 aligninput">
             
-        </form>
-
-        <div class="right_section">
-            
-            <h4 style="text-align : center";>Pdf Preview</h4>
-            <iframe src="home2.php" width="100%" height="600" id="refreshpdf" title="pdf preview">
-                </iframe>
-                
-            </div>
-            <div class="bottom_section">
-                
-                <button class = "btn btn-success"><a href="birla_2.php" class= "auto" style="text-decoration:none ; color : white"; target="_blank" >Download pdf</a></button>
-            </div>
+            <input type="text" class="form-control autosave" id="medicines_expense" name="medicines_expense" >
         </div>
+                    <div class="col-md-6 aligninput">
+                        <span class="alphabet">l.</span>
+                        
+                        <label class="inlinedivs"for="">All inclusive package charges if any applicable</label>
+                        <input type="text" class="form-control autosave" id="inclusive" name="inclusive" > 
+                    </div>
+                    
+                    
+                    <div class="col-md-6 aligninput">
+                        <span class="alphabet">m.</span>
+                        
+                        <label class="inlinedivs"for="">Sum total expected cost of hospitalisation</label>
+                        <input type="text" class="form-control autosave" id="cost_hospital" name="cost_hospital" >
+                    </div class="col-md-6 aligninput">
+                    <h6>Mandatory : Past History of any chronic illness If yes , since (month/year)</h6>
+                    
+                    <div>
+
+                    </div>
+                        
+                        <div class="col-md-6 aligninput">
+                        <div class="form-check checkwidth">
+                                                            <input type="checkbox" class="form-check-input autosave diabetes" id="diabetes" name="diabetes" value="No" >
+                                            </div>  
+                            <label class="inlinedivs"for="">Diabetes :</label>
+                            
+                            <input type="text" class="form-control autosave" id="diabetes" name="diabetes">
+                        </div> 
+                        <div class="col-md-6 aligninput">
+
+                        <div class="form-check checkwidth">
+                                                            <input type="checkbox" class="form-check-input autosave heart_disease" id="heart_disease" name="heart_disease" value="No" >
+                                            </div>  
+                            <label class="inlinedivs"for="">Heart Disease :</label>
+                            <input type="text" class="form-control autosave" id="heart_disease" name="heart_disease">
+                        </div> 
+                        <div class="col-md-6 aligninput">
+                        <div class="form-check checkwidth">
+                                                            <input type="checkbox" class="form-check-input autosave hypertension" id="hypertension" name="hypertension" value="No" >
+                                            </div>  
+                            <label class="inlinedivs"for="">Hypertension :</label>
+                            <input type="text" class="form-control autosave" id="hypertension" name="hypertension">
+                        </div> 
+                        <div class="col-md-6 aligninput">
+
+                        <div class="form-check checkwidth">
+                                                            <input type="checkbox" class="form-check-input autosave hyperlipidemias" id="hyperlipidemias" name="hyperlipidemias" value="No" >
+                                            </div>                          
+                            <label class="inlinedivs"for="">Hyperlipidemias :</label>
+                            <input type="text" class="form-control autosave" id="hyperlipidemias" name="hyperlipidemias" >
+                        </div>
+                        
+                        <div class="col-md-6 aligninput">
+                            
+                        <div class="form-check checkwidth">
+                                                            <input type="checkbox" class="form-check-input autosave osteoarthritis" id="osteoarthritis" name="osteoarthritis" value="No" >
+                                            </div> 
+                                            <label class="inlinedivs" for="">Osteoarthritis :</label> 
+                            <input type="text" class="form-control class " id="osteoarthritis"  name="osteoarthritis">
+                        </div>
+                        
+                        <div class="col-md-6 aligninput">
+
+                        <div class="form-check checkwidth">
+                                                            <input type="checkbox" class="form-check-input autosave ashtma_copd_bronchitis" id="ashtma_copd_bronchitis" name="ashtma_copd_bronchitis" value="No" >
+                                            </div>  
+
+                        <label class="inlinedivs"for="">Asthma/COPD/Bronchitis :</label>
+
+                        <input type="text" class="form-control autosave input_size"  id="ashtma_copd_bronchitis" name="ashtma_copd_bronchitis">
+                    </div>
+
+                    <div class="col-md-6 aligninput">
+
+                    <div class="form-check checkwidth">
+                                      <input type="checkbox" class="form-check-input autosave cancer" id="cancer" name="cancer" value="No" >
+                                            </div>  
+                                        
+                                        <label class="inlinedivs"for="">Cancer :</label>
+
+                                        <input type="text" class="form-control autosave input_size"   id="cancer" name="cancer">
+                        
+    </div>
+                        <div class="col-md-6 aligninput">
+                        <div class="form-check checkwidth">
+                                                            <input type="checkbox" class="form-check-input autosave alcohol" id="alcohol" name="alcohol" value="No" >
+                                            </div>  
+                            <label class="inlinedivs"for="">Alcohol or drug abuse :</label>
+                            <input type="text" class="form-control autosave" id="alcohol_drug" name="alcohol_drug">
+                        </div>
+                        <div class="col-md-6 aligninput">
+                        
+                        <div class="form-check checkwidth">
+                                                            <input type="checkbox" class="form-check-input autosave alcohol" id="alcohol" name="alcohol" value="No" >
+                                            </div>  
+
+                            <label class="inlinedivs"for="">Any HIV or STD/Related ailment :</label>
+
+                            <input type="text" class="form-control autosave" id="hiv_std" name="hiv_std" >
+                        </div>
+                        <div class="col-md-6  aligninput">
+
+                            <label class="inlinedivs"for="" style="margin-right:12px";>Any other Ailment give details :</label>
+                            <input type="text" class="form-control autosave" id="aliment" name="aliment" >
+                        </div>
+                        <p>(PLEASE READ VERY CAREFULLY)</p>
+                        <label class="inlinedivs"for="" style="margin:auto ; margin-right:10px;">We confirm having read understood and agreed to the Declarations on the reverse of this form</label>
+                        <div class="col-md-6 aligninput">
+                        
+                                <span class="alphabet">a.</span>
+                                
+                                <label class="inlinedivs"for="">Name of the treating doctor :</label>
+                                <input type="text" class="form-control autosave" id="treating_doctor" name="treating_doctor" >
+                    
+                        </div>
+                    <div class="col-md-6 aligninput">
+                        <span class="alphabet">b.</span>
+                        
+                        <label class="inlinedivs"for="">Qualification :</label>
+                        <input type="text" class="form-control autosave" id="qualification" name="qualification" >
+                    </div>
+                    <div class="col-md-6 aligninput">
+                        <span class="alphabet">c.</span>
+                        
+                        <label class="inlinedivs"for="">Registration No. with State Code :</label>
+                        <input type="text" class="form-control autosave" id="state_code" name="state_code" > 
+                    </div>
+                    <div style="display:flex;">
+
+                        <div class="form-group col-md-6 " style="margin-right:70px;">
+                            <input type="text" class="hospital_seal" style="height: 45px;width: 12rem; margin-left: 25px;" id="hospital_seal">
+                            <p>Hospital Seal (Must include Hospital ID)</p>
+                            <p>(IMPORTANT PLEASE TURN OVER)</p>
+                        </div>        
+                        <div class="form-group col-md-6" style="float:right;">
+                        <input type="text" class="patient_signature" style="height: 45px;width: 12rem; margin-left: 25px;" name="patient_signature" id="patient_signature">
+                            <p>Patient/Insured Name & Signature</p>
+                        </div>
+                        
+                    </div>
+                    <div class="form-group">  
+                        <input type="hidden" name="post_id" id="post_id" />  
+                        <div id="autoSave"></div>  
+                    </div>  
+        
+                
+            </form>
+    </div>
+
+            <div class="right_section">
+                
+                <h4 style="text-align : center";>Pdf Preview</h4>
+                <iframe src="birla_pdf2.php" width="100%" height="600" id="refreshpdf" title="pdf preview">
+                    </iframe>
+                    
+                </div>
+                <div class="bottom_section">
+                    
+                    <button class = "btn btn-success"><a href="birla_2.php" class= "auto" style="text-decoration:none ; color : white"; target="_blank" >Download pdf</a></button>
+                </div>
+        
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            
+            $("#doa").datepicker({ dateFormat: "dd/mm/yy" ,changeMonth  :true , changeYear  :true });
+            $("#dod").datepicker({ dateFormat: "dd/mm/yy" ,changeMonth  :true , changeYear  :true });
+            $("#date_injury").datepicker({ dateFormat: "dd/mm/yy" ,changeMonth  :true , changeYear  :true });
+            $("#date_consultation").datepicker({ dateFormat: "dd/mm/yy"  ,changeMonth  :true , changeYear  :true });
+
+            
+  $('.autosave').change(function () { 
+    
+    
+    
+    // var gender = [];
+    // var mediclaim = [];
+    // var physician = [];
+  
+
+    // $(".gender").each(function(){
+    // if($(this).is(":checked")){
+    //     gender.push($(this).val());
+    // }
+    // });
+
+    // $(".mediclaim").each(function(){
+    // if($(this).is(":checked")){
+    //     mediclaim.push($(this).val());
+    // }
+    // });
+
+    // $(".physician").each(function(){
+    // if($(this).is(":checked")){
+    //     physician.push($(this).val());
+    // }
+    // });
+
+
+  
+    // gender = gender.toString();
+    // mediclaim = mediclaim.toString();
+    // physician = physician.toString();
+
+
+
+    var rta = $('#rta').val();
+    var date_injury = $('#date_injury').val();  
+
+   var police = $('#police').val();  
    
 
+   var test = $('#test').val();  
+   var maternity = $('#maternity').val();  
+   var dod = $('#dod').val();  
+   var doa = $('#doa').val();  
+   var time = $('#time').val();  
+   var emergency = $('#emergency').val();  
+   var stay_hospital = $('#stay_hospital').val();  
 
-    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
-    
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
-</body>
-</html>
+   var room_type = $('#room_type').val();  
+
+   var rent = $('#rent').val();  
+   var cost_investigation = $('#cost_investigation').val();  
+   var icu_charges = $('#icu_charges').val();  
+   var ot_charges = $('#ot_charges').val();  
+   var fees_charges = $('#fees_charges').val();  
+   var medicines_expense = $('#medicines_expense').val();  
+   var inclusive = $('#inclusive').val();  
+   var cost_hospital = $('#cost_hospital').val();  
+   var diabetes = $('#diabetes').val();  
+   var heart_disease = $('#heart_disease').val();  
+   var hypertension = $('#hypertension').val();  
+   var osteoarthritis = $('#osteoarthritis').val();  
+   var ashtma_copd_bronchitis = $('#ashtma_copd_bronchitis').val();  
+   var cancer = $('#cancer').val();  
+   var alcohol_drug = $('#alcohol_drug').val();  
+   var hiv_std = $('#hiv_std').val();  
+   var aliment = $('#aliment').val();  
+   var treating_doctor = $('#treating_doctor').val();  
+   var qualification = $('#qualification').val();  
+   var state_code = $('#state_code').val();  
+   var hospital_seal = $('#hospital_seal').val();  
+   var patient_signature = $('#patient_signature').val();  
+   var post_id = $('#post_id').val(); 
+  
+   
+        $.ajax({  
+             url:"birla_data2.php",  
+             method:"POST",  
+             data:{
+                rta : rta,
+                date_injury:date_injury,
+                police:police, 
+                alcohol:alcohol,
+                test:test, 
+                maternity:maternity,
+                dod:dod, 
+                doa:doa,
+                time:time, 
+                emergency : emergency,
+                stay_hospital:stay_hospital,
+                room_type:room_type, 
+                rent:rent,
+                cost_investigation:cost_investigation, 
+                icu_charges:icu_charges,
+                ot_charges:ot_charges, 
+                fees_charges:fees_charges,
+                medicines_expense:medicines_expense, 
+                inclusive:inclusive,
+                cost_hospital:cost_hospital, 
+                diabetes:diabetes,
+                heart_disease:heart_disease, 
+                hypertension:hypertension,
+                hyperlipidemias:hyperlipidemias, 
+                osteoarthritis:osteoarthritis,
+                ashtma_copd_bronchitis:ashtma_copd_bronchitis,
+                cancer:cancer,
+                alcohol_drug:alcohol_drug, 
+                hiv_std:hiv_std,
+                aliment:aliment, 
+                treating_doctor:treating_doctor,
+                qualification:qualification, 
+                state_code:state_code,
+                hospital_seal:hospital_seal,
+                patient_signature:patient_signature,
+                
+                post_id:post_id
+            },  
+             dataType:"text",  
+             success:function(data)  
+             {  
+                  if(data != '')  
+                  {  
+                       $('#post_id').val(data);  
+                       document.getElementById("refreshpdf").contentDocument.location.reload(true);
+                  }  
+                 
+             }  
+        });  
+
+    });
+        });
+
+    </script>
+        <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+        
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
+    </body>
+    </html>

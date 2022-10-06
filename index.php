@@ -47,10 +47,6 @@
                 <!-- <div id="Anmol" class="center_section data"><img class="image" src="Anmol/1.png" alt=""> </div>
                 <div id="Alankit" class=" center_section data"><img class="image" src="Alankit/1.png" alt=""> </div> -->
                 
-
-         
-
-
 </div>
 <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
 

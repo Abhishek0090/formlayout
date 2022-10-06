@@ -81,7 +81,7 @@
                     <span class="alphabet">d.</span>
                     
                     <label for="">Date of Birth</label>
-                    <input type="text" class="form-control autosave" id="dob"  name="dob" >
+                    <input type="text"  class="form-control autosave" id="dob"  name="dob" >
                 </div>
                 
                 <div class="col-md-6 aligninput">
@@ -284,7 +284,7 @@
             <div class="right_section">
                 
                 <h4 style="text-align : center";>Pdf Preview</h4>
-                <iframe src="home.php" width="100%" height="600" id="refreshpdf" title="pdf preview">
+                <iframe src="birla_pdf.php" width="100%" height="600" id="refreshpdf" title="pdf preview">
                     </iframe>
      
         </div>
@@ -446,7 +446,7 @@ $("#date_consultation").datepicker({ dateFormat: "dd/mm/yy"  ,changeMonth  :true
        0
 
             $.ajax({  
-                 url:"admin.php",  
+                 url:"birla_data.php",  
                  method:"POST",  
                  data:{
                     name_company : name_company,
