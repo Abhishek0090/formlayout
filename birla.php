@@ -16,7 +16,7 @@
             
         <!-- Aditya Birla -->
         <div  id="birla" class="data container" >
-                            <div class="center_section mt-5   formalign " style="  width: 62%";>
+                            <div class="center_section mt-5   formalign " style="  width: 62%"; id="form1">
                                 <div class="row d-flex adjust flex-column col"> 
                         
                             <form  method="post">
@@ -277,26 +277,29 @@
                             </div>  
                           
                         </div>
+                            
                         
                     </form>
-                 
                     <div class="right_section">
                         
                         <h4 style="text-align : center";>Pdf Preview</h4>
                         <iframe src="birla_pdf.php" width="100%" height="600" id="refreshpdf" title="pdf preview">
                             </iframe>
-            
-                </div>
-    
-        <div class="bottom_section">
-            
-            <button class = "btn btn-success"><a href="home.php" class= "auto" style="text-decoration:none ; color : white"; target="_blank" >Download pdf</a></button>
-        </div>
+                            
+                        </div>
+                        
+                        <div class="bottom_section">
+                            
+                            <button class = "btn btn-success"><a href="home.php" class= "auto" style="text-decoration:none ; color : white"; target="_blank" >Download pdf</a></button>
+                        </div>
+                        <?php include 'birla_2.php';?>
         <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
 
             <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
-                    <script>
+
+
+        <script>
         $(document).ready(function () {
 
         //select change

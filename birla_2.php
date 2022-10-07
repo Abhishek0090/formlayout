@@ -487,7 +487,7 @@
    var state_code = $('#state_code').val();  
    var hospital_seal = $('#hospital_seal').val();  
    var patient_signature = $('#patient_signature').val();  
-   var pot_id = $('#post_id').val(); s
+   var post_id = $('#post_id').val(); 
   
    
         $.ajax({  

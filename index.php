@@ -39,18 +39,21 @@
         <div class="top_section col-2 mt-2 " >
                 <button class="btn btn-warning " id="Next"><a href="birla_2.php">Next</a></button>
                 <button class="btn btn-dark" >Prev</button>
-                <button class="btn btn-success" >Auto Save</button>
+                             
+    <button class="btn btn-success">
+        <input type="hidden"  name="post_id" id="post_id"/>  
+        AutoSave
+    </button>        
+                          
         </div>
 
     <?php include 'birla.php';?>
- 
 
 
-                <!-- <div id="Anmol" class="center_section data"><img class="image" src="Anmol/1.png" alt=""> </div>
-                <div id="Alankit" class=" center_section data"><img class="image" src="Alankit/1.png" alt=""> </div> -->
+    
                 
 </div>
-<!-- <script>
+ <script>
      var form1 = document.getElementById('form1');
   var form2 = document.getElementById('form2');
   var form3 = document.getElementById('form3');
@@ -64,14 +67,10 @@
   var Prev2 = document.getElementById('Prev2');
 
 
-//   for (let i = 0; i < array.length; i++) {
-//     const element = array[i];
-    
-//   }
+
 
   Next.onclick = function(){
-    form1.style.color = "red";
-    form2.style.top= "-400rem";
+    form1.style.display = "none";
   }
   Next2.onclick = function(){
     form2.style.left = "-450px";
