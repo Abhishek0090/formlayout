@@ -15,3 +15,17 @@
     display: flex;
     margin-right: 40px;
 }
+#form2{
+    left: 450px;
+
+
+}
+.container{
+    width : 360px;
+    height: 400px;
+    margin: 8% auto;
+    background: #fff;
+    border-radius: 5;
+    position: relative;
+  
+}

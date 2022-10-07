@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
     <html lang="en">
     <head>
         <meta charset="UTF-8">
@@ -15,40 +15,17 @@
     </head>
     <body>
 
-    <div class="left_section">
-                        <select class="form-select"  style = "width:80%" ; aria-label="Default select example">
-            <option selected>Select Patient</option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
-            </select>
-            <br>
-
-                <select class="form-select" id = "select_form"  style = "width:80%" ; aria-label="Default select example">
-                    <option selected value="birla">Select Category</option>
-                    <option  value="birla">Aditya Birla</option>
-                    <option value="Alankit">Alankit</option>
-                    <option value="Anmol">Anmol</option>
-                    <option value="Apollo">Apollo</option>
-                
-                </select>
-     
-             </div>
-       
-       
-        <div class="top_section col-2 mt-2 " >
-                <button class="btn btn-warning " id="Next"><a href="birla_2.php" style="text-decoration:none;">Next</a></button>
-                <button class="btn btn-dark" ><a href="index.php">Prev</a></button>
-                <button class="btn btn-success" >Auto Save</button>
-        </div>
+    <div>
 
 
-        <div id="birla_2" class="container" >
+
+<!-- 
+        <div id="birla_2">
             
-            <div class="center_section mt-5 formdesign" style="width:62%"; id="form2">
-                <div class="row d-flex adjust flex-column col"> 
+            <div class="center_section mt-5 formdesign">
+                <div class="row d-flex adjust flex-column col">  -->
                     
-                                <form  method="post" >
+                                <form  method="post">
                                     
                                     <div class="form-group">
                                         
@@ -380,24 +357,12 @@
         
                 
             </form>
-</div>
-            <div class="right_section">
-                        
-                        <h4 style="text-align : center";>Pdf Preview</h4>
-                        <iframe src="birla_pdf.php" width="100%" height="600" id="refreshpdf" title="pdf preview">
-                            </iframe>
-            
-                </div>
-           
-                <div class="bottom_section">
-            
-            <button class = "btn btn-success"><a href="home.php" class= "auto" style="text-decoration:none ; color : white"; target="_blank" >Download pdf</a></button>
-        </div>
 
-        <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
+           
         
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
+    
+
     <script>
         $(document).ready(function () {
             
@@ -548,6 +513,9 @@
         });
 
     </script>
-     
+        <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+        
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
     </body>
     </html>
