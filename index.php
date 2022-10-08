@@ -17,7 +17,7 @@
         
             <div class="left_section">
                         <select class="form-select"  style = "width:80%" ; aria-label="Default select example">
-            <option selected>Select Patient</option>
+            <option defaultValue>Select Patient</option>
             <option value="1">One</option>
             <option value="2">Two</option>
             <option value="3">Three</option>
@@ -25,7 +25,7 @@
             <br>
 
                 <select class="form-select" id = "select_form"  style = "width:80%" ; aria-label="Default select example">
-                    <option selected value="birla">Select Category</option>
+                    <option defaultValue value="birla">Select Category</option>
                     <option  value="birla">Aditya Birla</option>
                     <option value="Alankit">Alankit</option>
                     <option value="Anmol">Anmol</option>
@@ -49,43 +49,12 @@
 
     <?php include 'birla.php';?>
 
+    </div>
 
-    
-                
 </div>
  <script>
-     var form1 = document.getElementById('form1');
-  var form2 = document.getElementById('form2');
-  var form3 = document.getElementById('form3');
-
-
-  var Next = document.getElementById('Next');
+    
   
-  var Next2 = document.getElementById('Next2');
-
-  var Prev1 = document.getElementById('Prev1');
-  var Prev2 = document.getElementById('Prev2');
-
-
-
-
-  Next.onclick = function(){
-    form1.style.display = "none";
-  }
-  Next2.onclick = function(){
-    form2.style.left = "-450px";
-    form3.style.left = "40px";
-  }
-
-  Prev.onclick = function(){
-    form1.style.top = "40px";
-    form2.style.top = "-4500px";
-  }
-  Back2.onclick = function(){
-
-    form2.style.left = "40px";
-    form3.style.left = "450px";
-  } -->
 </script>
 
 <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>

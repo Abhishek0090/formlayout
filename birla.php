@@ -275,7 +275,13 @@
                             <input type="hidden" name="post_id" id="post_id" />  
                             <div id="autoSave"></div>  
                             </div>  
-                          
+                                <button id="show">Show more</button>
+                                <button id="hide">hide more</button>
+                                <div class="showdiv">
+                                    
+                                    <?php include 'birla_2.php';?>
+                              
+                            </div>
                         </div>
                             
                         
@@ -292,7 +298,8 @@
                             
                             <button class = "btn btn-success"><a href="home.php" class= "auto" style="text-decoration:none ; color : white"; target="_blank" >Download pdf</a></button>
                         </div>
-                        <?php include 'birla_2.php';?>
+                       
+                       
         <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
 
             <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
@@ -302,7 +309,14 @@
         <script>
         $(document).ready(function () {
 
-        //select change
+
+  $("#hide").click(function(){
+    $(".showdiv").hide();
+  });
+  $("#show").click(function(){
+    $(".showdiv").show();
+  });
+
 
         $('#select_form').change(function (){
             $('.data').hide();

@@ -15,40 +15,7 @@
     </head>
     <body>
 
-    <div class="left_section">
-                        <select class="form-select"  style = "width:80%" ; aria-label="Default select example">
-            <option selected>Select Patient</option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
-            </select>
-            <br>
-
-                <select class="form-select" id = "select_form"  style = "width:80%" ; aria-label="Default select example">
-                    <option selected value="birla">Select Category</option>
-                    <option  value="birla">Aditya Birla</option>
-                    <option value="Alankit">Alankit</option>
-                    <option value="Anmol">Anmol</option>
-                    <option value="Apollo">Apollo</option>
-                
-                </select>
-     
-             </div>
-       
-       
-        <div class="top_section col-2 mt-2 " >
-                <button class="btn btn-warning " id="Next"><a href="birla_2.php" style="text-decoration:none;">Next</a></button>
-                <button class="btn btn-dark" ><a href="index.php">Prev</a></button>
-                <button class="btn btn-success" >Auto Save</button>
-        </div>
-
-
-        <div id="birla_2" class="container" >
-            
-            <div class="center_section mt-5 formdesign" style="width:62%"; id="form2">
-                <div class="row d-flex adjust flex-column col"> 
-                    
-                                <form  method="post" >
+   
                                     
                                     <div class="form-group">
                                         
@@ -378,21 +345,8 @@
                     </div>
                   
         
-                
-            </form>
-</div>
-            <div class="right_section">
-                        
-                        <h4 style="text-align : center";>Pdf Preview</h4>
-                        <iframe src="birla_pdf.php" width="100%" height="600" id="refreshpdf" title="pdf preview">
-                            </iframe>
-            
-                </div>
+
            
-                <div class="bottom_section">
-            
-            <button class = "btn btn-success"><a href="home.php" class= "auto" style="text-decoration:none ; color : white"; target="_blank" >Download pdf</a></button>
-        </div>
 
         <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
         
@@ -406,143 +360,143 @@
             $("#date_injury").datepicker({ dateFormat: "dd/mm/yy" ,changeMonth  :true , changeYear  :true });
             // $("#date_consultation").datepicker({ dateFormat: "dd/mm/yy"  ,changeMonth  :true , changeYear  :true });
 
+                    
+        $('.autosave').change(function () { 
             
-  $('.autosave').change(function () { 
-    
-    
-    
-    var rta = [];
-    var police = [];
-    var physician = [];
-    var physician = [];
-    var physician = [];
-    var physician = [];
-    var physician = [];
-  
+            
+            
+            var rta = [];
+            var police = [];
+            var physician = [];
+            var physician = [];
+            var physician = [];
+            var physician = [];
+            var physician = [];
+        
 
-    $(".rta").each(function(){
-    if($(this).is(":checked")){
-        rta.push($(this).val());
-    }
-    });
+            $(".rta").each(function(){
+            if($(this).is(":checked")){
+                rta.push($(this).val());
+            }
+            });
 
-    $(".police").each(function(){
-    if($(this).is(":checked")){
-        police.push($(this).val());
-    }
-    });
+            $(".police").each(function(){
+            if($(this).is(":checked")){
+                police.push($(this).val());
+            }
+            });
 
-    $(".physician").each(function(){
-    if($(this).is(":checked")){
-        physician.push($(this).val());
-    }
-    });
+            $(".physician").each(function(){
+            if($(this).is(":checked")){
+                physician.push($(this).val());
+            }
+            });
 
 
-  
-    rta = rta.toString();
-    // alert(rta);return false;
-    police = police.toString();
-    physician = physician.toString();
+        
+            rta = rta.toString();
+            // alert(rta);return false;
+            police = police.toString();
+            physician = physician.toString();
 
 
 
 
-    var date_injury = $('#date_injury').val(); 
-    
+            var date_injury = $('#date_injury').val(); 
+            
 
 
-   
+        
 
-   var test = $('#test').val();  
-   var maternity = $('#maternity').val();  
-   var dod = $('#dod').val();  
-   var alcohol = $('#alcohol').val();  
-   var doa = $('#doa').val();  
-   var time = $('#time').val();  
-   var emergency = $('#emergency').val();  
-   var stay_hospital = $('#stay_hospital').val();  
+        var test = $('#test').val();  
+        var maternity = $('#maternity').val();  
+        var dod = $('#dod').val();  
+        var alcohol = $('#alcohol').val();  
+        var doa = $('#doa').val();  
+        var time = $('#time').val();  
+        var emergency = $('#emergency').val();  
+        var stay_hospital = $('#stay_hospital').val();  
 
-   var room_type = $('#room_type').val();  
+        var room_type = $('#room_type').val();  
 
-   var rent = $('#rent').val();  
-   var cost_investigation = $('#cost_investigation').val();  
-   var icu_charges = $('#icu_charges').val();  
-   var ot_charges = $('#ot_charges').val();  
-   var fees_charges = $('#fees_charges').val();  
-   var medicines_expense = $('#medicines_expense').val();  
-   var inclusive = $('#inclusive').val();  
-   var cost_hospital = $('#cost_hospital').val();  
-   var diabetes = $('#diabetes').val();  
-   var heart_disease = $('#heart_disease').val();  
-   var hypertension = $('#hypertension').val();  
-   var osteoarthritis = $('#osteoarthritis').val();  
-   var ashtma_copd_bronchitis = $('#ashtma_copd_bronchitis').val();  
-   var cancer = $('#cancer').val();  
-   var alcohol_drug = $('#alcohol_drug').val();  
-   var hiv_std = $('#hiv_std').val();  
-   var aliment = $('#aliment').val();  
-   var treating_doctor = $('#treating_doctor').val();  
-   var qualification = $('#qualification').val();  
-   var state_code = $('#state_code').val();  
-   var hospital_seal = $('#hospital_seal').val();  
-   var patient_signature = $('#patient_signature').val();  
-   var post_id = $('#post_id').val(); 
-  
-   
-        $.ajax({  
-             url:"birla_data.php",  
-             method:"POST",  
-             data:{
-                rta : rta,
-                date_injury:date_injury,
-                police:police, 
-                alcohol:alcohol,
-                test:test, 
-                maternity:maternity,
-                dod:dod, 
-                doa:doa,
-                time:time, 
-                emergency : emergency,
-                stay_hospital:stay_hospital,
-                room_type:room_type, 
-                rent:rent,
-                cost_investigation:cost_investigation, 
-                icu_charges:icu_charges,
-                ot_charges:ot_charges, 
-                fees_charges:fees_charges,
-                medicines_expense:medicines_expense, 
-                inclusive:inclusive,
-                cost_hospital:cost_hospital, 
-                diabetes:diabetes,
-                heart_disease:heart_disease, 
-                hypertension:hypertension,
-                hyperlipidemias:hyperlipidemias, 
-                osteoarthritis:osteoarthritis,
-                ashtma_copd_bronchitis:ashtma_copd_bronchitis,
-                cancer:cancer,
-                alcohol_drug:alcohol_drug, 
-                hiv_std:hiv_std,
-                aliment:aliment, 
-                treating_doctor:treating_doctor,
-                qualification:qualification, 
-                state_code:state_code,
-                hospital_seal:hospital_seal,
-                patient_signature:patient_signature,
-                
-                post_id:post_id
-            },  
-             dataType:"text",  
-             success:function(data)  
-             {  
-                  if(data != '')  
-                  {  
-                       $('#post_id').val(data);  
-                       document.getElementById("refreshpdf").contentDocument.location.reload(true);
-                  }  
-                 
-             }  
-        });  
+        var rent = $('#rent').val();  
+        var cost_investigation = $('#cost_investigation').val();  
+        var icu_charges = $('#icu_charges').val();  
+        var ot_charges = $('#ot_charges').val();  
+        var fees_charges = $('#fees_charges').val();  
+        var medicines_expense = $('#medicines_expense').val();  
+        var inclusive = $('#inclusive').val();  
+        var cost_hospital = $('#cost_hospital').val();  
+        var diabetes = $('#diabetes').val();  
+        var heart_disease = $('#heart_disease').val();  
+        var hypertension = $('#hypertension').val();  
+        var osteoarthritis = $('#osteoarthritis').val();  
+        var ashtma_copd_bronchitis = $('#ashtma_copd_bronchitis').val();  
+        var cancer = $('#cancer').val();  
+        var alcohol_drug = $('#alcohol_drug').val();  
+        var hiv_std = $('#hiv_std').val();  
+        var aliment = $('#aliment').val();  
+        var treating_doctor = $('#treating_doctor').val();  
+        var qualification = $('#qualification').val();  
+        var state_code = $('#state_code').val();  
+        var hospital_seal = $('#hospital_seal').val();  
+        var patient_signature = $('#patient_signature').val();  
+        var post_id = $('#post_id').val(); 
+        
+        
+                $.ajax({  
+                    url:"birla_data.php",  
+                    method:"POST",  
+                    data:{
+                        rta : rta,
+                        date_injury:date_injury,
+                        police:police, 
+                        alcohol:alcohol,
+                        test:test, 
+                        maternity:maternity,
+                        dod:dod, 
+                        doa:doa,
+                        time:time, 
+                        emergency : emergency,
+                        stay_hospital:stay_hospital,
+                        room_type:room_type, 
+                        rent:rent,
+                        cost_investigation:cost_investigation, 
+                        icu_charges:icu_charges,
+                        ot_charges:ot_charges, 
+                        fees_charges:fees_charges,
+                        medicines_expense:medicines_expense, 
+                        inclusive:inclusive,
+                        cost_hospital:cost_hospital, 
+                        diabetes:diabetes,
+                        heart_disease:heart_disease, 
+                        hypertension:hypertension,
+                        hyperlipidemias:hyperlipidemias, 
+                        osteoarthritis:osteoarthritis,
+                        ashtma_copd_bronchitis:ashtma_copd_bronchitis,
+                        cancer:cancer,
+                        alcohol_drug:alcohol_drug, 
+                        hiv_std:hiv_std,
+                        aliment:aliment, 
+                        treating_doctor:treating_doctor,
+                        qualification:qualification, 
+                        state_code:state_code,
+                        hospital_seal:hospital_seal,
+                        patient_signature:patient_signature,
+                        
+                        post_id:post_id
+                    },  
+                    dataType:"text",  
+                    success:function(data)  
+                    {  
+                        if(data != '')  
+                        {  
+                            $('#post_id').val(data);  
+                            document.getElementById("refreshpdf").contentDocument.location.reload(true);
+                        }  
+                        
+                    }  
+                });  
 
     });
         });
