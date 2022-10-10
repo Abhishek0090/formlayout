@@ -37,8 +37,8 @@
        
        
         <div class="top_section col-2 mt-2 " >
-                <button class="btn btn-warning " id="Next"><a href="birla_2.php">Next</a></button>
-                <button class="btn btn-dark" >Prev</button>
+                <button class="btn btn-warning " onclick="loaddata()">Next</button>
+                <button class="btn btn-dark" onclick="loadprevious()" >Prev</button>
                              
     <button class="btn btn-success">
         <input type="hidden"  name="post_id" id="post_id"/>  
@@ -46,15 +46,40 @@
     </button>        
                           
         </div>
-
-    <?php include 'birla.php';?>
-
+        <div id="formdata">
+           <?php include 'birla.php';?>
+        </div>
+        <input type="hidden" id="formid" value="1">
+           
     </div>
 
 </div>
  <script>
     
-  
+    function loaddata(){
+    
+    //     var formid = $('#formid').val();
+       
+    //     $.ajax({
+    //                 url: 'action.php',
+    //                 type: "POST",
+    //                 dataType: 'text',
+    //                 data : {
+    //                     action : formid,
+                
+    //                 }
+    //             }).done(function (result){
+    //                 $('#formdata').html(result);
+    //                 $('#formid').val(formid+1);
+    //             });
+    // }
+
+        window.location.href = "birla_2.php";
+   
+    }
+    function loadprevious(){
+        window.location.href = "index.php";
+    }
 </script>
 
 <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>

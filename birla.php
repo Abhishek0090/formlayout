@@ -275,13 +275,7 @@
                             <input type="hidden" name="post_id" id="post_id" />  
                             <div id="autoSave"></div>  
                             </div>  
-                                <button id="show">Show more</button>
-                                <button id="hide">hide more</button>
-                                <div class="showdiv">
-                                    
-                                    <?php include 'birla_2.php';?>
-                              
-                            </div>
+                               
                         </div>
                             
                         
@@ -296,7 +290,7 @@
                         
                         <div class="bottom_section">
                             
-                            <button class = "btn btn-success"><a href="home.php" class= "auto" style="text-decoration:none ; color : white"; target="_blank" >Download pdf</a></button>
+                            <button class = "btn btn-success"><a href="birla_pdf.php" class= "auto" style="text-decoration:none ; color : white"; target="_blank" >Download pdf</a></button>
                         </div>
                        
                        

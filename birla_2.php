@@ -14,9 +14,44 @@
         <title>Document</title>
     </head>
     <body>
+    <div class="left_section">
+                        <select class="form-select"  style = "width:80%" ; aria-label="Default select example">
+            <option defaultValue>Select Patient</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+            </select>
+            <br>
 
+                <select class="form-select" id = "select_form"  style = "width:80%" ; aria-label="Default select example">
+                    <option defaultValue value="birla">Select Category</option>
+                    <option  value="birla">Aditya Birla</option>
+                    <option value="Alankit">Alankit</option>
+                    <option value="Anmol">Anmol</option>
+                    <option value="Apollo">Apollo</option>
+                
+                </select>
+     
+             </div>
+       
+       
+        <div class="top_section col-2 mt-2 " >
+                <button class="btn btn-warning " onclick="loaddata()">Next</button>
+                <button class="btn btn-dark" > <a href="index.php">Prev</a></button>
+                             
+    <button class="btn btn-success">
+        <input type="hidden"  name="post_id" id="post_id"/>  
+        AutoSave
+    </button>        
+                          
+        </div>
    
-                                    
+    <div  id="birla" class=" container" >
+                            <div class="center_section mt-5   formalign " style="  width: 62%"; id="form1">
+                                <div class="row d-flex adjust flex-column col"> 
+                        
+                            <form  method="post">
+
                                     <div class="form-group">
                                         
                                         <div class="col d-flex flex-row aligninput  form-group">
@@ -341,7 +376,8 @@
                         <input type="text" class="patient_signature" style="height: 45px;width: 12rem; margin-left: 25px;" name="patient_signature" id="patient_signature">
                             <p>Patient/Insured Name & Signature</p>
                         </div>
-                        
+</div>
+</form>
                     </div>
                   
         
