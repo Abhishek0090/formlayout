@@ -73,7 +73,7 @@ input:checked {
 	
 	$link = mysqli_connect("localhost","root","","birlaform");
 	$no = 0;
-	$q = "SELECT * FROM `apollo` ORDER BY id DESC";
+	$q = "SELECT * FROM `birla1` ORDER BY id DESC";
 	$res = mysqli_query($link,$q);
 	
 	$row = mysqli_num_rows($res);

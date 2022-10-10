@@ -14,43 +14,12 @@
         <title>Document</title>
     </head>
     <body>
-    <div class="left_section">
-                        <select class="form-select"  style = "width:80%" ; aria-label="Default select example">
-            <option defaultValue>Select Patient</option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
-            </select>
-            <br>
-
-                <select class="form-select" id = "select_form"  style = "width:80%" ; aria-label="Default select example">
-                    <option defaultValue value="birla">Select Category</option>
-                    <option  value="birla">Aditya Birla</option>
-                    <option value="Alankit">Alankit</option>
-                    <option value="Anmol">Anmol</option>
-                    <option value="Apollo">Apollo</option>
-                
-                </select>
-     
-             </div>
-       
-       
-        <div class="top_section col-2 mt-2 " >
-                <button class="btn btn-warning " onclick="loaddata()">Next</button>
-                <button class="btn btn-dark" > <a href="index.php">Prev</a></button>
-                             
-    <button class="btn btn-success">
-        <input type="hidden"  name="post_id" id="post_id"/>  
-        AutoSave
-    </button>        
-                          
-        </div>
-   
-    <div  id="birla" class=" container" >
-                            <div class="center_section mt-5   formalign " style="  width: 62%"; id="form1">
+    
+    <div  id="birla" class="data hide2 container" >
+                            <div class="center_section mt-5   formdesign " style="  width: 62%";>
                                 <div class="row d-flex adjust flex-column col"> 
                         
-                            <form  method="post">
+                                    <form  method="post">
 
                                     <div class="form-group">
                                         
@@ -61,12 +30,12 @@
                                             <span class="alphabet">i.</span>
                                             <label class="inlinedivs"for="">Is it RTA -</label>
                                             <div class="form-check checkwidth">
-                                                <input  type="radio" class="form-check-input autosave rta"   id="rta" name="rta" value="Yes" checked >Yes
+                                                <input  type="radio" class="form-check-input  rta"   id="rta" name="rta" value="Yes" checked onchange="update_data('rta','rta')" >Yes
                                                 <label class="inlinedivs"class="form-check-label" for="radio1"></label>
                                             </div>
                                             
                                             <div class="form-check">
-                                                <input type="radio" class="form-check-input autosave rta" id="rta" name="rta" value="No" >No
+                                                <input type="radio" class="form-check-input  rta" id="rta" name="rta" onchange="update_data('rta','rta')" value="No" >No
                                                 <label class="inlinedivs"class="form-check-label" for="radio2" ></label>
                                             </div>
                                      </div>
@@ -74,7 +43,7 @@
 
                                             <span class="alphabet">ii.</span>
                                             <label class="inlinedivs"for="">Date of Injury : </label>
-                                            <input type="text" class="form-control class autosave"  name="date_injury" id="date_injury"  >
+                                            <input type="text" class="form-control class "  name="date_injury" id="date_injury"  >
                                             
                                         </div>
                                         <div class="col-md-6 aligninput form-group">
@@ -82,24 +51,24 @@
                                             <span class="alphabet">iii.</span>
                                             <label class="inlinedivs"for="">Reported to Police : </label>
                                             <div class="form-check checkwidth">
-                                                <input  type="radio" class="form-check-input autosave police"   id="police" name="police" value="Yes" checked >Yes
+                                                <input  type="radio" class="form-check-input  police"   id="police" name="police" value="Yes" checked >Yes
                                                 <label class="inlinedivs"class="form-check-label" for="radio1"></label>
                                             </div>
                                             <div class="form-check">
-                                                <input type="radio" class="form-check-input autosave police" id="police" name="police" value="No" >No
+                                                <input type="radio" class="form-check-input  police" id="police" name="police" value="No" >No
                                                 <label class="inlinedivs"class="form-check-label" for="radio2" ></label>
                                             </div>
                                         </div>
-                                        </div>
+                                       
                                         <div class="col-md-6 aligninput form-group">
                                 <span class="alphabet">b.</span>
                                 <label class="inlinedivs"for="">Injury / Disease caused due to substance abuse / alcohol consumption : </label>
                                 <div class="form-check checkwidth">
-                                                <input  type="radio" class="form-check-input autosave alcohol"   id="alcohol" name="alcohol" value="Yes" checked >Yes
+                                                <input  type="radio" class="form-check-input  alcohol"   id="alcohol" name="alcohol" value="Yes" checked >Yes
                                                 <label class="inlinedivs"class="form-check-label" for="radio1"></label>
                                             </div>
                                             <div class="form-check">
-                                                <input type="radio" class="form-check-input autosave alcohol" id="alcohol" name="alcohol" value="No" >No
+                                                <input type="radio" class="form-check-input  alcohol" id="alcohol" name="alcohol" value="No" >No
                                                 <label class="inlinedivs"class="form-check-label" for="radio2" ></label>
                                 </div>
     </div>
@@ -107,11 +76,11 @@
                     <div class="col-md-6 aligninput form-group">
                         <label class="inlinedivs"for="">Test Conducted to establish this :</label>
                         <div class="form-check checkwidth">
-                                                <input  type="radio" class="form-check-input autosave test"   id="test" name="test" value="Yes" checked >Yes
+                                                <input  type="radio" class="form-check-input  test"   id="test" name="test" value="Yes" checked >Yes
                                                 <label class="inlinedivs"class="form-check-label" for="radio1"></label>
                                             </div>
                                             <div class="form-check">
-                                                <input type="radio" class="form-check-input autosave test" id="test" name="test" value="No" >No (if Yes attach reports)
+                                                <input type="radio" class="form-check-input  test" id="test" name="test" value="No" >No (if Yes attach reports)
                                                 <label class="inlinedivs"class="form-check-label" for="radio2" ></label>
                                 </div>       
                     </div>
@@ -121,18 +90,18 @@
                         <label class="inlinedivs"for="">In case of Maternity</label>
                         <div class="form-check checkwidth">
                             <label class="inlinedivs"class="form-check-label" for="checkbox"></label>
-                            <input  type="checkbox" class="form-check-input autosave "   id="maternity" name="maternity" value="Yes" checked >G
+                            <input  type="checkbox" class="form-check-input  "   id="maternity" name="maternity" value="Yes" checked >G
     </div>
                                             <div class="form-check checkwidth">
-                                                <input type="checkbox" class="form-check-input autosave maternity" id="maternity" name="maternity" value="No" >P
+                                                <input type="checkbox" class="form-check-input  maternity" id="maternity" name="maternity" value="No" >P
                                                 <label class="inlinedivs"class="form-check-label" for="checkbox" ></label>
                                         </div>  
                                         <div class="form-check checkwidth">
-                                                        <input type="checkbox" class="form-check-input autosave maternity" id="maternity" name="maternity" value="No" >L
+                                                        <input type="checkbox" class="form-check-input  maternity" id="maternity" name="maternity" value="No" >L
                                                         <label class="inlinedivs"class="form-check-label" for="checkbox" ></label>
                                         </div>  
                                             <div class="form-check checkwidth">
-                                                            <input type="checkbox" class="form-check-input autosave maternity" id="maternity" name="maternity" value="No" >A
+                                                            <input type="checkbox" class="form-check-input  maternity" id="maternity" name="maternity" value="No" >A
                                                             <label class="inlinedivs"class="form-check-label" for="checkbox" ></label>
                                             </div>  
     </div>  
@@ -140,7 +109,7 @@
     
                                     
                                     <label class="inlinedivs"for="">Date of Delivery</label>
-                                    <input type="text" class="form-control autosave" id="dod"  name="dod" >
+                                    <input type="text" class="form-control " id="dod"  name="dod" >
                                 </div>
                 
                     
@@ -151,12 +120,12 @@
                     <span class="alphabet">a.</span>
                     
                     <label class="inlinedivs"for="">Date of admission : </label>
-                    <input type="text" class="form-control autosave" id="doa"  name="doa" >
+                    <input type="text" class="form-control " id="doa"  name="doa" >
                 </div>
                 <div class="col-md-6 aligninput">
                     <span class="alphabet">b.</span>
                     <label class="inlinedivs"for="">Time</label>
-                    <input type="time" class="form-control autosave" id="time"  name="time" >
+                    <input type="time" class="form-control " id="time"  name="time" >
                 </div>
             </div>
             
@@ -167,11 +136,11 @@
                     
                         <label class="inlinedivs"for="">Is this an emergency / a planned hospitalization event ?</label>
                         <div class="form-check checkwidth">
-                                                            <input type="radio" class="form-check-input autosave emergency" id="emergency" name="emergency" value="Emergency"  checked >Emergency
+                                                            <input type="radio" class="form-check-input  emergency" id="emergency" name="emergency" value="Emergency"  checked >Emergency
                                                             <label class="inlinedivs"class="form-check-label" for="radio2" ></label>
                                </div>  
                                     <div class="form-check checkwidth">
-                                                                <input type="radio" class="form-check-input autosave planned" id="emergency"      name="emergency" value="Planned" >Planned
+                                                                <input type="radio" class="form-check-input  planned" id="emergency"      name="emergency" value="Planned" >Planned
                                                                 <label class="inlinedivs" class="form-check-label" for="radio2" ></label>
                                  </div>  
                         </div>
@@ -182,42 +151,42 @@
                     <span class="alphabet">d.</span>
                     
                     <label class="inlinedivs"for="">Expected no. of days stay in hospital :</label>
-                    <input type="text" class="form-control autosave" id="stay_hospital"  name="stay_hospital" >
+                    <input type="text" class="form-control " id="stay_hospital"  name="stay_hospital" >
                 </div>
                 
                 <div class="col-md-6 aligninput">
                     <span class="alphabet">e.</span>
                     
                     <label class="inlinedivs"for="">Room Type : </label>
-                    <input type="text" class="form-control autosave" id="room_type" name="room_type" >
+                    <input type="text" class="form-control " id="room_type" name="room_type" >
                 </div>
                 
                 <div class="col-md-6 aligninput">
                     <span class="alphabet">f.</span>
                     
                     <label class="inlinedivs"for="">Per Day Room Rent + Nursing & Service Charges + Patient's Diet</label>
-                    <input type="text"  class="form-control autosave rent" id="rent" name="rent" >
+                    <input type="text"  class="form-control  rent" id="rent" name="rent" >
                 </div>
                 
                 <div class="col-md-6 aligninput">
                         <span class="alphabet">g.</span>
                         
                         <label class="inlinedivs"for="">Expected cost of Investigation + diagnostics</label>
-                        <input type="text" class="form-control autosave cost_investigation" id="cost_investigation" name="cost_investigation" >
+                        <input type="text" class="form-control  cost_investigation" id="cost_investigation" name="cost_investigation" >
                     </div>
                     
                     <div class="col-md-6 aligninput">
                         <span class="alphabet">h.</span>
                         
                         <label class="inlinedivs"for="">ICU Charges : </label>
-                        <input type="text" class="form-control autosave icu_charges " id="icu_charges" name="icu_charges">
+                        <input type="text" class="form-control  icu_charges " id="icu_charges" name="icu_charges">
                     </div>
                     
                     <div class="col-md-6 aligninput">
                         <span class="alphabet">i.</span>
                     
                         <label class="inlinedivs"for="">OT Charges</label>
-                        <input type="text" class="form-control autosave ot_charges" id="ot_charges" name="ot_charges" >
+                        <input type="text" class="form-control  ot_charges" id="ot_charges" name="ot_charges" >
                     </div>
                     
                     <div class="col-md-6 aligninput">
@@ -225,7 +194,7 @@
                         
                         <label class="inlinedivs"for="">Professional fees Surgeon + Anaesthetist Fees + consultation Charges :</label>
                     
-                        <input type="text" class="form-control autosave fees_charges" id="fees_charges" name="fees_charges" >
+                        <input type="text" class="form-control  fees_charges" id="fees_charges" name="fees_charges" >
             
                     </div>
                 <div class="col-md-6 aligninput">
@@ -236,13 +205,13 @@
                 </div>
         <div class="col-md-6 aligninput">
             
-            <input type="text" class="form-control autosave" id="medicines_expense" name="medicines_expense" >
+            <input type="text" class="form-control " id="medicines_expense" name="medicines_expense" >
         </div>
                     <div class="col-md-6 aligninput">
                         <span class="alphabet">l.</span>
                         
                         <label class="inlinedivs"for="">All inclusive package charges if any applicable</label>
-                        <input type="text" class="form-control autosave" id="inclusive" name="inclusive" > 
+                        <input type="text" class="form-control " id="inclusive" name="inclusive" > 
                     </div>
                     
                     
@@ -250,7 +219,7 @@
                         <span class="alphabet">m.</span>
                         
                         <label class="inlinedivs"for="">Sum total expected cost of hospitalisation</label>
-                        <input type="text" class="form-control autosave" id="cost_hospital" name="cost_hospital" >
+                        <input type="text" class="form-control " id="cost_hospital" name="cost_hospital" >
                     </div class="col-md-6 aligninput">
                     <h6>Mandatory : Past History of any chronic illness If yes , since (month/year)</h6>
                     
@@ -260,40 +229,40 @@
                         
                         <div class="col-md-6 aligninput">
                         <div class="form-check checkwidth">
-                                                            <input type="checkbox" class="form-check-input autosave diabetes" id="diabetes" name="diabetes" value="No" >
+                                                            <input type="checkbox" class="form-check-input  diabetes" id="diabetes" name="diabetes" value="No" >
                                             </div>  
                             <label class="inlinedivs"for="">Diabetes :</label>
                             
-                            <input type="text" class="form-control autosave" id="diabetes" name="diabetes">
+                            <input type="text" class="form-control " id="diabetes" name="diabetes">
                         </div> 
                         <div class="col-md-6 aligninput">
 
                         <div class="form-check checkwidth">
-                                                            <input type="checkbox" class="form-check-input autosave heart_disease" id="heart_disease" name="heart_disease" value="No" >
+                                                            <input type="checkbox" class="form-check-input  heart_disease" id="heart_disease" name="heart_disease" value="No" >
                                             </div>  
                             <label class="inlinedivs"for="">Heart Disease :</label>
-                            <input type="text" class="form-control autosave" id="heart_disease" name="heart_disease">
+                            <input type="text" class="form-control " id="heart_disease" name="heart_disease">
                         </div> 
                         <div class="col-md-6 aligninput">
                         <div class="form-check checkwidth">
-                                                            <input type="checkbox" class="form-check-input autosave hypertension" id="hypertension" name="hypertension" value="No" >
+                                                            <input type="checkbox" class="form-check-input  hypertension" id="hypertension" name="hypertension" value="No" >
                                             </div>  
                             <label class="inlinedivs"for="">Hypertension :</label>
-                            <input type="text" class="form-control autosave" id="hypertension" name="hypertension">
+                            <input type="text" class="form-control " id="hypertension" name="hypertension">
                         </div> 
                         <div class="col-md-6 aligninput">
 
                         <div class="form-check checkwidth">
-                                                            <input type="checkbox" class="form-check-input autosave hyperlipidemias" id="hyperlipidemias" name="hyperlipidemias" value="No" >
+                                                            <input type="checkbox" class="form-check-input  hyperlipidemias" id="hyperlipidemias" name="hyperlipidemias" value="No" >
                                             </div>                          
                             <label class="inlinedivs"for="">Hyperlipidemias :</label>
-                            <input type="text" class="form-control autosave" id="hyperlipidemias" name="hyperlipidemias" >
+                            <input type="text" class="form-control " id="hyperlipidemias" name="hyperlipidemias" >
                         </div>
                         
                         <div class="col-md-6 aligninput">
                             
                         <div class="form-check checkwidth">
-                                                            <input type="checkbox" class="form-check-input autosave osteoarthritis" id="osteoarthritis" name="osteoarthritis" value="No" >
+                                                            <input type="checkbox" class="form-check-input  osteoarthritis" id="osteoarthritis" name="osteoarthritis" value="No" >
                                             </div> 
                                             <label class="inlinedivs" for="">Osteoarthritis :</label> 
                             <input type="text" class="form-control class " id="osteoarthritis"  name="osteoarthritis">
@@ -302,46 +271,46 @@
                         <div class="col-md-6 aligninput">
 
                         <div class="form-check checkwidth">
-                                                            <input type="checkbox" class="form-check-input autosave ashtma_copd_bronchitis" id="ashtma_copd_bronchitis" name="ashtma_copd_bronchitis" value="No" >
+                                                            <input type="checkbox" class="form-check-input  ashtma_copd_bronchitis" id="ashtma_copd_bronchitis" name="ashtma_copd_bronchitis" value="No" >
                                             </div>  
 
                         <label class="inlinedivs"for="">Asthma/COPD/Bronchitis :</label>
 
-                        <input type="text" class="form-control autosave input_size"  id="ashtma_copd_bronchitis" name="ashtma_copd_bronchitis">
+                        <input type="text" class="form-control  input_size"  id="ashtma_copd_bronchitis" name="ashtma_copd_bronchitis">
                     </div>
 
                     <div class="col-md-6 aligninput">
 
                     <div class="form-check checkwidth">
-                                      <input type="checkbox" class="form-check-input autosave cancer" id="cancer" name="cancer" value="No" >
+                                      <input type="checkbox" class="form-check-input  cancer" id="cancer" name="cancer" value="No" >
                                             </div>  
                                         
                                         <label class="inlinedivs"for="">Cancer :</label>
 
-                                        <input type="text" class="form-control autosave input_size"   id="cancer" name="cancer">
+                                        <input type="text" class="form-control  input_size"   id="cancer" name="cancer">
                         
-    </div>
+                      </div>
                         <div class="col-md-6 aligninput">
                         <div class="form-check checkwidth">
-                                                            <input type="checkbox" class="form-check-input autosave alcohol" id="alcohol" name="alcohol" value="No" >
+                                                            <input type="checkbox" class="form-check-input  alcohol" id="alcohol" name="alcohol" value="No" >
                                             </div>  
                             <label class="inlinedivs"for="">Alcohol or drug abuse :</label>
-                            <input type="text" class="form-control autosave" id="alcohol_drug" name="alcohol_drug">
+                            <input type="text" class="form-control " id="alcohol_drug" name="alcohol_drug">
                         </div>
                         <div class="col-md-6 aligninput">
                         
                         <div class="form-check checkwidth">
-                                                            <input type="checkbox" class="form-check-input autosave alcohol" id="alcohol" name="alcohol" value="No" >
+                                                            <input type="checkbox" class="form-check-input  alcohol" id="alcohol" name="alcohol" value="No" >
                                             </div>  
 
                             <label class="inlinedivs"for="">Any HIV or STD/Related ailment :</label>
 
-                            <input type="text" class="form-control autosave" id="hiv_std" name="hiv_std" >
+                            <input type="text" class="form-control " id="hiv_std" name="hiv_std" >
                         </div>
                         <div class="col-md-6  aligninput">
 
                             <label class="inlinedivs"for="" style="margin-right:12px";>Any other Ailment give details :</label>
-                            <input type="text" class="form-control autosave" id="aliment" name="aliment" >
+                            <input type="text" class="form-control " id="aliment" name="aliment" >
                         </div>
                         <p>(PLEASE READ VERY CAREFULLY)</p>
                         <label class="inlinedivs"for="" style="margin:auto ; margin-right:10px;">We confirm having read understood and agreed to the Declarations on the reverse of this form</label>
@@ -350,20 +319,20 @@
                                 <span class="alphabet">a.</span>
                                 
                                 <label class="inlinedivs"for="">Name of the treating doctor :</label>
-                                <input type="text" class="form-control autosave" id="treating_doctor" name="treating_doctor" >
+                                <input type="text" class="form-control " id="treating_doctor" name="treating_doctor" >
                     
                         </div>
                     <div class="col-md-6 aligninput">
                         <span class="alphabet">b.</span>
                         
                         <label class="inlinedivs"for="">Qualification :</label>
-                        <input type="text" class="form-control autosave" id="qualification" name="qualification" >
+                        <input type="text" class="form-control " id="qualification" name="qualification" >
                     </div>
                     <div class="col-md-6 aligninput">
                         <span class="alphabet">c.</span>
                         
                         <label class="inlinedivs"for="">Registration No. with State Code :</label>
-                        <input type="text" class="form-control autosave" id="state_code" name="state_code" > 
+                        <input type="text" class="form-control " id="state_code" name="state_code" > 
                     </div>
                     <div style="display:flex;">
 
@@ -376,166 +345,176 @@
                         <input type="text" class="patient_signature" style="height: 45px;width: 12rem; margin-left: 25px;" name="patient_signature" id="patient_signature">
                             <p>Patient/Insured Name & Signature</p>
                         </div>
-</div>
-</form>
+                        
                     </div>
-                  
-        
+</div>
 
-           
+</form>
+</div>
+
+
+                    <div class="right_section">
+                        
+                        <h4 style="text-align : center";>Pdf Preview</h4>
+                        <iframe src="birla_pdf.php" width="100%" height="600" id="refreshpdf" title="pdf preview">
+                            </iframe>
+                            
+                        </div>
+                        
+                        <div class="bottom_section">
+                            
+                            <button class = "btn btn-success"><a href="birla_pdf.php" class= "auto" style="text-decoration:none ; color : white"; target="_blank" >Download pdf</a></button>
+                        </div>
+                       
 
         <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
         
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
     <script>
-        $(document).ready(function () {
+        // $(document).ready(function () {
             
-            $("#doa").datepicker({ dateFormat: "dd/mm/yy" ,changeMonth  :true , changeYear  :true });
-            $("#dod").datepicker({ dateFormat: "dd/mm/yy" ,changeMonth  :true , changeYear  :true });
-            $("#date_injury").datepicker({ dateFormat: "dd/mm/yy" ,changeMonth  :true , changeYear  :true });
-            // $("#date_consultation").datepicker({ dateFormat: "dd/mm/yy"  ,changeMonth  :true , changeYear  :true });
+          
+        //     $('#select_form').change(function (){
+        //     $('.data').hide();
+        //     $('#'+$(this).val()).fadeIn(400);
+        // }).change();
 
-                    
-        $('.autosave').change(function () { 
+        // $('.').change(function () { 
             
             
             
-            var rta = [];
-            var police = [];
-            var physician = [];
-            var physician = [];
-            var physician = [];
-            var physician = [];
-            var physician = [];
-        
+        //     var rta = [];
+        //     var police = [];
+        //     var physician = [];
+           
 
-            $(".rta").each(function(){
-            if($(this).is(":checked")){
-                rta.push($(this).val());
-            }
-            });
+        //     $(".rta").each(function(){
+        //     if($(this).is(":checked")){
+        //         rta.push($(this).val());
+        //     }
+        //     });
 
-            $(".police").each(function(){
-            if($(this).is(":checked")){
-                police.push($(this).val());
-            }
-            });
+        //     $(".police").each(function(){
+        //     if($(this).is(":checked")){
+        //         police.push($(this).val());
+        //     }
+        //     });
 
-            $(".physician").each(function(){
-            if($(this).is(":checked")){
-                physician.push($(this).val());
-            }
-            });
+        //     $(".physician").each(function(){
+        //     if($(this).is(":checked")){
+        //         physician.push($(this).val());
+        //     }
+        //     });
 
 
         
-            rta = rta.toString();
-            // alert(rta);return false;
-            police = police.toString();
-            physician = physician.toString();
+        //     rta = rta.toString();
+        //     // alert(rta);return false;
+        //     police = police.toString();
+        //     physician = physician.toString();
 
 
 
 
-            var date_injury = $('#date_injury').val(); 
+        //     var date_injury = $('#date_injury').val(); 
             
 
 
         
 
-        var test = $('#test').val();  
-        var maternity = $('#maternity').val();  
-        var dod = $('#dod').val();  
-        var alcohol = $('#alcohol').val();  
-        var doa = $('#doa').val();  
-        var time = $('#time').val();  
-        var emergency = $('#emergency').val();  
-        var stay_hospital = $('#stay_hospital').val();  
+        // var test = $('#test').val();  
+        // var maternity = $('#maternity').val();  
+        // var dod = $('#dod').val();  
+        // var alcohol = $('#alcohol').val();  
+        // var doa = $('#doa').val();  
+        // var time = $('#time').val();  
+        // var emergency = $('#emergency').val();  
+        // var stay_hospital = $('#stay_hospital').val();  
 
-        var room_type = $('#room_type').val();  
+        // var room_type = $('#room_type').val();  
 
-        var rent = $('#rent').val();  
-        var cost_investigation = $('#cost_investigation').val();  
-        var icu_charges = $('#icu_charges').val();  
-        var ot_charges = $('#ot_charges').val();  
-        var fees_charges = $('#fees_charges').val();  
-        var medicines_expense = $('#medicines_expense').val();  
-        var inclusive = $('#inclusive').val();  
-        var cost_hospital = $('#cost_hospital').val();  
-        var diabetes = $('#diabetes').val();  
-        var heart_disease = $('#heart_disease').val();  
-        var hypertension = $('#hypertension').val();  
-        var osteoarthritis = $('#osteoarthritis').val();  
-        var ashtma_copd_bronchitis = $('#ashtma_copd_bronchitis').val();  
-        var cancer = $('#cancer').val();  
-        var alcohol_drug = $('#alcohol_drug').val();  
-        var hiv_std = $('#hiv_std').val();  
-        var aliment = $('#aliment').val();  
-        var treating_doctor = $('#treating_doctor').val();  
-        var qualification = $('#qualification').val();  
-        var state_code = $('#state_code').val();  
-        var hospital_seal = $('#hospital_seal').val();  
-        var patient_signature = $('#patient_signature').val();  
-        var post_id = $('#post_id').val(); 
+        // var rent = $('#rent').val();  
+        // var cost_investigation = $('#cost_investigation').val();  
+        // var icu_charges = $('#icu_charges').val();  
+        // var ot_charges = $('#ot_charges').val();  
+        // var fees_charges = $('#fees_charges').val();  
+        // var medicines_expense = $('#medicines_expense').val();  
+        // var inclusive = $('#inclusive').val();  
+        // var cost_hospital = $('#cost_hospital').val();  
+        // var diabetes = $('#diabetes').val();  
+        // var heart_disease = $('#heart_disease').val();  
+        // var hypertension = $('#hypertension').val();  
+        // var osteoarthritis = $('#osteoarthritis').val();  
+        // var ashtma_copd_bronchitis = $('#ashtma_copd_bronchitis').val();  
+        // var cancer = $('#cancer').val();  
+        // var alcohol_drug = $('#alcohol_drug').val();  
+        // var hiv_std = $('#hiv_std').val();  
+        // var aliment = $('#aliment').val();  
+        // var treating_doctor = $('#treating_doctor').val();  
+        // var qualification = $('#qualification').val();  
+        // var state_code = $('#state_code').val();  
+        // var hospital_seal = $('#hospital_seal').val();  
+        // var patient_signature = $('#patient_signature').val();  
+        // var post_id = $('#post_id').val(); 
         
         
-                $.ajax({  
-                    url:"birla_data.php",  
-                    method:"POST",  
-                    data:{
-                        rta : rta,
-                        date_injury:date_injury,
-                        police:police, 
-                        alcohol:alcohol,
-                        test:test, 
-                        maternity:maternity,
-                        dod:dod, 
-                        doa:doa,
-                        time:time, 
-                        emergency : emergency,
-                        stay_hospital:stay_hospital,
-                        room_type:room_type, 
-                        rent:rent,
-                        cost_investigation:cost_investigation, 
-                        icu_charges:icu_charges,
-                        ot_charges:ot_charges, 
-                        fees_charges:fees_charges,
-                        medicines_expense:medicines_expense, 
-                        inclusive:inclusive,
-                        cost_hospital:cost_hospital, 
-                        diabetes:diabetes,
-                        heart_disease:heart_disease, 
-                        hypertension:hypertension,
-                        hyperlipidemias:hyperlipidemias, 
-                        osteoarthritis:osteoarthritis,
-                        ashtma_copd_bronchitis:ashtma_copd_bronchitis,
-                        cancer:cancer,
-                        alcohol_drug:alcohol_drug, 
-                        hiv_std:hiv_std,
-                        aliment:aliment, 
-                        treating_doctor:treating_doctor,
-                        qualification:qualification, 
-                        state_code:state_code,
-                        hospital_seal:hospital_seal,
-                        patient_signature:patient_signature,
+        //         $.ajax({  
+        //             url:"birla_data.php",  
+        //             method:"POST",  
+        //             data:{
+        //                 rta : rta,
+        //                 date_injury:date_injury,
+        //                 police:police, 
+        //                 alcohol:alcohol,
+        //                 test:test, 
+        //                 maternity:maternity,
+        //                 dod:dod, 
+        //                 doa:doa,
+        //                 time:time, 
+        //                 emergency : emergency,
+        //                 stay_hospital:stay_hospital,
+        //                 room_type:room_type, 
+        //                 rent:rent,
+        //                 cost_investigation:cost_investigation, 
+        //                 icu_charges:icu_charges,
+        //                 ot_charges:ot_charges, 
+        //                 fees_charges:fees_charges,
+        //                 medicines_expense:medicines_expense, 
+        //                 inclusive:inclusive,
+        //                 cost_hospital:cost_hospital, 
+        //                 diabetes:diabetes,
+        //                 heart_disease:heart_disease, 
+        //                 hypertension:hypertension,
+        //                 hyperlipidemias:hyperlipidemias, 
+        //                 osteoarthritis:osteoarthritis,
+        //                 ashtma_copd_bronchitis:ashtma_copd_bronchitis,
+        //                 cancer:cancer,
+        //                 alcohol_drug:alcohol_drug, 
+        //                 hiv_std:hiv_std,
+        //                 aliment:aliment, 
+        //                 treating_doctor:treating_doctor,
+        //                 qualification:qualification, 
+        //                 state_code:state_code,
+        //                 hospital_seal:hospital_seal,
+        //                 patient_signature:patient_signature,
                         
-                        post_id:post_id
-                    },  
-                    dataType:"text",  
-                    success:function(data)  
-                    {  
-                        if(data != '')  
-                        {  
-                            $('#post_id').val(data);  
-                            document.getElementById("refreshpdf").contentDocument.location.reload(true);
-                        }  
+        //                 post_id:post_id
+        //             },  
+        //             dataType:"text",  
+        //             success:function(data)  
+        //             {  
+        //                 if(data != '')  
+        //                 {  
+        //                     $('#post_id').val(data);  
+        //                     document.getElementById("refreshpdf").contentDocument.location.reload(true);
+        //                 }  
                         
-                    }  
-                });  
+        //             }  
+        //         });  
 
-    });
-        });
+    // });
+    //     });
 
     </script>
      

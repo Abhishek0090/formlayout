@@ -262,6 +262,12 @@
         </iframe>
 
 </div> 
+   
+<div class="bottom_section">
+                            
+                            <button class = "btn btn-success"><a href="apollo_home.php" class= "auto" style="text-decoration:none ; color : white"; target="_blank" >Download pdf</a></button>
+                        </div>
+                       
 </div>
 </body>
 </html>
