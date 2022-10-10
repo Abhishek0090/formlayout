@@ -54,11 +54,11 @@
                             <label for="">Gender</label>
                             
                             <div class="form-check checkwidth">
-                                <input  type="radio" class="form-check-input  gender"   id="gender" name="gender" value="Male" checked onchange="update_data('gender','gender')" >Male
+                                <input  type="checkbox" class="form-check-input  gender"   id="gender" name="gender" value="Male" checked onchange="update_data('gender','gender')" >Male
                                 <label class="form-check-label" for="radio1"></label>
                             </div>
                             <div class="form-check">
-                    <input type="radio" class="form-check-input  gender" id="gender" name="gender" value="Female" onchange="update_data('gender','gender')" >Female
+                    <input type="checkbox" class="form-check-input  gender" id="gender" name="gender" value="Female" onchange="update_data('gender','gender')" >Female
                     <label class="form-check-label" for="radio2" ></label>
                 </div>
             </div>

@@ -62,6 +62,18 @@
                 $('#'+$(this).val()).fadeIn(400);
             }).change();
 
+            
+            $("#dob").datepicker({ dateFormat: "dd/mm/yy" ,changeMonth  :true , changeYear  :true });
+            $("#date_consultation").datepicker({ dateFormat: "dd/mm/yy"  ,changeMonth  :true , changeYear  :true });
+    
+
+            $("#doa").datepicker({ dateFormat: "dd/mm/yy" ,changeMonth  :true , changeYear  :true });
+                $("#dod").datepicker({ dateFormat: "dd/mm/yy" ,changeMonth  :true , changeYear  :true });
+                $("#date_injury").datepicker({ dateFormat: "dd/mm/yy" ,changeMonth  :true , changeYear  :true });
+                // $("#date_consultation").datepicker({ dateFormat: "dd/mm/yy"  ,changeMonth  :true , changeYear  :true });
+
+            
+
             $('.hide2').hide();
         
     function loaddata(){
@@ -84,7 +96,9 @@
      <script>
         function update_data(inputid,field_name ){
             var patientid = $('#patient_id').val();
-            var field_value = $('#'+inputid).val()
+            var field_value = $('#'+inputid).val();
+            $('input[type="radio"]:checked').val()
+
             $.ajax({
                     url: "save_birla_data.php",
                     type: "POST",
