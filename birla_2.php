@@ -30,12 +30,12 @@
                                             <span class="alphabet">i.</span>
                                             <label class="inlinedivs"for="">Is it RTA -</label>
                                             <div class="form-check checkwidth">
-                                                <input  type="radio" class="form-check-input  rta"   id="rta" name="rta" value="Yes" checked onchange="update_data('rta','rta')" >Yes
+                                                <input  type="radio" class="form-check-input "   id="rta1" name="rta" value="Yes" checked onchange="update_data('rta1','rta')" >Yes
                                                 <label class="inlinedivs"class="form-check-label" for="radio1"></label>
                                             </div>
                                             
                                             <div class="form-check">
-                                                <input type="radio" class="form-check-input  rta" id="rta" name="rta" onchange="update_data('rta','rta')" value="No" >No
+                                                <input type="radio" class="form-check-input " id="rta2" name="rta" onchange="update_data('rta2','rta')" value="No" >No
                                                 <label class="inlinedivs"class="form-check-label" for="radio2" ></label>
                                             </div>
                                      </div>
@@ -43,7 +43,7 @@
 
                                             <span class="alphabet">ii.</span>
                                             <label class="inlinedivs"for="">Date of Injury : </label>
-                                            <input type="text" class="form-control class "  name="date_injury" id="date_injury"  onchange="update_data('date_injury','date_injury')">
+                                            <input type="text" class="form-control class "  name="date_injury" id="date_injury"  onchange="update_data('date_injury','date_injury')" placeholder="DD/MM/YY">
                                             
                                         </div>
                                         <div class="col-md-6 aligninput form-group">
@@ -51,24 +51,30 @@
                                             <span class="alphabet">iii.</span>
                                             <label class="inlinedivs"for="">Reported to Police : </label>
                                             <div class="form-check checkwidth">
-                                                <input  type="radio" class="form-check-input  police"   id="police" name="police" value="Yes" checked onchange="update_data('police','police')">Yes
+                                                <input  type="radio" class="form-check-input  police"   id="police1" name="police[]" value="Yes" checked onchange="update_data('police1','police')">Yes
                                                 <label class="inlinedivs"class="form-check-label" for="radio1"></label>
                                             </div>
                                             <div class="form-check">
-                                                <input type="radio" class="form-check-input  police" id="police" name="police" value="No" onchange="update_data('police','police')">No
+                                                <input type="radio" class="form-check-input  police" id="police2" name="police[]" value="No" onchange="update_data('police2','police')">No
                                                 <label class="inlinedivs"class="form-check-label" for="radio2" ></label>
                                             </div>
                                         </div>
-                                       
+                                        <div class="col-md-6 aligninput form-group">
+
+                                            <span class="alphabet">iv.</span>
+                                            <label class="inlinedivs" >FIR NO : </label>
+                                                    
+                                    <input type="text" class="form-control " id="fir" name="fir" onchange="update_data('fir','fir')">
+                                       </div>
                                         <div class="col-md-6 aligninput form-group">
                                 <span class="alphabet">b.</span>
                                 <label class="inlinedivs"for="">Injury / Disease caused due to substance abuse / alcohol consumption : </label>
                                 <div class="form-check checkwidth">
-                                                <input  type="radio" class="form-check-input  alcohol"   id="alcohol" name="alcohol" value="Yes" checked onchange="update_data('alcohol','alcohol')">Yes
+                                                <input  type="radio" class="form-check-input  alcohol"   id="alcohol1" name="alcohol[]" value="Yes" checked onchange="update_data('alcohol1','alcohol')">Yes
                                                 <label class="inlinedivs"class="form-check-label" for="radio1"></label>
                                             </div>
                                             <div class="form-check">
-                                                <input type="radio" class="form-check-input  alcohol" id="alcohol" name="alcohol" value="No" onchange="update_data('alcohol','alcohol')">No
+                                                <input type="radio" class="form-check-input  alcohol" id="alcohol2" name="alcohol[]" value="No" onchange="update_data('alcohol2','alcohol')">No
                                                 <label class="inlinedivs"class="form-check-label" for="radio2" ></label>
                                 </div>
     </div>
@@ -76,11 +82,11 @@
                     <div class="col-md-6 aligninput form-group">
                         <label class="inlinedivs"for="">Test Conducted to establish this :</label>
                         <div class="form-check checkwidth">
-                                                <input  type="radio" class="form-check-input  test"   id="test" name="test" value="Yes" checked onchange="update_data('test','test')">Yes
+                                                <input  type="radio" class="form-check-input  test"   id="test1" name="test[]" value="Yes" checked onchange="update_data('test1','test')">Yes
                                                 <label class="inlinedivs"class="form-check-label" for="radio1"></label>
                                             </div>
                                             <div class="form-check">
-                                                <input type="radio" class="form-check-input  test" id="test" name="test" value="No" onchange="update_data('test','test')">No (if Yes attach reports)
+                                                <input type="radio" class="form-check-input  test" id="test2" name="test[]" value="No" onchange="update_data('test2','test')">No (if Yes attach reports)
                                                 <label class="inlinedivs"class="form-check-label" for="radio2" ></label>
                                 </div>       
                     </div>
@@ -90,18 +96,18 @@
                         <label class="inlinedivs"for="">In case of Maternity</label>
                         <div class="form-check checkwidth">
                             <label class="inlinedivs"class="form-check-label" for="checkbox"></label>
-                            <input  type="checkbox" class="form-check-input  "   id="maternity" name="maternity" value="Yes" checked onchange="update_data('maternity','maternity')">G
+                            <input  type="checkbox" class="form-check-input  "   id="maternity" name="maternity[]" value="G" checked onchange="update_data('maternity','maternity')">G
     </div>
                                             <div class="form-check checkwidth">
-                                                <input type="checkbox" class="form-check-input  maternity" id="maternity" name="maternity" value="No" onchange="update_data('maternity','maternity')">P
+                                                <input type="checkbox" class="form-check-input  maternity" id="maternity" name="maternity[]" value="P" onchange="update_data('maternity','maternity')">P
                                                 <label class="inlinedivs"class="form-check-label" for="checkbox" ></label>
                                         </div>  
                                         <div class="form-check checkwidth">
-                                                        <input type="checkbox" class="form-check-input  maternity" id="maternity" name="maternity" value="No" onchange="update_data('maternity','maternity')">L
+                                                        <input type="checkbox" class="form-check-input  maternity" id="maternity" name="maternity[]" value="L" onchange="update_data('maternity','maternity')">L
                                                         <label class="inlinedivs"class="form-check-label" for="checkbox" ></label>
                                         </div>  
                                             <div class="form-check checkwidth">
-                                                            <input type="checkbox" class="form-check-input  maternity" id="maternity" name="maternity" value="No" onchange="update_data('rta','rta')">A
+                                                            <input type="checkbox" class="form-check-input  maternity" id="maternity" name="maternity[]" value="A" onchange="update_data('maternity','maternity')">A
                                                             <label class="inlinedivs"class="form-check-label" for="checkbox" ></label>
                                             </div>  
     </div>  
@@ -109,7 +115,7 @@
     
                                     
                                     <label class="inlinedivs"for="">Date of Delivery</label>
-                                    <input type="text" class="form-control " id="dod"  name="dod"  onchange="update_data('dod','dod')">
+                                    <input type="text" class="form-control " id="dod"  name="dod" placeholder="DD/MM/YY" onchange="update_data('dod','dod')">
                                 </div>
                 
                     
@@ -120,12 +126,12 @@
                     <span class="alphabet">a.</span>
                     
                     <label class="inlinedivs"for="">Date of admission : </label>
-                    <input type="text" class="form-control " id="doa"  name="doa"  onchange="update_data('doa','doa')">
+                    <input type="text" class="form-control " id="doa"  name="doa" placeholder="DD/MM/YY" onchange="update_data('doa','doa')">
                 </div>
                 <div class="col-md-6 aligninput">
                     <span class="alphabet">b.</span>
                     <label class="inlinedivs"for="">Time</label>
-                    <input type="time" class="form-control " id="time"  name="time"  onchange="update_data('time','time')">
+                    <input type="text" class="form-control " id="time"  name="time"  onchange="update_data('time','time')">
                 </div>
             </div>
             
@@ -136,11 +142,11 @@
                     
                         <label class="inlinedivs"for="">Is this an emergency / a planned hospitalization event ?</label>
                         <div class="form-check checkwidth">
-                                                            <input type="radio" class="form-check-input  emergency" id="emergency" name="emergency" value="Emergency"  checked  onchange="update_data('emergency','emergency')">Emergency
+                                                            <input type="radio" class="form-check-input  emergency" id="emergency1" name="emergency[]" value="Emergency"  checked  onchange="update_data('emergency1','emergency')">Emergency
                                                             <label class="inlinedivs"class="form-check-label" for="radio2" ></label>
                                </div>  
                                     <div class="form-check checkwidth">
-                                                                <input type="radio" class="form-check-input  planned" id="emergency"      name="emergency" value="Planned"  onchange="update_data('emergency','emergency')">Planned
+                                                                <input type="radio" class="form-check-input  planned" id="emergency2"      name="emergency[]" value="Planned"  onchange="update_data('emergency2','emergency')">Planned
                                                                 <label class="inlinedivs" class="form-check-label" for="radio2" ></label>
                                  </div>  
                         </div>
@@ -151,7 +157,7 @@
                     <span class="alphabet">d.</span>
                     
                     <label class="inlinedivs"for="">Expected no. of days stay in hospital :</label>
-                    <input type="text" class="form-control " id="stay_hospital"  name="stay_hospital"  onchange="update_data('stay_hospital','stay_hospital')">
+                    <input type="text" class="form-control " id="stay_hospital"  name="stay_hospital"  onchange="update_data('stay_hospital','stay_hospital')">Days
                 </div>
                 
                 <div class="col-md-6 aligninput">
@@ -229,83 +235,83 @@
                         
                         <div class="col-md-6 aligninput">
                         <div class="form-check checkwidth">
-                                                            <input type="checkbox" class="form-check-input  diabetes" id="diabetes" name="diabetes" value="No"  onchange="update_data('diabetes','diabetes')">
+                                                            <input type="checkbox" class="form-check-input  diabetes" id="diabetes" name="diabetes[]" value="Yes"  onchange="update_data('diabetes','diabetes')">
                                             </div>  
                             <label class="inlinedivs"for="">Diabetes :</label>
                             
-                            <input type="text" class="form-control " id="diabetes" name="diabetes" onchange="update_data('diabetes','diabetes')">
+                            <input type="text" class="form-control " id="diabetes_date" name="diabetes_date" onchange="update_data('diabetes_date','diabetes_date')" placeholder="mm/yy">
                         </div> 
                         <div class="col-md-6 aligninput">
 
                         <div class="form-check checkwidth">
-                                                            <input type="checkbox" class="form-check-input  heart_disease" id="heart_disease" name="heart_disease" value="No"  onchange="update_data('heart_disease','heart_disease')">
+                                                            <input type="checkbox" class="form-check-input  heart_disease" id="heart_disease" name="heart_disease[]" value="Yes"  onchange="update_data('heart_disease','heart_disease')">
                                             </div>  
                             <label class="inlinedivs"for="">Heart Disease :</label>
-                            <input type="text" class="form-control " id="heart_disease" name="heart_disease" onchange="update_data('heart_disease','heart_disease')">
+                            <input type="text" class="form-control " id="heart_disease_date" name="heart_disease_date" onchange="update_data('heart_disease_date','heart_disease_date')" placeholder="mm/yy">
                         </div> 
                         <div class="col-md-6 aligninput">
                         <div class="form-check checkwidth">
-                                                            <input type="checkbox" class="form-check-input  hypertension" id="hypertension" name="hypertension" value="No"  onchange="update_data('hypertension','hypertension')">
+                                                            <input type="checkbox" class="form-check-input  hypertension" id="hypertension" name="hypertension[]" value="Yes"  onchange="update_data('hypertension','hypertension')">
                                             </div>  
                             <label class="inlinedivs"for="">Hypertension :</label>
-                            <input type="text" class="form-control " id="hypertension" name="hypertension" onchange="update_data('hypertension','hypertension')">
+                            <input type="text" class="form-control " id="hypertension_date" name="hypertension_date" onchange="update_data('hypertension_date','hypertension_date')" placeholder="mm/yy">
                         </div> 
                         <div class="col-md-6 aligninput">
 
                         <div class="form-check checkwidth">
-                                                            <input type="checkbox" class="form-check-input  hyperlipidemias" id="hyperlipidemias" name="hyperlipidemias" value="No"  onchange="update_data('hyperlipidemias','hyperlipidemias')">
+                                                            <input type="checkbox" class="form-check-input  hyperlipidemias" id="hyperlipidemias" name="hyperlipidemias[]" value="Yes"  onchange="update_data('hyperlipidemias','hyperlipidemias')">
                                             </div>                          
                             <label class="inlinedivs"for="">Hyperlipidemias :</label>
-                            <input type="text" class="form-control " id="hyperlipidemias" name="hyperlipidemias"  onchange="update_data('hyperlipidemias','hyperlipidemias')">
+                            <input type="text" class="form-control " id="hyperlipidemias_date" name="hyperlipidemias_date"  onchange="update_data('hyperlipidemias_date','hyperlipidemias_date')" placeholder="mm/yy">
                         </div>
                         
                         <div class="col-md-6 aligninput">
                             
                         <div class="form-check checkwidth">
-                                                            <input type="checkbox" class="form-check-input  osteoarthritis" id="osteoarthritis" name="osteoarthritis" value="No"  onchange="update_data('osteoarthritis','osteoarthritis')">
+                                                            <input type="checkbox" class="form-check-input  osteoarthritis" id="osteoarthritis" name="osteoarthritis[]" value="Yes"  onchange="update_data('osteoarthritis','osteoarthritis')">
                                             </div> 
                                             <label class="inlinedivs" for="">Osteoarthritis :</label> 
-                            <input type="text" class="form-control class " id="osteoarthritis"  name="osteoarthritis" onchange="update_data('osteoarthritis','osteoarthritis')">
+                            <input type="text" class="form-control class " id="osteoarthritis_date"  name="osteoarthritis_date" onchange="update_data('osteoarthritis_date','osteoarthritis_date')" placeholder="mm/yy">
                         </div>
                         
                         <div class="col-md-6 aligninput">
 
                         <div class="form-check checkwidth">
-                                                            <input type="checkbox" class="form-check-input  ashtma_copd_bronchitis" id="ashtma_copd_bronchitis" name="ashtma_copd_bronchitis" value="No"  onchange="update_data('ashtma_copd_bronchitis','ashtma_copd_bronchitis')">
+                                                            <input type="checkbox" class="form-check-input  ashtma_copd_bronchitis" id="ashtma_copd_bronchitis" name="ashtma_copd_bronchitis[]" value="Yes"  onchange="update_data('ashtma_copd_bronchitis','ashtma_copd_bronchitis')">
                                             </div>  
 
                         <label class="inlinedivs"for="">Asthma/COPD/Bronchitis :</label>
 
-                        <input type="text" class="form-control  input_size"  id="ashtma_copd_bronchitis" name="ashtma_copd_bronchitis" onchange="update_data('ashtma_copd_bronchitis','ashtma_copd_bronchitis')">
+                        <input type="text" class="form-control  input_size"  id="ashtma_copd_bronchitis_date" name="ashtma_copd_bronchitis_date" onchange="update_data('ashtma_copd_bronchitis_date','ashtma_copd_bronchitis_date')" placeholder="mm/yy">
                     </div>
 
                     <div class="col-md-6 aligninput">
 
                     <div class="form-check checkwidth">
-                                      <input type="checkbox" class="form-check-input  cancer" id="cancer" name="cancer" value="No"  onchange="update_data('cancercancer','cancercancer')">
+                                      <input type="checkbox" class="form-check-input  cancer" id="cancer" name="cancer[]" value="Yes"  onchange="update_data('cancercancer','cancercancer')">
                                             </div>  
                                         
                                         <label class="inlinedivs"for="">Cancer :</label>
 
-                                        <input type="text" class="form-control  input_size"   id="cancer" name="cancer" onchange="update_data('cancer','cancer')">
+                                        <input type="text" class="form-control  input_size"   id="cancer_date" name="cancer_date" onchange="update_data('cancer_date','cancer_date')" placeholder="mm/yy">
                         
                       </div>
                         <div class="col-md-6 aligninput">
                         <div class="form-check checkwidth">
-                                                            <input type="checkbox" class="form-check-input  alcohol" id="alcohol" name="alcohol" value="No"  onchange="update_data('alcohol','alcohol')">
+                                                            <input type="checkbox" class="form-check-input  alcohol" id="alcohol" name="alcohol[]" value="Yes"  onchange="update_data('alcohol','alcohol')">
                                             </div>  
                             <label class="inlinedivs"for="">Alcohol or drug abuse :</label>
-                            <input type="text" class="form-control " id="alcohol_drug" name="alcohol_drug" onchange="update_data('alcohol','alcohol')">
+                            <input type="text" class="form-control " id="alcohol_drug_date" name="alcohol_drug_date" onchange="update_data('alcohol_date','alcohol_date')" placeholder="mm/yy">
                         </div>
                         <div class="col-md-6 aligninput">
                         
                         <div class="form-check checkwidth">
-                                                            <input type="checkbox" class="form-check-input  alcohol" id="alcohol" name="alcohol" value="No"  onchange="update_data('alcohol','alcohol')">
+                                                            <input type="checkbox" class="form-check-input  hiv_std" id="hiv_std" name="hiv_std[]" value="Yes"  onchange="update_data('hiv_std','hiv_std')">
                                             </div>  
 
                             <label class="inlinedivs"for="">Any HIV or STD/Related ailment :</label>
 
-                            <input type="text" class="form-control " id="hiv_std" name="hiv_std"  onchange="update_data('hiv_std','hiv_std')">
+                            <input type="text" class="form-control " id="hiv_std_date" name="hiv_std_date"  onchange="update_data('hiv_std_date','hiv_std_date')" placeholder="mm/yy">
                         </div>
                         <div class="col-md-6  aligninput">
 
@@ -332,7 +338,7 @@
                         <span class="alphabet">c.</span>
                         
                         <label class="inlinedivs"for="">Registration No. with State Code :</label>
-                        <input type="text" class="form-control " id="state_code" name="state_code"  onchange="update_data('state_code','state_code')"> 
+                        <input type="text" class="form-control " id="state_code" name="state_code" maxlength="6" onchange="update_data('state_code','state_code')"> 
                     </div>
                     <div style="display:flex;">
 

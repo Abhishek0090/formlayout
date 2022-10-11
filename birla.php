@@ -54,11 +54,11 @@
                             <label for="">Gender</label>
                             
                             <div class="form-check checkwidth">
-                                <input  type="checkbox" class="form-check-input  gender"   id="gender" name="gender" value="Male" checked onchange="update_data('gender','gender')" >Male
+                                <input  type="radio" class="form-check-input  gender"   id="gender1" name="gender" value="Male" checked onchange="update_data('gender1','gender')" >Male
                                 <label class="form-check-label" for="radio1"></label>
                             </div>
                             <div class="form-check">
-                    <input type="checkbox" class="form-check-input  gender" id="gender" name="gender" value="Female" onchange="update_data('gender','gender')" >Female
+                    <input type="radio" class="form-check-input  gender" id="gender2" name="gender" value="Female" onchange="update_data('gender2','gender')" >Female
                     <label class="form-check-label" for="radio2" ></label>
                 </div>
             </div>
@@ -81,7 +81,7 @@
                             <span class="alphabet">d.</span>
                             
                             <label for="">Date of Birth</label>
-                            <input type="text"  class="form-control " id="dob"  name="dob" onchange="update_data('dob','dob')">
+                            <input type="text"  class="form-control " placeholder="DD/MM/YY"id="dob"  name="dob" onchange="update_data('dob','dob')">
                         </div>
                         
                         <div class="col-md-6 aligninput">
@@ -208,7 +208,7 @@
                         </div>
 
                             <label for="">Date of first consultation :</label>
-                            <input type="text" class="form-control  input_size" style="width:40%"; id="date_consultation" name="date_consultation"  onchange="update_data('date_consultation','date_consultation')">
+                            <input type="text" class="form-control  input_size" style="width:40%"; id="date_consultation" placeholder="DD/MM/YY"name="date_consultation"  onchange="update_data('date_consultation','date_consultation')">
                             
                             <label for="">Past history of present ailment if any :</label>
                             <input type="text" class="form-control  input_size"   style="width:40%"; id="past_history" name="past_history"onchange="update_data('past_history','past_history')">
