@@ -12,7 +12,7 @@ if($num_rows>0){
     $sql = "UPDATE birla1 SET $field_name = '$field_value' WHERE patient_id = '".$patientid."'";
     $result = mysqli_query($conn,$sql);
     if($result){
-        $response['message'] = "updated Successfully";
+        $response['message'] = "data Saved Successfully";
         $response['code'] = "200";
         $response['last_insert_id'] = '';
     }
@@ -30,7 +30,7 @@ else{
     
     return $last_insert_id;
     if($last_insert_id>0){
-        $response['message'] = "Saved Successfully";
+        $response['message'] = "data Saved Successfully";
         $response['code'] = "200";
         $response['last_insert_id'] = $last_insert_id;
 

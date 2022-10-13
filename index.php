@@ -13,7 +13,8 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>     
-         <title>Document</title>
+         <title>Forms</title>
+       
     </head>
     <body>
         <div >
@@ -33,17 +34,16 @@
                         <option value="Alankit">Alankit</option>
                         <option value="Anmol">Anmol</option>
                         <option value="Apollo">Apollo</option>
-                    
                     </select>
         
                 </div>
         
         
             <div class="top_section col-2 mt-2 " >
-                    <button class="btn btn-warning " onclick="loaddata()">Next</button>
-                    <button class="btn btn-dark" onclick="loadprevious()" >Prev</button>
+                    <button class="btn btn-warning nextbtn" onclick="loaddata()">Next</button>
+                    <button class="btn btn-dark prevbtn" onclick="loadprevious()" >Prev</button>
                                 
-        <button class="btn btn-success">
+        <button class="btn btn-success savenow">
             <!-- <input type="hidden"  name="post_id" id="post_id"/>   -->
             
             AutoSave
@@ -52,11 +52,18 @@
             </div>
             <?php include 'apollo.php'?>
                 <section id="div1" class="hide1">
-                    <?php include 'birla.php'?>;
+                    <?php include 'birla.php'?>
                 </section>
                 <section id="div2" class="hide2">
-                <?php include 'birla_2.php'?>;
+                <?php include 'birla_2.php'?>
                 </section>
+                <section id="div3" class="hide3">
+                <?php include 'birla_3.php'?>
+                </section>
+                <section id="div4" class="hide4">
+                <?php include 'birla_4.php'?>
+                </section>
+               
     
 
     </div>
@@ -90,27 +97,58 @@
                 $("#alcohol_drug_date").datepicker({ dateFormat: "mm/yy" ,changeMonth  :true , changeYear  :true });
                 $("#hiv_std_date").datepicker({ dateFormat: "mm/yy" ,changeMonth  :true , changeYear  :true });
          
-             
-
+            
+                $('.hide2').hide();
+                $('.hide3').hide();
+                $('.hide4').hide();
+                var count = 0;
+    function loaddata(){
+           
+        if(count==0){
+            $('.hide2').show();
+            $('.hide1').hide();
+            $('.hide3').hide();
+            $('.hide4').hide();
+        }
+        if(count==1){
+            $('.hide3').show();
+            $('.hide1').hide();
             $('.hide2').hide();
-        
-            function loaddata(){
-                    
-                var value2 =  $('#div2').attr('class');               
-      
-
-                      
-                            $('.hide1').hide();
-                            $('.hide2').show();
-
-                    }
-                    
+            $('.hide4').hide();
+        }
+        if(count==2){
+            $('.hide3').hide();
+            $('.hide1').hide();
+            $('.hide2').hide();
+            $('.hide4').show();
+        }
+        count++;                   
+    
+                }
+             
             function loadprevious(){
-               var value =  $('#div1').attr('class'); 
-               $('.hide2').hide();
-               $('.hide1').show();
-               // alert(value);return false;
-         
+                if(count==1){
+                    $('.hide1').show();
+                    $('.hide2').hide();
+                    $('.hide3').hide();
+                    $('.hide4').hide();
+                    
+                }
+                if(count==2){
+                    $('.hide2').show();
+                    $('.hide1').hide();
+                    $('.hide3').hide();
+                    $('.hide4').hide();
+                    
+                }
+                if(count==3){
+                    $('.hide3').show();
+                    $('.hide1').hide();
+                    $('.hide2').hide();
+                    $('.hide4').hide();
+                    
+                }
+                count--;
 
         }
 
@@ -134,9 +172,17 @@
                         console.log(dataResult);
                         var result = JSON.parse(dataResult);
                         if(result.code='200'){
-                            // alert(result.message);
                             // alert()
-                       
+                            if(dataResult){
+
+                                $('.savenow').click(function (e) { 
+                                    alert(result.message);
+                                    
+                                });
+                            }
+                            else{
+
+                            }
                             document.getElementById("refreshpdf").contentDocument.location.reload(true);
                         }
                         else{
@@ -149,6 +195,8 @@
             }       
 
             </script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script src="mdtimepicker.js"></script>
     <script>
       $(document).ready(function () {
         $('#time').mdtimepicker(); 
@@ -158,8 +206,6 @@
       });
   
        </script>
-    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
-    <script src="mdtimepicker.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
 

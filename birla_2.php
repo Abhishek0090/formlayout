@@ -14,7 +14,7 @@
         <title>Document</title>
     </head>
     <body>
-    
+
     <div  id="birla" class="data hide2 container" >
                             <div class="center_section mt-5   formdesign " style="  width: 62%";>
                                 <div class="row d-flex adjust flex-column col"> 
@@ -251,7 +251,7 @@
                         </div> 
                         <div class="col-md-6 aligninput">
                         <div class="form-check checkwidth">
-                                                            <input type="checkbox" class="form-check-input  hypertension" id="hypertension" name="hypertension[]" value="Yes"  onchange="update_data('hypertension','hypertension')">
+                                          <input type="checkbox" class="form-check-input  hypertension" id="hypertension" name="hypertension[]" value="Yes"  onchange="update_data('hypertension','hypertension')">
                                             </div>  
                             <label class="inlinedivs"for="">Hypertension :</label>
                             <input type="text" class="form-control " id="hypertension_date" name="hypertension_date" onchange="update_data('hypertension_date','hypertension_date')" placeholder="mm/yy">
@@ -288,7 +288,7 @@
                     <div class="col-md-6 aligninput">
 
                     <div class="form-check checkwidth">
-                                      <input type="checkbox" class="form-check-input  cancer" id="cancer" name="cancer[]" value="Yes"  onchange="update_data('cancercancer','cancercancer')">
+                                      <input type="checkbox" class="form-check-input  cancer" id="cancer" name="cancer[]" value="Yes"  onchange="update_data('cancer','cancer')">
                                             </div>  
                                         
                                         <label class="inlinedivs"for="">Cancer :</label>
@@ -298,10 +298,10 @@
                       </div>
                         <div class="col-md-6 aligninput">
                         <div class="form-check checkwidth">
-                                                            <input type="checkbox" class="form-check-input  alcohol" id="alcohol" name="alcohol[]" value="Yes"  onchange="update_data('alcohol','alcohol')">
+                                                            <input type="checkbox" class="form-check-input  alcohol_drug" id="alcohol_drug" name="alcohol_drug[]" value="Yes"  onchange="update_data('alcohol_drug','alcohol_drug')">
                                             </div>  
                             <label class="inlinedivs"for="">Alcohol or drug abuse :</label>
-                            <input type="text" class="form-control " id="alcohol_drug_date" name="alcohol_drug_date" onchange="update_data('alcohol_date','alcohol_date')" placeholder="mm/yy">
+                            <input type="text" class="form-control " id="alcohol_drug_date" name="alcohol_drug_date" onchange="update_data('alcohol_drug_date','alcohol_drug_date')" placeholder="mm/yy">
                         </div>
                         <div class="col-md-6 aligninput">
                         
@@ -379,6 +379,8 @@
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
     <script>
+
+         
         // $(document).ready(function () {
             
           

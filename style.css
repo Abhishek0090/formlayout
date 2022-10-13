@@ -58,7 +58,7 @@ label{
     background-image: url('bg.jpg');
     background-position: cover;
     background-repeat: no-repeat;
-    background-size: 43.5rem 100%;
+    background-size: 46.5rem 100%;
     margin-top: 10rem;
     padding-left: 14px;
     padding-bottom: 14px;
@@ -82,7 +82,7 @@ label{
   }
 .right_section{
     /* width: 23.33%; */
-    width: 31.33%;
+    width: 35.33%;
     float: right;
     height: 1200px;
     margin-right: 6px;
@@ -105,8 +105,8 @@ a{
     text-decoration: none;
       }
 
- .input_size{
-    width: 50%;
+ .inputwidth{
+    width: %;
  } 
  .center_section1{
     padding-top: 0rem;
@@ -131,5 +131,6 @@ a{
     background: #fff;
     border-radius: 5;
     position: relative;
+    min-width: 1216px;
   
 }

@@ -1,9 +1,9 @@
 .formdesign{
     padding-top: 2rem;
-    background-image: url('birla/2.jpg');
+    background-image: url('bg1.jpg');
     background-position: cover;
     background-repeat: no-repeat;
-    background-size: 42.5rem 100%;
+    background-size: 46.5rem 100%;
     margin-top: 10rem;
     padding-left: 14px;
     padding-bottom: 14px;
@@ -15,11 +15,7 @@
     display: flex;
     margin-right: 40px;
 }
-#form2{
-    left: 450px;
 
-
-}
 .container{
     width : 360px;
     height: 400px;
