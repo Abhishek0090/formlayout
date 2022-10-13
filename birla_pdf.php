@@ -1758,11 +1758,11 @@
                         </div><br>
                         <div class=form-group col-md-6>
                         <input type=text class=patient_insured_sign style=height: 45px;width: 12rem; margin-left: 5px; >
-                        <label class=inlinedivs> Patient/Insured Name & Signature</label>
+                        <label class=inlinedivs > Patient/Insured Name & Signature</label>
                
                         </div><br>
                         <div class=col-md-6 aligninput>
-                            <label class=inlinedivs>Contact Number :</label>
+                            <label class=inlinedivs >Contact Number :</label>
                             <input type=text maxlength=10 />
                         </div><br>
 
@@ -1830,6 +1830,110 @@
 </div><br>
 </form>
 </div><br>
+
+";
+$html .="
+
+<div classcenter_section mt-5   formdesign style=  width: 62%;>
+							<div class=row d-flex adjust flex-column col> 
+					
+								<form  method=post>
+
+								<div class=form-group>
+									
+									<div class=col d-flex flex-row aligninput  form-group>
+
+									<h6>
+   DOCUMENTS TO BE PROVIDED BY THE HOSPITAL IN SUPPORT OF THE CLAIM
+</h6>
+
+									</div>
+									
+<div class=aligninput>
+				<span class=alphabet>1.</span>
+				
+				<label class=inlinedivs >Detailed Discharge Summary and all Bills from the hospital .
+</label>
+							
+			</div>
+			
+<div class=aligninput>
+				<span class=alphabet>2.</span>
+				
+				<label class=inlinedivs >Cash Memos from the Hospitals / Chemists supported by proper prescription
+</label>
+							
+			</div>
+			
+<div class=aligninput>
+				<span class=alphabet>3.</span>
+				
+				<label class=inlinedivs >Receipts and Pathological Test Reports from Pathologists , Supported by note from the attending Medical Practitioner I  Surgeon recommending such pathological Tests.
+</label>
+							
+			</div>
+
+			
+<div class=aligninput>
+				<span class=alphabet>4.</span>
+				
+				<label class=inlinedivs >Surgeon's Certificate stating nature of operation performed and Surgeon's Bill and Receipt.
+</label>
+							
+			</div>
+<div class=aligninput>
+				<span class=alphabet>5.</span>
+				
+				<label class=inlinedivs >Certificates from attending Medical Practitioner / Surgeon that the patient is fully cured.
+</label>
+							
+			</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class=aligninput>
+<label  class=inlinedivs>Aditya Birla Health Insurance Co. Limited. IRDAI Reg.153. CIN No. U66000MH2015PLC263677</label>
+</div>
+<div class=aligninput>
+
+<label style=margin-right  : 10px><strong>Address:-</strong>10th Floor, R-Tech Park, Nirlon Compound, Next to HUB Mall, Off Western Express Highway, Goregaon East, Mumbai - 400 063<br>
+Telephone: +91 22 6225 7600, Fax: +91 22 6225 7700. For more details on risk factors, terms and conditions please read sales brochure carefully before concluding a sale. Aditya Birla Health Logo is owned by its respective Owners and Used under license by us. </label>
+</div>
+</div>
+</form>
+</div>
+</div>
 ";
 	
 
