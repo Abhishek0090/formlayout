@@ -69,21 +69,16 @@
 		margin-right: 40px;
 	}
 	.signature_left{
-		flex: 1;
-		border: 2px solid yellow;
-		width : 50%;
+		width : 400px;
+		height : 50px;
 	}
 
 	.signature_right{
-		flex: 1;
-		border: 2px solid yellow;
-		width : 50%;
-
+		width : 400px;
+		height : 50px;
+		float : right;
 	}
 	
-	 .signature_left:first-child{
-		margin-right: 20px;
-	 } 
 	.updown{
 		margin-bottom : 10px;
 	}
@@ -92,6 +87,8 @@
 	}
 	.alignsign{
 		display: flex;	
+		justify-content  : space-between;
+		flex-direction  : column;
 	
 	}
 	.hospital_div_final{
@@ -1330,8 +1327,6 @@
 	<div class=updown aligninput margin>
 	<h4>Mandatory : Past History of any chronic illness If yes , since (month/year)</h4>
 	
-	
-	
 	</div>
 
 	<div class=updown>
@@ -1682,18 +1677,19 @@ $html .="
 	$html .= "	</div>
 		<div class=alignsign>
 				<div class=signature_left>
-			<input type=text class=inlinedivs style=height: 45px;width: 12rem; margin-left: 25px;  value=\"".$hospital_seal."\">	
+			<input type=text class=inlinedivs  value=\"".$hospital_seal."\">	
 			<p>Hospital Seal (Must include Hospital ID)</p>
 			
 			<p>(IMPORTANT PLEASE TURN OVER)</p>
 			</div>
-	<div class=signature_left>
-	<input type=text class= style=height: 45px;width: 12rem; margin-left: 25px;  value=\"".$patient_signature."\">
+	<div class=signature_right>
+	<input type=text class=inlinedivs value=\"".$patient_signature."\">
 	<p>Patient/Insured Name & Signature</p>
 </div>
+
 </div>
 
-		</form>
+		
 	";
 
 	$html .= " 
@@ -1850,7 +1846,7 @@ $html .="
                             <p style=margin-left:65px>Doctor's Signature</p>
  						</div>
 
-</form>
+
 </div><br>
 <br>
 <br>
@@ -1870,7 +1866,7 @@ $html .="
 			<div class=margin  formdesign style=  width: 62%;>
 							<div class= adjust > 
 					
-								<form  method=post>
+						
  
 									<div class= aligninput  >
 
@@ -1978,7 +1974,7 @@ $html .="
 Telephone: +91 22 6225 7600, Fax: +91 22 6225 7700. For more details on risk factors, terms and conditions please read sales brochure carefully before concluding a sale. Aditya Birla Health Logo is owned by its respective Owners and Used under license by us. </label>
 </div>
 </div>
-</form>
+
 </div>
 </div>
 ";
