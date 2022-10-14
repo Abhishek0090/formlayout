@@ -301,7 +301,7 @@
 		
 		$html .="
 
-	<div class=margin>
+	<div class=margin><div>
 		<h4>DETAILS OF THE THIRD PARTY ADMINISTRATOR</h4><P>(To be filled in block letters)</P>
 		<div class=updown >
 			
@@ -395,15 +395,6 @@
 			}
 		
 		$html .= "
-		
-		
-	<label></label>&nbsp;
-
-
-
-	<label></label>&nbsp;
-
-	
 	</div>
 	
 	<div class=updown>
@@ -798,7 +789,7 @@
 		
 		<label>Proposed line of treatment :</label>&nbsp;
 		<label>Medical Management Surgical Management Intensive care Investigation Non allopathic treatment.</label>&nbsp;";
-		for ($i=0; $i < 5; $i++) { 
+		for ($i=0; $i < 7; $i++) { 
 			# code...
 			if($i<count($line_treatment_exp)){
 
@@ -933,7 +924,7 @@
 
 
 			
-			<div class=updown   >
+			<div class=updown>
 				
 				<span class=>o.</span> 
 				<label  >In case of accident : </label> 
@@ -1286,7 +1277,7 @@
 	</div>
 
 
-	<div class= >
+	<div>
 	<span class=>m.</span>
 
 	<label  >Sum total expected cost of hospitalisation</label>";
@@ -1655,16 +1646,16 @@ $html .="
 	
 	$html .= "	</div>
 		<div class=alignsign>
-				<div class=signature_left>
-			<input type=text   value=\"".$hospital_seal."\">	
-			<p>Hospital Seal (Must include Hospital ID)</p>
-			
-			<p>(IMPORTANT PLEASE TURN OVER)</p>
+							<div class=signature_left>
+						<input type=text   value=\"".$hospital_seal."\">	
+						<p>Hospital Seal (Must include Hospital ID)</p>
+						
+						<p>(IMPORTANT PLEASE TURN OVER)</p>
+						</div>
+				<div class=signature_right>
+				<input type=text  value=\"".$patient_signature."\">
+				<p>Patient/Insured Name & Signature</p>
 			</div>
-	<div class=signature_right>
-	<input type=text  value=\"".$patient_signature."\">
-	<p>Patient/Insured Name & Signature</p>
-</div>
 
 </div>
 
