@@ -47,6 +47,8 @@
 	} 
 	input{
 		margin-right:120px;
+
+
 	}
 	.blockwise{
 		width : 22px;
@@ -57,9 +59,7 @@
 	.radiobtn{
 		accent-color: red;
 	}
-	input[type=checkbox]{
-		accent-color: red;
-	}
+
 	input:checked {
 		height: 50px;
 		width: 50px;
@@ -68,12 +68,54 @@
 		display: flex;
 		margin-right: 40px;
 	}
-	.signature_align{
-		display:flex;
-		flex-direction : row;
+	.signature_left{
+		flex: 1;
+		border: 2px solid yellow;
+		width : 50%;
 	}
-	.signature{
-		float : right;
+
+	.signature_right{
+		flex: 1;
+		border: 2px solid yellow;
+		width : 50%;
+
+	}
+	
+	 .signature_left:first-child{
+		margin-right: 20px;
+	 } 
+	.updown{
+		margin-bottom : 10px;
+	}
+	.spacing{
+		margin-bottom : 30px;
+	}
+	.alignsign{
+		display: flex;	
+	
+	}
+	.hospital_div_final{
+
+		border  :2px solid red;
+		margin-right:70px;
+	}
+	.hospital_final{
+		height: 45px;
+		width: 12rem;
+		 margin-left: 25px;
+	}
+	.doctor_sign{
+		height: 45px;
+		width: 12rem; size=25;
+		 margin-left: 25px; 
+		 border  :2px solid red;
+
+	}
+	.doctor_div{
+
+
+		border  :2px solid red;
+		float  :right;
 	}
 	</style>';
 
@@ -176,6 +218,7 @@
 
 			$rta = $row['rta'];
 			$date_injury = $row['date_injury'];
+			$police = $row['police'];
 			$alcohol = $row['alcohol'];
 			$test = $row['test'];
 			$maternity = $row['maternity'];
@@ -269,11 +312,11 @@
 			$state_code_exp = str_split($state_code);
 			$hospital_seal_exp = str_split($hospital_seal);
 			$patient_signature_exp = str_split($patient_signature);
-			$patient_insured_name_exp = $row['patient_insured_name'];
-			$patient_insured_sign_exp = $row['patient_insured_sign'];
-			$contact_declaration_exp = $row['contact_declaration'];
-			$hospital_seal_final_exp = $row['hospital_seal_final'];
-			$doctor_signature_exp = $row['doctor_signature'];
+			$patient_insured_name_exp = str_split($patient_insured_name);
+			$patient_insured_sign_exp = str_split($patient_insured_sign);
+			$contact_declaration_exp = str_split($contact_declaration);
+			$hospital_seal_final_exp = str_split($hospital_seal_final);
+			$doctor_signature_exp = str_split($doctor_signature);
 		}
 		} else {
 			echo "Something went wrong" ;
@@ -283,8 +326,8 @@
 		$html .="
 
 	<div class=margin>
-		<h3>DETAILS OF THE THIRD PARTY ADMINISTRATOR</h3><P>(To be filled in block letters)</P>
-		<div >
+		<h4>DETAILS OF THE THIRD PARTY ADMINISTRATOR</h4><P>(To be filled in block letters)</P>
+		<div class=updown >
 			
 			<span>a.</span> Name of TPA/Insurance Company : ";
 
@@ -303,7 +346,7 @@
 		$html .="
 		</div>
 		
-		<div>
+		<div class=updown >
 		<span>b.</span>
 	<label>Toll free phone number</label>&nbsp;";
 	for ($i=0; $i < 13; $i++) { 
@@ -316,8 +359,7 @@
 			$html .= "
 			<input  class=blockwise>";
 		}
-		
-	}
+		}
 	$html .="
 	</div>
 	
@@ -341,8 +383,8 @@
 	</div><br>
 	
 
-	<h3>TO BE FILLED BY THE INSURED/PATIENT</h3>
-	<div>
+	<h4>TO BE FILLED BY THE INSURED/PATIENT</h4>
+	<div class=updown>
 	<span>a.</span>
 
 		<label >Name of the Patient</label>&nbsp;";
@@ -360,6 +402,7 @@
 		$html .= "
 	
 		</div>
+		<div class=updown>
 		<span>b.</span>
 		<label>Gender</label>&nbsp;";
 		
@@ -387,7 +430,7 @@
 	
 	</div>
 	
-	<div>
+	<div class=updown>
 		<span>c.</span>
 		
 			
@@ -407,7 +450,7 @@
 			Years 
 	</div>
 
-	<div>
+	<div class=updown>
 	<span>d.</span>
 
 		<label>Date of Birth</label>&nbsp;";
@@ -426,8 +469,8 @@
 		
 		</div>
 
-	<div>
-	<span>e.</span>
+		<div class=updown>
+		<span>e.</span>
 
 		<label>Contact Number</label>&nbsp;";
 		for ($i=0; $i < 10; $i++) { 
@@ -444,7 +487,7 @@
 		$html .= "
 	</div>
 
-	<div>
+	<div class=updown>
 	<span>f.</span>
 
 		<label>Contact number of attending relative</label>&nbsp;";
@@ -462,7 +505,7 @@
 		$html .= "
 	</div>
 
-	<div>
+	<div class=updown>
 	<span>g.</span>
 
 		<label>Insured Card ID number</label>&nbsp;";
@@ -480,7 +523,7 @@
 		$html .= "
 	</div>
 
-	<div>
+	<div class=updown>
 	<span>h.</span>
 
 		<label>Policy number / Name of corporate</label>&nbsp;";
@@ -501,7 +544,7 @@
 		
 	</div>
 
-	<div>
+	<div class=updown>
 	<span>i.</span>
 
 		<label>Employee ID</label>&nbsp;";
@@ -521,7 +564,7 @@
 		
 	</div>
 
-	<div>
+	<div class=updown>
 	<span>j.</span>
 
 		<label>Currently do you have any other Mediclaim/Health insurance</label>&nbsp;";
@@ -542,7 +585,7 @@
 
 	</div>
 
-	<div>
+	<div class=updown>
 
 	<span>k.</span>
 
@@ -561,7 +604,7 @@
 		}
 		$html .= "
 	</div>
-	<div>
+	<div class=updown>
 	<span>l.</span>
 
 		<label>Do you have any family  physician</label>&nbsp;";
@@ -582,7 +625,7 @@
 	</div>
 
 
-	<div>
+	<div class=updown>
 	<span>m.</span>
 
 		<label>Name of the family physician</label>&nbsp;";
@@ -615,18 +658,13 @@
 			}
 		}
 		$html .= "
-		
-		
-		
-		
 		<p>PLEASE COMPLETE DECLARATION ON THE REVERSE SIDE OF THIS FORM</p>
+
 		</div><br>
-
-
-		<h2>TO BE FILLED BY THE TREATING DOCTOR/HOSPITAL</h2>
+		<h4>TO BE FILLED BY THE TREATING DOCTOR/HOSPITAL</h4>
 		
-		<div>
-			<span>a.</span>
+		<div class=updown>
+		<span>a.</span>
 			
 			<label>Name of the treating doctor :</label>&nbsp;";
 			for ($i=0; $i < 28; $i++) { 
@@ -643,8 +681,8 @@
 			$html .= "
 		
 		</div>
-		<div>
-			<span>b.</span>
+		<div class=updown>
+		<span>b.</span>
 			
 			<label>Contact number:</label>&nbsp;";
 			for ($i=0; $i < 10; $i++) { 
@@ -661,7 +699,7 @@
 			$html .= "
 		
 	</div>
-	<div>
+	<div class=updown>
 		<span>c.</span>
 		
 		<label>Name of ILLNESS / Disease with presenting Complaints :</label>&nbsp;";
@@ -680,7 +718,7 @@
 
 		
 	</div>
-	<div>
+	<div class=updown>
 		<span>d.</span>
 		
 		<label>Relevant clinical findings :</label>&nbsp;";
@@ -698,7 +736,7 @@
 		$html .= "
 	</div>
 
-	<div>
+	<div class=updown>
 		<span>e.</span>
 		
 		<label>Duration of the present ailment :</label>&nbsp; ";
@@ -718,7 +756,7 @@
 		
 		<span>Days</span>
 	</div>
-	<div>
+	<div class=updown>
 		<label>Date of first consultation :</label>&nbsp;";
 		for ($i=0; $i < 10; $i++) { 
 			# code...
@@ -746,7 +784,7 @@
 		$html .= "
 		
 	</div>
-	<div>
+	<div class=updown>
 		<span>f.</span>
 		
 		<label>Provisional diagnosis :</label>&nbsp;";
@@ -762,7 +800,7 @@
 		}
 		$html .= "
 	</div>
-	<div>
+	<div class=updown>
 		<span>g.</span>
 		
 		<label>ICD 10 Code :</label>&nbsp;";
@@ -779,7 +817,7 @@
 		$html .= "
 		
 	</div>
-	<div>
+	<div class=updown>
 		<span>h.</span>
 		
 		<label>Proposed line of treatment :</label>&nbsp;
@@ -798,7 +836,7 @@
 		
 		
 	</div>
-	<div>
+	<div class=updown>
 		<span>I.</span>
 		
 		<label>If Investigation &/or Medical Management provide :</label>&nbsp;";
@@ -816,7 +854,7 @@
 		
 		
 	</div>
-	<div>
+	<div class=updown>
 		<span>j.</span>
 		
 		<label>Route of drug administartion :</label>&nbsp;";
@@ -833,7 +871,7 @@
 		$html .= "
 		
 	</div>
-	<div>
+	<div class=updown>
 		<span>k.</span>
 		
 		<label>If Surgical, name of surgery :</label>&nbsp;";
@@ -849,7 +887,7 @@
 		}
 		$html .= "
 	</div>
-	<div>
+	<div class=updown>
 		<span>l.</span>
 		
 		<label>ICD 10 PCS Code :</label>&nbsp;";
@@ -865,7 +903,7 @@
 		}
 		$html .= "
 		</div>
-	<div>
+		<div class=updown>
 		<span>m.</span>
 		
 		<label>If other treatments provide details :</label>&nbsp;";
@@ -882,22 +920,7 @@
 		$html .= "
 		
 	</div>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<div class=margin></div><br>
+	
 	<div>
 		<span>n.</span>
 		
@@ -914,12 +937,27 @@
 		}
 		$html .= "
 	</div><br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<div class=margin></div><br>
 	"; 
 	$html .="
 
-		<div>
+
 			
-			<div class=col d-flex flex-row aligninput  >
+			<div class=updown aligninput  >
 				
 				<span class=alphabet>o.</span> 
 				<label class=inlinedivs for=>In case of accident : </label> 
@@ -940,8 +978,8 @@
 			}
 		
 		$html .= "
-		</div><br>
-				<div class=col-md-6 aligninput form-group>
+		</div>
+				<div class=updown >
 
 				<span class=alphabet>ii.</span>
 				<label class=inlinedivsfor=>Date of Injury : </label>";
@@ -955,14 +993,13 @@
 						$html .= "<input  class=blockwise>";
 					}
 				}
-				$html .= "
-			</div><br>
-			"; 
-			$html .="</div><br>
-			<div class=col-md-6 aligninput form-group>
+			
+			$html .="
+			</div>
+			<div class=updown aligninput >
 
 				<span class=alphabet>iii.</span>
-				<label class=inlinedivsfor=>Reported to Police : </label>";
+				<label class=inlinedivs>Reported to Police : </label>";
 		
 				if($police == "Yes"){
 		
@@ -977,9 +1014,9 @@
 				}
 			
 			$html .= "
-			</div><br>
-				</div><br>
-			<div class=col-md-6 aligninput form-group>
+			</div>
+			
+			<div class=updown aligninput >
 	<span class=alphabet>b.</span>
 	<label class=inlinedivs for=>Injury / Disease caused due to substance abuse / alcohol consumption : </label>";
 					
@@ -996,9 +1033,9 @@
 				}
 
 	$html .= "
-	</div><br>
+	</div>
 
-	<div class=col-md-6 aligninput form-group>
+	<div class=updown aligninput >
 	<label class=inlinedivsfor=>Test Conducted to establish this :</label>";
 		
 	if($test == "Yes"){
@@ -1014,8 +1051,8 @@
 	}
 
 	$html .= "
-	</div><br>
-	<div class=col-md-6 aligninput form-group>
+	</div>
+	<div class=updown aligninput >
 	<span class=alphabet>q.</span>
 
 	<label class=inlinedivsfor=>In case of Maternity :</label>";
@@ -1026,7 +1063,7 @@
 	}
 
 	$html .= "
-	<label class=inlinedivsclass=form-check-label for=checkbox>G</label>";
+	<label class=inlinedivs class=form-check-label for=checkbox>G</label>";
 
 
 				if($maternity == "P"){
@@ -1066,9 +1103,9 @@
 		}
 		$html .= "
 
-	<h5>TO BE FILLED BY THE INSURED/PATIENT</h5>
-	<h5>Details of the patient admitted </h5>
-	<div class=col-md-6 aligninput>
+		</div>
+	<h4>Details of the patient admitted </h4>
+	<div class=updown aligninput>
 	<span class=alphabet>a.</span>
 
 	<label class=inlinedivs >Date of admission : </label>";
@@ -1096,10 +1133,10 @@
 		}
 	}
 	$html .= "
-	</div><br>
+	</div>
 
 
-	<div class=col-md-6 aligninput>
+	<div class=updown aligninput>
 	<span class=alphabet>c.</span>
 	
 
@@ -1118,11 +1155,10 @@
 	}
 
 	$html .= "
-	</div><br>
+	</div>
 
-	</div><br>
 
-	<div class=col-md-6 aligninput>
+	<div class=updown aligninput>
 	<span class=alphabet>d.</span>
 
 	<label class=inlinedivs >Expected no. of days stay in hospital :</label>";
@@ -1137,9 +1173,9 @@
 		}
 	}
 	$html .= "
-	</div><br>
+	</div>
 
-	<div class=col-md-6 aligninput>
+	<div class=updown aligninput>
 	<span class=alphabet>e.</span>
 
 	<label class=inlinedivs >Room Type : </label>";
@@ -1154,9 +1190,9 @@
 		}
 	}
 	$html .= "
-	</div><br>
+	</div>
 
-	<div class=col-md-6 aligninput>
+	<div class=updown aligninput>
 	<span class=alphabet>f.</span>
 
 	<label class=inlinedivs >Per Day Room Rent + Nursing & Service Charges + Patient's Diet</label>";
@@ -1171,9 +1207,9 @@
 		}
 	}
 	$html .= "
-	</div><br>
+	</div>
 
-	<div class=col-md-6 aligninput>
+	<div class=updown aligninput>
 	<span class=alphabet>g.</span>
 
 	<label class=inlinedivs >Expected cost of Investigation + diagnostics</label>";
@@ -1188,9 +1224,9 @@
 		}
 	}
 	$html .= "
-	</div><br>
+	</div>
 
-	<div class=col-md-6 aligninput>
+	<div class=updown aligninput>
 	<span class=alphabet>h.</span>
 
 	<label class=inlinedivs >ICU Charges : </label>";
@@ -1205,8 +1241,7 @@
 		}
 	}
 	$html .= "
-	</div><br>
-	<div class=col-md-6 aligninput>
+	
 	<span class=alphabet>i.</span>
 
 	<label class=inlinedivs >OT Charges</label>";
@@ -1221,8 +1256,8 @@
 		}
 	}
 	$html .= "
-
-	<div class=col-md-6 aligninput>
+</div>
+	<div class=updown aligninput>
 	<span class=alphabet>j.</span>
 
 	<label class=inlinedivs >Professional fees Surgeon + Anaesthetist Fees + consultation Charges :</label>
@@ -1238,14 +1273,13 @@
 		}
 	}
 	$html .= "
-	</div><br>
-	<div class=col-md-6 aligninput>
+	</div>
+	<div class=updown aligninput>
 	<span class=alphabet>k.</span>
 
 	<label class=inlinedivs >Medicines + Consumables + Cost of Implants(if applicable specify)Other hospital expenses if any:</label>
 
-	</div><br>
-	<div class=col-md-6 aligninput>";
+";
 	for ($i=0; $i < 10; $i++) { 
 		# code...
 		if($i<count($medicines_expense_exp)){
@@ -1257,8 +1291,8 @@
 		}
 	}
 	$html .= "
-	</div><br>
-	<div class=col-md-6 aligninput>
+	</div>
+	<div class=updown aligninput>
 	<span class=alphabet>l.</span>
 
 	<label class=inlinedivs >All inclusive package charges if any applicable</label>";
@@ -1273,10 +1307,10 @@
 		}
 	}
 	$html .= "
-	</div><br>
+	</div>
 
 
-	<div class=col-md-6 aligninput>
+	<div class= aligninput>
 	<span class=alphabet>m.</span>
 
 	<label class=inlinedivs >Sum total expected cost of hospitalisation</label>";
@@ -1291,11 +1325,17 @@
 		}
 	}
 	$html .= "
-	</div><br>
-	<div class=margin>
-	<div class=col-md-6 aligninput margin>
-	<h6>Mandatory : Past History of any chronic illness If yes , since (month/year)</h6>";
+	</div>
+	
+	<div class=updown aligninput margin>
+	<h4>Mandatory : Past History of any chronic illness If yes , since (month/year)</h4>
+	
+	
+	
+	</div>
 
+	<div class=updown>
+	";
 	if($diabetes == "Yes"){
 
 		$html .="<input type=checkbox checked=checked> ";
@@ -1321,8 +1361,8 @@
 	
 
 	$html .= "
-	</div><br> 
-	<div class=col-md-6 aligninput>
+	</div>
+	<div class=updown aligninput>
 	";
 
 	if($heart_disease == "Yes"){
@@ -1354,8 +1394,8 @@
 	
 
 	$html .= "
-	</div><br>
-	<div class=col-md-6 aligninput>";
+	</div>
+	<div class=updown aligninput>";
 
 
 	if($hypertension == "Yes"){
@@ -1367,8 +1407,6 @@
 		$html .= "
 		<input type=checkbox>";
 	}
-
-
 	$html .= "
 
 	<label class=inlinedivs >Hypertension :</label>";
@@ -1385,10 +1423,9 @@
 	}
 	
 	$html .= "
-	</div><br>
-	<div class=col-md-6 aligninput>
-
-	<div class=form-check checkwidth>";
+	</div>
+	<div class=updown aligninput>
+";
 
 	if($hyperlipidemias == "Yes"){
 
@@ -1415,11 +1452,11 @@
 	}
 	
 	$html .= "
-	</div><br>
+	</div>
 
-	<div class= aligninput>
+	<div class=updown aligninput >
 
-	<div class= checkwidth>";
+	";
 
 	if($osteoarthritis == "Yes"){
 
@@ -1432,7 +1469,6 @@
 	
 
 	$html .= "
-
 				<label class=inlinedivs  >Osteoarthritis :</label> ";
 		
 				for ($i=0; $i < 10; $i++) { 
@@ -1444,13 +1480,11 @@
 						$html .= "<input  class=blockwise>";
 					}
 				}
-				
-				$html .= "
-	</div><br>
 
-	<div class=col-md-6 aligninput>
-
-	<div class=form-check checkwidth>";
+$html .="
+</div>
+<div class=updown aligninput> 
+";
 
 	if($ashtma_copd_bronchitis == "Yes"){
 
@@ -1465,7 +1499,7 @@
 	$html .= "
 		
 
-	<label class=inlinedivs >Asthma/COPD/Bronchitis :</label>
+	<label class=inlinedivs>Asthma/COPD/Bronchitis :</label>
 
 	";
 		
@@ -1479,11 +1513,9 @@
 		}
 	}
 	
-	$html .= "	</div><br>
+	$html .= "	</div>
 
-	<div class=col-md-6 aligninput>
-
-	<div class=form-check checkwidth>
+	<div class=updown aligninput>
 	";
 
 	if($cancer == "Yes"){
@@ -1513,9 +1545,9 @@
 	}
 	
 	$html .= "
-	<div class=col-md-6 aligninput>
+	</div>
+	<div class=updown aligninput>
 
-	<div class=form-check checkwidth>
 	";
 	
 	if($alcohol_drug == "Yes"){
@@ -1544,8 +1576,8 @@
 	}
 	
 	$html .= "
-				</div><br>  
-				<div class=col-md-6  aligninput>
+				</div>
+				<div class=updown aligninput>
 	";
 
 	if($hiv_std == "Yes"){
@@ -1573,8 +1605,8 @@
 	}
 	
 	$html .= "
-	</div><br>
-	<div class=col-md-6  aligninput>
+	</div>
+	<div class=updown  aligninput>
 
 	<label class=inlinedivs  style=margin-right:12px>Any other Ailment give details :</label>
 	";
@@ -1590,9 +1622,12 @@
 	}
 	
 	$html .= "	</div><br>
+	<h4>DECLARATION</h4>
 	<p>(PLEASE READ VERY CAREFULLY)</p>
+	<div class=updown>
 	<label class=inlinedivs  style=margin:auto ; margin-right:10px;>We confirm having read understood and agreed to the Declarations on the reverse of this form</label>
-	<div class=col-md-6 aligninput>
+	</div>
+	<div class=updown aligninput>
 
 	<span class=alphabet>a.</span>
 
@@ -1610,8 +1645,8 @@
 	}
 	
 	$html .= "	
-	</div><br>
-	<div class=col-md-6 aligninput>
+	</div>
+	<div class=updown aligninput>
 	<span class=alphabet>b.</span>
 
 	<label class=inlinedivs >Qualification :</label>
@@ -1627,8 +1662,8 @@
 		}
 	}
 	
-	$html .= "	</div><br>
-	<div class=col-md-6 aligninput>
+	$html .= "	</div>
+	<div class=updown aligninput>
 	<span class=alphabet>c.</span>
 
 	<label class=inlinedivs >Registration No. with State Code :</label>
@@ -1644,250 +1679,246 @@
 		}
 	}
 	
-	$html .= "	</div><br>
-	<div class=margin signature_align>
-		<div class=signature_align>
-	<input type=text class= style=height: 45px;width: 12rem; margin-left: 25px; id=hospital_seal value=\"".$hospital_seal."\">
-	<p>Hospital Seal (Must include Hospital ID)</p>
-	<p>(IMPORTANT PLEASE TURN OVER)</p>
-	</div><br>
-	<div>
-
-	<input type=text class= style=height: 45px;width: 12rem; margin-left: 25px; name=patient_signature id=patient_signature value=\"".$patient_signature."\">
+	$html .= "	</div>
+		<div class=alignsign>
+				<div class=signature_left>
+			<input type=text class=inlinedivs style=height: 45px;width: 12rem; margin-left: 25px;  value=\"".$hospital_seal."\">	
+			<p>Hospital Seal (Must include Hospital ID)</p>
+			
+			<p>(IMPORTANT PLEASE TURN OVER)</p>
+			</div>
+	<div class=signature_left>
+	<input type=text class= style=height: 45px;width: 12rem; margin-left: 25px;  value=\"".$patient_signature."\">
 	<p>Patient/Insured Name & Signature</p>
-	</div><br>
-	</div><br>
-	</div><br>
-	</form>
-	</div><br>";
+</div>
+</div>
+
+		</form>
+	";
 
 	$html .= " 
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-    <div class=center_section mt-5   formdesign  style=  width: 62%;>
-                                <div class=row d-flex adjust flex-column col> 
-                   
-
-                                    <div class=form-group>
-                                        
-                                        <div class=col d-flex flex-row aligninput  form-group>
+	<div class=spacing></div>
+    <div class=margin>
                                             
-    <h6>
+    <h4>
         DECLARATION BY THE PATIENT/REPRESENTATIVE:
-    </h6>
+    </h4>
 </div><br>
 
-<div class=col-md-6 aligninput>
+<div class=updown aligninput>
                     <span class=alphabet>1.</span>
                     
                     <label class=inlinedivs >I agree to allow the hospital to submit all original documents pertaining to hospitalization to the Insurer / TPA after the discharge. I agree to sign on the Final Bill & the Discharge Summary, before my discharge.
 </label>
                                 
-                </div><br>
-<div class=col-md-6 aligninput>
+                </div>
+<div class=updown aligninput>
                     <span class=alphabet>2.</span>
                     
                     <label class=inlinedivs >Payment to hospital is governed by the terms and conditions of the policy. In case the Insurer / TPA is not liable to settle the hospital bill, I undertake to settle the bill as per the terms and conditions of the policy.</label>
                                 
-                </div><br>
+                </div>
 
-<div class=col-md-6 aligninput>
+<div class=updown aligninput>
                     <span class=alphabet>3.</span>
                     
                     <label class=inlinedivs >All non-medical expenses and expenses not relevant to current hospitalization and the amounts over & above the limit authorised by the Insurer / TPA not governed by the terms and conditions of the policy will be paid by me.</label>
                                 
-                </div><br>
-<div class=col-md-6 aligninput>
+                </div>
+<div class=updown aligninput>
                     <span class=alphabet>4.</span>
                     
                     <label class=inlinedivs >I hereby declare to abide by the terms and conditions of the policy and if at any time the facts disclosed by me are found to be false or incorrect, I forfeit my claim and agree to indentify the Insurer / TPA.</label>
                                 
-                </div><br>
-<div class=col-md-6 aligninput>
+                </div>
+<div class=updown aligninput>
                     <span class=alphabet>5.</span>
                     
                     <label class=inlinedivs >I agree and understand that TPA is in no way warranting the service of the hospital & that the Insurer / TPA is in no way guaranteeing that the services provided by the hospital will be of a particular quality or standard.</label>
                                 
-                </div><br>
-<div class=col-md-6 aligninput>
+                </div>
+<div class=updown aligninput>
                     <span class=alphabet>6.</span>
                     
                     <label class=inlinedivs >I hereby warrant the truth of the forgoing particu lars in every respect and I agree that if I have made or shall make any false or untrue statement, suppression or concealment with respect to the claim, my right to claim reimbursement of the said expenses shall be absolutely forfeited.</label>
                                 
-                </div><br>
-<div class=col-md-6 aligninput>
+                </div>
+<div class=updown aligninput>
                     <span class=alphabet>7.</span>
                     
                     <label class=inlinedivs >I agree to identify the hospital against all expenses incurred on my behalf, which are not reimbursed by the Insurer / TPA. </label>
                                 
-                </div><br>
-                <div class=col-md-6 aligninput>
+                </div>
+                <div class=updown aligninput>
                             
                             
                             <label >Patient's /Insured Name:</label>
-                            <input type=text class=form-control inputsize   style=width:400px>
-                        </div><br>
-                        <div class=form-group col-md-6>
-                        <input type=text class=patient_insured_sign style=height: 45px;width: 12rem; margin-left: 5px; >
+							";
+		
+							for ($i=0; $i < 25; $i++) { 
+								# code...
+								if($i<count($patient_insured_name_exp)){
+									$html .="<input class=blockwise value=\"".$patient_insured_name_exp[$i]."\">";
+								}
+								else{
+									$html .= "<input  class=blockwise>";
+								}
+							}
+							
+							$html .= "</div><br>
+                        <div class= updown>
+                        <input type=text class=patient_insured_sign style=height: 45px;width: 12rem; margin-left: 5px; size=50 value=\"".$patient_insured_sign."\" >
+
+						<br>
                         <label class=inlinedivs > Patient/Insured Name & Signature</label>
-               
-                        </div><br>
-                        <div class=col-md-6 aligninput>
+                        </div>
+						<div class=updown></div>
+                        <div class=updown aligninput>
                             <label class=inlinedivs >Contact Number :</label>
-                            <input type=text maxlength=10 />
+                            ";
+		
+							for ($i=0; $i < 9; $i++) { 
+								# code...
+								if($i<count($contact_declaration_exp)){
+									$html .="<input class=blockwise value=\"".$contact_declaration_exp[$i]."\">";
+								}
+								else{
+									$html .= "<input  class=blockwise>";
+								}
+							}
+							
+							$html .= "
                         </div><br>
 
-                        <div class=col d-flex flex-row aligninput  form-group>
+                        <div class= aligninput  >
                                             
-                                            <h6>
+                                            <h4>
                                                 Hospital DECLARATION
-                                            </h6>
+                                            </h4>
                                         </div><br>
                                         
-    </div><br>
-    <div class=col-md-6 aligninput>
+ 
+    <div class=updown aligninput>
     <span class=alphabet>1.</span>
     <label class=inlinedivs >We have no objection to any authorized TPA / Insurance Company official verifying documents pertaining to hospitalization.</label>
-</div><br>
-    <div class=col-md-6 aligninput>
+</div>
+    <div class=updown aligninput>
                     <span class=alphabet>2.</span>
                     
                     <label class=inlinedivs >All valid original documents duly countersigned by the insured I patient as per the checklist mentioned below will be sent to TPA / Insurance Company within 7 days of the patient's discharge.</label>
                                 
-                </div><br>
-    <div class=col-md-6 aligninput>
+                </div>
+    <div class=updown aligninput>
                     <span class=alphabet>3.</span>
                     
                     <label class=inlinedivs >All nonmedical expenses OR expenses not relevant to hospitalization or illness OR expenses disallowed in the Authorisation Letter of the TPA / Insurance Co. OR arising out of incorrect information in the pre-authorisation form will be collected from the patient.</label>
                                 
-                </div><br>
-    <div class=col-md-6 aligninput>
+                </div>
+    <div class=updown aligninput>
                     <span class=alphabet>4.</span>
                     
                     <label class=inlinedivs >WE AGREE THAT TPA / INSURANCE COMPANY WILL NOT BE LIABLE TO MAKE THE PAYMENT IN THE EVENT OF ANY DISCREPANCY BETWEEN THE FACTS IN THIS FORM AND  DISCHARGE SUMMARY or other documents.</label>
                                 
-                </div><br>
-    <div class=col-md-6 aligninput>
+                </div>
+    <div class=updown aligninput>
                     <span class=alphabet>5.</span>
                     
                     <label class=inlinedivs >The patient declaration has been signed by the patient or by his representative in our presence.</label>
                                 
-                </div><br>
-<div class=col-md-6 aligninput>
+                </div>
+<div class=updown aligninput>
                     <span class=alphabet>6.</span>
                     
                     <label class=inlinedivs >We agree to provide clarifications for the queries raised regarding this hospitalization and we take the sole responsibility for any delay in offering clarifications.</label>
                                 
-</div><br>
-<div class=col-md-6 aligninput>
+</div>
+<div class=updown aligninput>
                     <span class=alphabet>7.</span>
                     
                     <label class=inlinedivs >We will abide by the terms and conditions agreed in the MOU.</label>
                                 
-</div><br>
-<div style=display:flex;>
+</div>
 
-                        <div class=form-group col-md-6 style=margin-right:70px;>
-                            <input type=text class=hospital_seal_final style=height: 45px;width: 12rem; margin-left: 25px;>
+
+                        <div class= updown hospital_div_final>
+                            <input type=text  class=hospital_final value=\"".$hospital_seal_final."\"  size=25>
                             <p style=margin-left:75px>Hospital Seal </p>
                      
-                        </div><br>        
-                        <div class=form-group col-md-6 style=float:right;>
-                        <input type=text style=height: 45px;width: 12rem; margin-left: 25px;>
+                        </div>       
+                        <div class= updown doctor_div>
+                        <input type=text class=doctor_sign value=\"".$doctor_signature."\">
                             <p style=margin-left:65px>Doctor's Signature</p>
-                        </div><br>
-                        
-                    </div><br>
-</div><br>
+ 						</div>
+
 </form>
 </div><br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
 
 ";
 $html .="
 
-<div classcenter_section mt-5   formdesign style=  width: 62%;>
-							<div class=row d-flex adjust flex-column col> 
+
+			<div class=margin  formdesign style=  width: 62%;>
+							<div class= adjust > 
 					
 								<form  method=post>
+ 
+									<div class= aligninput  >
 
-								<div class=form-group>
-									
-									<div class=col d-flex flex-row aligninput  form-group>
+						 <h4>
+						DOCUMENTS TO BE PROVIDED BY THE HOSPITAL IN SUPPORT OF THE CLAIM
+						</h4>
 
-									<h6>
-   DOCUMENTS TO BE PROVIDED BY THE HOSPITAL IN SUPPORT OF THE CLAIM
-</h6>
-
-									</div>
-									
-<div class=aligninput>
-				<span class=alphabet>1.</span>
-				
-				<label class=inlinedivs >Detailed Discharge Summary and all Bills from the hospital .
-</label>
+									 </div>
+												
+			<div class=aligninput>
+							<span class=alphabet>1.</span>
 							
-			</div>
+							<label class=inlinedivs >Detailed Discharge Summary and all Bills from the hospital .
+			</label>
+										
+			 </div>
 			
-<div class=aligninput>
-				<span class=alphabet>2.</span>
-				
-				<label class=inlinedivs >Cash Memos from the Hospitals / Chemists supported by proper prescription
-</label>
+			<div class=aligninput>
+							<span class=alphabet>2.</span>
 							
-			</div>
+							<label class=inlinedivs >Cash Memos from the Hospitals / Chemists supported by proper prescription
+			</label>
+										
+			 </div>
 			
-<div class=aligninput>
-				<span class=alphabet>3.</span>
-				
-				<label class=inlinedivs >Receipts and Pathological Test Reports from Pathologists , Supported by note from the attending Medical Practitioner I  Surgeon recommending such pathological Tests.
-</label>
-							
-			</div>
+				<div class=aligninput>
+								<span class=alphabet>3.</span>
+								
+								<label class=inlinedivs >Receipts and Pathological Test Reports from Pathologists , Supported by note from the attending Medical Practitioner I  Surgeon recommending such pathological Tests.
+				</label>
+											
+				 </div>
 
-			
-<div class=aligninput>
-				<span class=alphabet>4.</span>
-				
-				<label class=inlinedivs >Surgeon's Certificate stating nature of operation performed and Surgeon's Bill and Receipt.
-</label>
 							
-			</div>
-<div class=aligninput>
-				<span class=alphabet>5.</span>
-				
-				<label class=inlinedivs >Certificates from attending Medical Practitioner / Surgeon that the patient is fully cured.
-</label>
-							
-			</div>
+				<div class=aligninput>
+								<span class=alphabet>4.</span>
+								
+								<label class=inlinedivs >Surgeon's Certificate stating nature of operation performed and Surgeon's Bill and Receipt.
+				</label>
+											
+				 </div>
+				<div class=aligninput>
+								<span class=alphabet>5.</span>
+								
+								<label class=inlinedivs >Certificates from attending Medical Practitioner / Surgeon that the patient is fully cured.
+				</label>
+											
+  				</div>
 <br>
 <br>
 <br>
@@ -1922,6 +1953,22 @@ $html .="
 <br>
 <br>
 <br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+
 <div class=aligninput>
 <label  class=inlinedivs>Aditya Birla Health Insurance Co. Limited. IRDAI Reg.153. CIN No. U66000MH2015PLC263677</label>
 </div>

@@ -319,6 +319,7 @@
                             <input type="text" class="form-control " id="aliment" name="aliment"  onchange="update_data('aliment','aliment')">
                         </div>
                         <p>(PLEASE READ VERY CAREFULLY)</p>
+                        <h6 class="inlinedivs"for="">DECLARATION :</h6>
                         <label class="inlinedivs"for="" style="margin:auto ; margin-right:10px;">We confirm having read understood and agreed to the Declarations on the reverse of this form</label>
                         <div class="col-md-6 aligninput">
                         
