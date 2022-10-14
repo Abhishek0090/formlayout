@@ -19,55 +19,36 @@
 		font-size  :20px;
 		background-size: 43.rem 100%;
 	}
+
 	.margin{
 		padding-top:130px;
-		
-		
 	}
-	.alphabet{
-		margin-right: 20px;
-	}
+	
 
 	label{
 		min-width: fit-content;
 		margin-right: 120px;
 	}
-
-
-	.aligninput{
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		justify-content: start;
-		margin: 4px;
-		min-width: fit-content;
-	}
-	.checkwidth{
-		margin-right: -7rem;
-	} 
 	input{
 		margin-right:120px;
-
+		
 
 	}
 	.blockwise{
 		width : 22px;
 		height : 20px;
 		border : none;	
-		padding : 12px;
-	}
-	.radiobtn{
-		accent-color: red;
-	}
+		padding-left :54px;
+	
+	
+		}
+	
 
 	input:checked {
 		height: 50px;
 		width: 50px;
 	}
-	.inlinedivs{
-		display: flex;
-		margin-right: 40px;
-	}
+	
 	.signature_left{
 		width : 400px;
 		height : 50px;
@@ -109,8 +90,6 @@
 
 	}
 	.doctor_div{
-
-
 		border  :2px solid red;
 		float  :right;
 	}
@@ -474,7 +453,7 @@
 			# code...
 			if($i<count($contact_patient_exp)){
 
-				$html .="<input class=blockwise value=\"".$contact_patient_exp[$i]."\">";
+				$html .="<input  class=blockwise value=\"".$contact_patient_exp[$i]."\">";
 			}
 			else{
 				$html .= "
@@ -954,12 +933,12 @@
 
 
 			
-			<div class=updown aligninput  >
+			<div class=updown   >
 				
-				<span class=alphabet>o.</span> 
-				<label class=inlinedivs for=>In case of accident : </label> 
-				<span class=alphabet>i.</span>
-				<label class=inlinedivs >Is it RTA -</label>
+				<span class=>o.</span> 
+				<label  >In case of accident : </label> 
+				<span class=>i.</span>
+				<label  >Is it RTA -</label>
 				";
 		
 			if($rta == "Yes"){
@@ -978,8 +957,8 @@
 		</div>
 				<div class=updown >
 
-				<span class=alphabet>ii.</span>
-				<label class=inlinedivsfor=>Date of Injury : </label>";
+				<span class=>ii.</span>
+				<label >Date of Injury : </label>";
 				for ($i=0; $i < 10; $i++) { 
 					# code...
 					if($i<count($date_injury_exp)){
@@ -993,10 +972,10 @@
 			
 			$html .="
 			</div>
-			<div class=updown aligninput >
+			<div class=updown  >
 
-				<span class=alphabet>iii.</span>
-				<label class=inlinedivs>Reported to Police : </label>";
+				<span class=>iii.</span>
+				<label >Reported to Police : </label>";
 		
 				if($police == "Yes"){
 		
@@ -1013,9 +992,9 @@
 			$html .= "
 			</div>
 			
-			<div class=updown aligninput >
-	<span class=alphabet>b.</span>
-	<label class=inlinedivs for=>Injury / Disease caused due to substance abuse / alcohol consumption : </label>";
+			<div class=updown  >
+	<span class=>b.</span>
+	<label  >Injury / Disease caused due to substance abuse / alcohol consumption : </label>";
 					
 				if($alcohol == "Yes"){
 
@@ -1032,8 +1011,8 @@
 	$html .= "
 	</div>
 
-	<div class=updown aligninput >
-	<label class=inlinedivsfor=>Test Conducted to establish this :</label>";
+	<div class=updown  >
+	<label >Test Conducted to establish this :</label>";
 		
 	if($test == "Yes"){
 
@@ -1049,10 +1028,10 @@
 
 	$html .= "
 	</div>
-	<div class=updown aligninput >
-	<span class=alphabet>q.</span>
+	<div class=updown  >
+	<span class=>q.</span>
 
-	<label class=inlinedivsfor=>In case of Maternity :</label>";
+	<label >In case of Maternity :</label>";
 		
 	if($maternity == "G"){
 
@@ -1060,7 +1039,7 @@
 	}
 
 	$html .= "
-	<label class=inlinedivs class=form-check-label for=checkbox>G</label>";
+	<label  class=form-check-label checkbox>G</label>";
 
 
 				if($maternity == "P"){
@@ -1069,7 +1048,7 @@
 				}
 				
 				$html .= "
-					<label class=inlinedivs class=form-check-label checkbox >P</label>";
+					<label  class=form-check-label checkbox >P</label>";
 		
 					if($maternity == "L"){
 					
@@ -1077,7 +1056,7 @@
 					}
 					
 					$html .= "
-							<label class=inlinedivs class=form-check-label for=checkbox >L</label>
+							<label  class=form-check-label checkbox >L</label>
 							";
 		
 							if($maternity == "A"){
@@ -1086,7 +1065,7 @@
 							}
 							
 							$html .= "
-								<label class= inlinedivs class= form-check-label  for= checkbox  >A</label>&nbsp;&nbsp;	  
+								<label class= inlinedivs class= form-check-label   checkbox  >A</label>&nbsp;&nbsp;	  
 		<label class= inlinedivs >Date of Delivery: </label>";
 		for ($i=0; $i < 10; $i++) { 
 			# code...
@@ -1102,10 +1081,10 @@
 
 		</div>
 	<h4>Details of the patient admitted </h4>
-	<div class=updown aligninput>
-	<span class=alphabet>a.</span>
+	<div class=updown >
+	<span class=>a.</span>
 
-	<label class=inlinedivs >Date of admission : </label>";
+	<label  >Date of admission : </label>";
 	for ($i=0; $i < 10; $i++) { 
 		# code...
 		if($i<count($doa_exp)){
@@ -1117,8 +1096,8 @@
 		}
 	}
 	$html .= "
-	<span class=alphabet>b.</span>
-	<label class=inlinedivs >Time</label>";
+	<span class=>b.</span>
+	<label  >Time</label>";
 	for ($i=0; $i < 8; $i++) { 
 		# code...
 		if($i<count($time_exp)){
@@ -1133,11 +1112,11 @@
 	</div>
 
 
-	<div class=updown aligninput>
-	<span class=alphabet>c.</span>
+	<div class=updown >
+	<span class=>c.</span>
 	
 
-	<label class=inlinedivs >Is this an emergency / a planned hospitalization event ?</label>";
+	<label  >Is this an emergency / a planned hospitalization event ?</label>";
 		
 	if($emergency == "Emergency"){
 
@@ -1155,10 +1134,10 @@
 	</div>
 
 
-	<div class=updown aligninput>
-	<span class=alphabet>d.</span>
+	<div class=updown >
+	<span class=>d.</span>
 
-	<label class=inlinedivs >Expected no. of days stay in hospital :</label>";
+	<label  >Expected no. of days stay in hospital :</label>";
 	for ($i=0; $i < 4; $i++) { 
 		# code...
 		if($i<count($stay_hospital_exp)){
@@ -1172,10 +1151,10 @@
 	$html .= "
 	</div>
 
-	<div class=updown aligninput>
-	<span class=alphabet>e.</span>
+	<div class=updown >
+	<span class=>e.</span>
 
-	<label class=inlinedivs >Room Type : </label>";
+	<label  >Room Type : </label>";
 	for ($i=0; $i < 10; $i++) { 
 		# code...
 		if($i<count($room_type_exp)){
@@ -1189,10 +1168,10 @@
 	$html .= "
 	</div>
 
-	<div class=updown aligninput>
-	<span class=alphabet>f.</span>
+	<div class=updown >
+	<span class=>f.</span>
 
-	<label class=inlinedivs >Per Day Room Rent + Nursing & Service Charges + Patient's Diet</label>";
+	<label  >Per Day Room Rent + Nursing & Service Charges + Patient's Diet</label>";
 	for ($i=0; $i < 10; $i++) { 
 		# code...
 		if($i<count($rent_exp)){
@@ -1206,10 +1185,10 @@
 	$html .= "
 	</div>
 
-	<div class=updown aligninput>
-	<span class=alphabet>g.</span>
+	<div class=updown >
+	<span class=>g.</span>
 
-	<label class=inlinedivs >Expected cost of Investigation + diagnostics</label>";
+	<label  >Expected cost of Investigation + diagnostics</label>";
 	for ($i=0; $i < 10; $i++) { 
 		# code...
 		if($i<count($cost_investigation_exp)){
@@ -1223,10 +1202,10 @@
 	$html .= "
 	</div>
 
-	<div class=updown aligninput>
-	<span class=alphabet>h.</span>
+	<div class=updown >
+	<span class=>h.</span>
 
-	<label class=inlinedivs >ICU Charges : </label>";
+	<label  >ICU Charges : </label>";
 	for ($i=0; $i < 10; $i++) { 
 		# code...
 		if($i<count($icu_charges_exp)){
@@ -1239,9 +1218,9 @@
 	}
 	$html .= "
 	
-	<span class=alphabet>i.</span>
+	<span class=>i.</span>
 
-	<label class=inlinedivs >OT Charges</label>";
+	<label  >OT Charges</label>";
 	for ($i=0; $i < 10; $i++) { 
 		# code...
 		if($i<count($ot_charges_exp)){
@@ -1254,10 +1233,10 @@
 	}
 	$html .= "
 </div>
-	<div class=updown aligninput>
-	<span class=alphabet>j.</span>
+	<div class=updown >
+	<span class=>j.</span>
 
-	<label class=inlinedivs >Professional fees Surgeon + Anaesthetist Fees + consultation Charges :</label>
+	<label  >Professional fees Surgeon + Anaesthetist Fees + consultation Charges :</label>
 	";
 	for ($i=0; $i < 10; $i++) { 
 		# code...
@@ -1271,10 +1250,10 @@
 	}
 	$html .= "
 	</div>
-	<div class=updown aligninput>
-	<span class=alphabet>k.</span>
+	<div class=updown >
+	<span class=>k.</span>
 
-	<label class=inlinedivs >Medicines + Consumables + Cost of Implants(if applicable specify)Other hospital expenses if any:</label>
+	<label  >Medicines + Consumables + Cost of Implants(if applicable specify)Other hospital expenses if any:</label>
 
 ";
 	for ($i=0; $i < 10; $i++) { 
@@ -1289,10 +1268,10 @@
 	}
 	$html .= "
 	</div>
-	<div class=updown aligninput>
-	<span class=alphabet>l.</span>
+	<div class=updown >
+	<span class=>l.</span>
 
-	<label class=inlinedivs >All inclusive package charges if any applicable</label>";
+	<label  >All inclusive package charges if any applicable</label>";
 	for ($i=0; $i < 10; $i++) { 
 		# code...
 		if($i<count($inclusive_exp)){
@@ -1307,10 +1286,10 @@
 	</div>
 
 
-	<div class= aligninput>
-	<span class=alphabet>m.</span>
+	<div class= >
+	<span class=>m.</span>
 
-	<label class=inlinedivs >Sum total expected cost of hospitalisation</label>";
+	<label  >Sum total expected cost of hospitalisation</label>";
 	for ($i=0; $i < 10; $i++) { 
 		# code...
 		if($i<count($cost_hospital_exp)){
@@ -1324,7 +1303,7 @@
 	$html .= "
 	</div>
 	
-	<div class=updown aligninput margin>
+	<div class=updown  margin>
 	<h4>Mandatory : Past History of any chronic illness If yes , since (month/year)</h4>
 	
 	</div>
@@ -1340,7 +1319,7 @@
 
 	$html .= "
 			
-	<label class=inlinedivs >Diabetes :</label>
+	<label  >Diabetes :</label>
 	";
 		
 	for ($i=0; $i < 10; $i++) { 
@@ -1357,7 +1336,7 @@
 
 	$html .= "
 	</div>
-	<div class=updown aligninput>
+	<div class=updown >
 	";
 
 	if($heart_disease == "Yes"){
@@ -1374,7 +1353,7 @@
 	$html .= "
 
 	
-	<label class=inlinedivs >Heart Disease :</label>";
+	<label  >Heart Disease :</label>";
 		
 	for ($i=0; $i < 10; $i++) { 
 		# code...
@@ -1390,7 +1369,7 @@
 
 	$html .= "
 	</div>
-	<div class=updown aligninput>";
+	<div class=updown >";
 
 
 	if($hypertension == "Yes"){
@@ -1404,7 +1383,7 @@
 	}
 	$html .= "
 
-	<label class=inlinedivs >Hypertension :</label>";
+	<label  >Hypertension :</label>";
 		
 	for ($i=0; $i < 10; $i++) { 
 		# code...
@@ -1419,7 +1398,7 @@
 	
 	$html .= "
 	</div>
-	<div class=updown aligninput>
+	<div class=updown >
 ";
 
 	if($hyperlipidemias == "Yes"){
@@ -1433,7 +1412,7 @@
 	
 	$html .= "
                        
-	<label class=inlinedivs >Hyperlipidemias :</label>";
+	<label  >Hyperlipidemias :</label>";
 		
 	for ($i=0; $i < 10; $i++) { 
 		# code...
@@ -1449,7 +1428,7 @@
 	$html .= "
 	</div>
 
-	<div class=updown aligninput >
+	<div class=updown  >
 
 	";
 
@@ -1464,7 +1443,7 @@
 	
 
 	$html .= "
-				<label class=inlinedivs  >Osteoarthritis :</label> ";
+				<label   >Osteoarthritis :</label> ";
 		
 				for ($i=0; $i < 10; $i++) { 
 					# code...
@@ -1478,7 +1457,7 @@
 
 $html .="
 </div>
-<div class=updown aligninput> 
+<div class=updown > 
 ";
 
 	if($ashtma_copd_bronchitis == "Yes"){
@@ -1494,7 +1473,7 @@ $html .="
 	$html .= "
 		
 
-	<label class=inlinedivs>Asthma/COPD/Bronchitis :</label>
+	<label >Asthma/COPD/Bronchitis :</label>
 
 	";
 		
@@ -1510,7 +1489,7 @@ $html .="
 	
 	$html .= "	</div>
 
-	<div class=updown aligninput>
+	<div class=updown >
 	";
 
 	if($cancer == "Yes"){
@@ -1525,7 +1504,7 @@ $html .="
 
 	$html .= "			
 			
-			<label class=inlinedivs >Cancer :</label>
+			<label  >Cancer :</label>
 
 	";
 		
@@ -1541,7 +1520,7 @@ $html .="
 	
 	$html .= "
 	</div>
-	<div class=updown aligninput>
+	<div class=updown >
 
 	";
 	
@@ -1557,7 +1536,7 @@ $html .="
 	
 	$html .= "	
 	
-	<label class=inlinedivs >Alcohol or drug abuse :</label>
+	<label  >Alcohol or drug abuse :</label>
 	";
 		
 	for ($i=0; $i < 10; $i++) { 
@@ -1572,7 +1551,7 @@ $html .="
 	
 	$html .= "
 				</div>
-				<div class=updown aligninput>
+				<div class=updown >
 	";
 
 	if($hiv_std == "Yes"){
@@ -1586,7 +1565,7 @@ $html .="
 	}
 
 	$html .= "	
-	<label class=inlinedivs >Any HIV or STD/Related ailment :</label>
+	<label  >Any HIV or STD/Related ailment :</label>
 	";
 		
 	for ($i=0; $i < 10; $i++) { 
@@ -1601,9 +1580,9 @@ $html .="
 	
 	$html .= "
 	</div>
-	<div class=updown  aligninput>
+	<div class=updown  >
 
-	<label class=inlinedivs  style=margin-right:12px>Any other Ailment give details :</label>
+	<label   style=margin-right:12px>Any other Ailment give details :</label>
 	";
 		
 	for ($i=0; $i < 10; $i++) { 
@@ -1620,13 +1599,13 @@ $html .="
 	<h4>DECLARATION</h4>
 	<p>(PLEASE READ VERY CAREFULLY)</p>
 	<div class=updown>
-	<label class=inlinedivs  style=margin:auto ; margin-right:10px;>We confirm having read understood and agreed to the Declarations on the reverse of this form</label>
+	<label   style=margin:auto ; margin-right:10px;>We confirm having read understood and agreed to the Declarations on the reverse of this form</label>
 	</div>
-	<div class=updown aligninput>
+	<div class=updown >
 
-	<span class=alphabet>a.</span>
+	<span class=>a.</span>
 
-	<label class=inlinedivs >Name of the treating doctor :</label>
+	<label  >Name of the treating doctor :</label>
 	";
 		
 	for ($i=0; $i < 10; $i++) { 
@@ -1641,10 +1620,10 @@ $html .="
 	
 	$html .= "	
 	</div>
-	<div class=updown aligninput>
-	<span class=alphabet>b.</span>
+	<div class=updown >
+	<span class=>b.</span>
 
-	<label class=inlinedivs >Qualification :</label>
+	<label  >Qualification :</label>
 	";
 		
 	for ($i=0; $i < 10; $i++) { 
@@ -1658,10 +1637,10 @@ $html .="
 	}
 	
 	$html .= "	</div>
-	<div class=updown aligninput>
-	<span class=alphabet>c.</span>
+	<div class=updown >
+	<span class=>c.</span>
 
-	<label class=inlinedivs >Registration No. with State Code :</label>
+	<label  >Registration No. with State Code :</label>
 	";
 		
 	for ($i=0; $i < 6; $i++) { 
@@ -1677,13 +1656,13 @@ $html .="
 	$html .= "	</div>
 		<div class=alignsign>
 				<div class=signature_left>
-			<input type=text class=inlinedivs  value=\"".$hospital_seal."\">	
+			<input type=text   value=\"".$hospital_seal."\">	
 			<p>Hospital Seal (Must include Hospital ID)</p>
 			
 			<p>(IMPORTANT PLEASE TURN OVER)</p>
 			</div>
 	<div class=signature_right>
-	<input type=text class=inlinedivs value=\"".$patient_signature."\">
+	<input type=text  value=\"".$patient_signature."\">
 	<p>Patient/Insured Name & Signature</p>
 </div>
 
@@ -1701,51 +1680,51 @@ $html .="
     </h4>
 </div><br>
 
-<div class=updown aligninput>
-                    <span class=alphabet>1.</span>
+<div class=updown >
+                    <span class=>1.</span>
                     
-                    <label class=inlinedivs >I agree to allow the hospital to submit all original documents pertaining to hospitalization to the Insurer / TPA after the discharge. I agree to sign on the Final Bill & the Discharge Summary, before my discharge.
+                    <label  >I agree to allow the hospital to submit all original documents pertaining to hospitalization to the Insurer / TPA after the discharge. I agree to sign on the Final Bill & the Discharge Summary, before my discharge.
 </label>
                                 
                 </div>
-<div class=updown aligninput>
-                    <span class=alphabet>2.</span>
+<div class=updown >
+                    <span class=>2.</span>
                     
-                    <label class=inlinedivs >Payment to hospital is governed by the terms and conditions of the policy. In case the Insurer / TPA is not liable to settle the hospital bill, I undertake to settle the bill as per the terms and conditions of the policy.</label>
+                    <label  >Payment to hospital is governed by the terms and conditions of the policy. In case the Insurer / TPA is not liable to settle the hospital bill, I undertake to settle the bill as per the terms and conditions of the policy.</label>
                                 
                 </div>
 
-<div class=updown aligninput>
-                    <span class=alphabet>3.</span>
+<div class=updown >
+                    <span class=>3.</span>
                     
-                    <label class=inlinedivs >All non-medical expenses and expenses not relevant to current hospitalization and the amounts over & above the limit authorised by the Insurer / TPA not governed by the terms and conditions of the policy will be paid by me.</label>
+                    <label  >All non-medical expenses and expenses not relevant to current hospitalization and the amounts over & above the limit authorised by the Insurer / TPA not governed by the terms and conditions of the policy will be paid by me.</label>
                                 
                 </div>
-<div class=updown aligninput>
-                    <span class=alphabet>4.</span>
+<div class=updown >
+                    <span class=>4.</span>
                     
-                    <label class=inlinedivs >I hereby declare to abide by the terms and conditions of the policy and if at any time the facts disclosed by me are found to be false or incorrect, I forfeit my claim and agree to indentify the Insurer / TPA.</label>
+                    <label  >I hereby declare to abide by the terms and conditions of the policy and if at any time the facts disclosed by me are found to be false or incorrect, I forfeit my claim and agree to indentify the Insurer / TPA.</label>
                                 
                 </div>
-<div class=updown aligninput>
-                    <span class=alphabet>5.</span>
+<div class=updown >
+                    <span class=>5.</span>
                     
-                    <label class=inlinedivs >I agree and understand that TPA is in no way warranting the service of the hospital & that the Insurer / TPA is in no way guaranteeing that the services provided by the hospital will be of a particular quality or standard.</label>
+                    <label  >I agree and understand that TPA is in no way warranting the service of the hospital & that the Insurer / TPA is in no way guaranteeing that the services provided by the hospital will be of a particular quality or standard.</label>
                                 
                 </div>
-<div class=updown aligninput>
-                    <span class=alphabet>6.</span>
+<div class=updown >
+                    <span class=>6.</span>
                     
-                    <label class=inlinedivs >I hereby warrant the truth of the forgoing particu lars in every respect and I agree that if I have made or shall make any false or untrue statement, suppression or concealment with respect to the claim, my right to claim reimbursement of the said expenses shall be absolutely forfeited.</label>
+                    <label  >I hereby warrant the truth of the forgoing particu lars in every respect and I agree that if I have made or shall make any false or untrue statement, suppression or concealment with respect to the claim, my right to claim reimbursement of the said expenses shall be absolutely forfeited.</label>
                                 
                 </div>
-<div class=updown aligninput>
-                    <span class=alphabet>7.</span>
+<div class=updown >
+                    <span class=>7.</span>
                     
-                    <label class=inlinedivs >I agree to identify the hospital against all expenses incurred on my behalf, which are not reimbursed by the Insurer / TPA. </label>
+                    <label  >I agree to identify the hospital against all expenses incurred on my behalf, which are not reimbursed by the Insurer / TPA. </label>
                                 
                 </div>
-                <div class=updown aligninput>
+                <div class=updown >
                             
                             
                             <label >Patient's /Insured Name:</label>
@@ -1766,11 +1745,11 @@ $html .="
                         <input type=text class=patient_insured_sign style=height: 45px;width: 12rem; margin-left: 5px; size=50 value=\"".$patient_insured_sign."\" >
 
 						<br>
-                        <label class=inlinedivs > Patient/Insured Name & Signature</label>
+                        <label  > Patient/Insured Name & Signature</label>
                         </div>
 						<div class=updown></div>
-                        <div class=updown aligninput>
-                            <label class=inlinedivs >Contact Number :</label>
+                        <div class=updown >
+                            <label  >Contact Number :</label>
                             ";
 		
 							for ($i=0; $i < 9; $i++) { 
@@ -1786,7 +1765,7 @@ $html .="
 							$html .= "
                         </div><br>
 
-                        <div class= aligninput  >
+                        <div class=   >
                                             
                                             <h4>
                                                 Hospital DECLARATION
@@ -1794,44 +1773,44 @@ $html .="
                                         </div><br>
                                         
  
-    <div class=updown aligninput>
-    <span class=alphabet>1.</span>
-    <label class=inlinedivs >We have no objection to any authorized TPA / Insurance Company official verifying documents pertaining to hospitalization.</label>
+    <div class=updown >
+    <span class=>1.</span>
+    <label  >We have no objection to any authorized TPA / Insurance Company official verifying documents pertaining to hospitalization.</label>
 </div>
-    <div class=updown aligninput>
-                    <span class=alphabet>2.</span>
+    <div class=updown >
+                    <span class=>2.</span>
                     
-                    <label class=inlinedivs >All valid original documents duly countersigned by the insured I patient as per the checklist mentioned below will be sent to TPA / Insurance Company within 7 days of the patient's discharge.</label>
+                    <label  >All valid original documents duly countersigned by the insured I patient as per the checklist mentioned below will be sent to TPA / Insurance Company within 7 days of the patient's discharge.</label>
                                 
                 </div>
-    <div class=updown aligninput>
-                    <span class=alphabet>3.</span>
+    <div class=updown >
+                    <span class=>3.</span>
                     
-                    <label class=inlinedivs >All nonmedical expenses OR expenses not relevant to hospitalization or illness OR expenses disallowed in the Authorisation Letter of the TPA / Insurance Co. OR arising out of incorrect information in the pre-authorisation form will be collected from the patient.</label>
+                    <label  >All nonmedical expenses OR expenses not relevant to hospitalization or illness OR expenses disallowed in the Authorisation Letter of the TPA / Insurance Co. OR arising out of incorrect information in the pre-authorisation form will be collected from the patient.</label>
                                 
                 </div>
-    <div class=updown aligninput>
-                    <span class=alphabet>4.</span>
+    <div class=updown >
+                    <span class=>4.</span>
                     
-                    <label class=inlinedivs >WE AGREE THAT TPA / INSURANCE COMPANY WILL NOT BE LIABLE TO MAKE THE PAYMENT IN THE EVENT OF ANY DISCREPANCY BETWEEN THE FACTS IN THIS FORM AND  DISCHARGE SUMMARY or other documents.</label>
+                    <label  >WE AGREE THAT TPA / INSURANCE COMPANY WILL NOT BE LIABLE TO MAKE THE PAYMENT IN THE EVENT OF ANY DISCREPANCY BETWEEN THE FACTS IN THIS FORM AND  DISCHARGE SUMMARY or other documents.</label>
                                 
                 </div>
-    <div class=updown aligninput>
-                    <span class=alphabet>5.</span>
+    <div class=updown >
+                    <span class=>5.</span>
                     
-                    <label class=inlinedivs >The patient declaration has been signed by the patient or by his representative in our presence.</label>
+                    <label  >The patient declaration has been signed by the patient or by his representative in our presence.</label>
                                 
                 </div>
-<div class=updown aligninput>
-                    <span class=alphabet>6.</span>
+<div class=updown >
+                    <span class=>6.</span>
                     
-                    <label class=inlinedivs >We agree to provide clarifications for the queries raised regarding this hospitalization and we take the sole responsibility for any delay in offering clarifications.</label>
+                    <label  >We agree to provide clarifications for the queries raised regarding this hospitalization and we take the sole responsibility for any delay in offering clarifications.</label>
                                 
 </div>
-<div class=updown aligninput>
-                    <span class=alphabet>7.</span>
+<div class=updown >
+                    <span class=>7.</span>
                     
-                    <label class=inlinedivs >We will abide by the terms and conditions agreed in the MOU.</label>
+                    <label  >We will abide by the terms and conditions agreed in the MOU.</label>
                                 
 </div>
 
@@ -1868,7 +1847,7 @@ $html .="
 					
 						
  
-									<div class= aligninput  >
+									<div class=   >
 
 						 <h4>
 						DOCUMENTS TO BE PROVIDED BY THE HOSPITAL IN SUPPORT OF THE CLAIM
@@ -1876,42 +1855,42 @@ $html .="
 
 									 </div>
 												
-			<div class=aligninput>
-							<span class=alphabet>1.</span>
+			<div class=>
+							<span class=>1.</span>
 							
-							<label class=inlinedivs >Detailed Discharge Summary and all Bills from the hospital .
+							<label  >Detailed Discharge Summary and all Bills from the hospital .
 			</label>
 										
 			 </div>
 			
-			<div class=aligninput>
-							<span class=alphabet>2.</span>
+			<div class=>
+							<span class=>2.</span>
 							
-							<label class=inlinedivs >Cash Memos from the Hospitals / Chemists supported by proper prescription
+							<label  >Cash Memos from the Hospitals / Chemists supported by proper prescription
 			</label>
 										
 			 </div>
 			
-				<div class=aligninput>
-								<span class=alphabet>3.</span>
+				<div class=>
+								<span class=>3.</span>
 								
-								<label class=inlinedivs >Receipts and Pathological Test Reports from Pathologists , Supported by note from the attending Medical Practitioner I  Surgeon recommending such pathological Tests.
+								<label  >Receipts and Pathological Test Reports from Pathologists , Supported by note from the attending Medical Practitioner I  Surgeon recommending such pathological Tests.
 				</label>
 											
 				 </div>
 
 							
-				<div class=aligninput>
-								<span class=alphabet>4.</span>
+				<div class=>
+								<span class=>4.</span>
 								
-								<label class=inlinedivs >Surgeon's Certificate stating nature of operation performed and Surgeon's Bill and Receipt.
+								<label  >Surgeon's Certificate stating nature of operation performed and Surgeon's Bill and Receipt.
 				</label>
 											
 				 </div>
-				<div class=aligninput>
-								<span class=alphabet>5.</span>
+				<div class=>
+								<span class=>5.</span>
 								
-								<label class=inlinedivs >Certificates from attending Medical Practitioner / Surgeon that the patient is fully cured.
+								<label  >Certificates from attending Medical Practitioner / Surgeon that the patient is fully cured.
 				</label>
 											
   				</div>
@@ -1965,10 +1944,10 @@ $html .="
 
 
 
-<div class=aligninput>
-<label  class=inlinedivs>Aditya Birla Health Insurance Co. Limited. IRDAI Reg.153. CIN No. U66000MH2015PLC263677</label>
+<div class=>
+<label  >Aditya Birla Health Insurance Co. Limited. IRDAI Reg.153. CIN No. U66000MH2015PLC263677</label>
 </div>
-<div class=aligninput>
+<div class=>
 
 <label style=margin-right  : 10px><strong>Address:-</strong>10th Floor, R-Tech Park, Nirlon Compound, Next to HUB Mall, Off Western Express Highway, Goregaon East, Mumbai - 400 063<br>
 Telephone: +91 22 6225 7600, Fax: +91 22 6225 7700. For more details on risk factors, terms and conditions please read sales brochure carefully before concluding a sale. Aditya Birla Health Logo is owned by its respective Owners and Used under license by us. </label>
